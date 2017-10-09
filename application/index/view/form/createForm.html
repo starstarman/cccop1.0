@@ -1,39 +1,41 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
 
     <title> Formbuild.leipi.org</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="leipi.org">
-    <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css" />
+    <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css"/>
     <!--[if lte IE 6]>
     <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/bootstrap-ie6.css?2024">
     <![endif]-->
     <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/ie.css?2024">
     <![endif]-->
-    <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css" />
+    <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
-        var _root='http://formbuild/index.php?s=/',_controller = 'index';
+        var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
 
     <style>
 
-        #components{
+        #components {
             min-height: 600px;
         }
-        #target{
+
+        #target {
             min-height: 200px;
             border: 1px solid #ccc;
             padding: 5px;
         }
-        #target .component{
+
+        #target .component {
             border: 1px solid #fff;
         }
-        #temp{
+
+        #temp {
             width: 500px;
             background: white;
             border: 1px dotted #ccc;
@@ -44,10 +46,12 @@
             margin: 0 auto;
             width: 213px;
         }
-        .popover-content form .btn{
+
+        .popover-content form .btn {
             margin-right: 10px
         }
-        #source{
+
+        #source {
             min-height: 500px;
         }
     </style>
@@ -61,7 +65,9 @@
     <div class="row clearfix">
         <div class="span6">
             <div class="clearfix">
-                <h2>我的表单<button class='btn btn-info' id="tijiao" type='submit'>提交</button></h2>
+                <h2>我的表单
+                    <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+                </h2>
                 <hr>
                 <div id="build">
                     <form id="target" class="form-horizontal">
@@ -76,7 +82,8 @@
                   </div>
                 </form>"
                             >
-                                <input type="hidden" name="form_name" value="" class="leipiplugins" leipiplugins="form_name" shibie=""/>
+                                <input type="hidden" name="form_name" value="" class="leipiplugins"
+                                       leipiplugins="form_name" shibie=""/>
                                 <legend class="leipiplugins-orgvalue">点击填写表单名</legend>
                             </div>
                         </fieldset>
@@ -123,7 +130,8 @@
                                     <!-- Text -->
                                     <label class="control-label leipiplugins-orgname">文本框</label>
                                     <div class="controls">
-                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value="" class="leipiplugins" leipiplugins="text" shenfen=""/>
+                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value=""
+                                               class="leipiplugins" leipiplugins="text" shenfen=""/>
                                     </div>
 
                                 </div>
@@ -155,12 +163,14 @@
                                     <label class="control-label leipiplugins-orgname">多行文本</label>
                                     <div class="controls">
                                         <div class="textarea">
-                                            <textarea title="多行文本" name="leipiNewField" class="leipiplugins" leipiplugins="textarea"/> </textarea>
+                                            <textarea title="多行文本" name="leipiNewField" class="leipiplugins"
+                                                      leipiplugins="textarea"/> </textarea>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+                        </div>
                     </fieldset>
                 </form>
             </div><!--tab-content-->
@@ -170,37 +180,67 @@
 </div> <!-- /container -->
 
 
-
-
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/jquery-1.7.2.min.js?2024"></script>
-<script type="text/javascript"  src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js?2024"></script>
+<script type="text/javascript" src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js?2024"></script>
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.core.js?2024"></script>
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js?2024"></script>
 <script type="text/javascript">
 
-    $(document).ready(function (){
+    $(document).ready(function () {
 
         $('#tijiao').click(function () {
-            //编写抛送的逻辑
-            var length=$('fieldset').children().length-1;//获取提交的元素个数
-            var contents= $('fieldset').html();           //获取整个表单的样式
-            var formName=$('input[name="form_name"]').val();
-            var  content={
-                'content':contents,
-                'length':length,
-                'formName':formName
-            };
-            var url="{:url('form/formSubmit')}";
-            // 抛送http
-            $.post(url,content,function (result) {
-                //逻辑
-//              if(result.code==1){
-//                  location.href=result.data;
-//              }else{
-//                  alert(result.msg);
-//              }
-            },"json");
+            var user_1='';
+//            .control-group .controls .leipiplugins
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_1")
+                    user_1=index+','
+            });
+
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_2")
+                    console.log(index)
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_3")
+                    console.log(index)
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_4")
+                    console.log(index)
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_5")
+                    console.log(index)
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_6")
+                    console.log(index)
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_7")
+                    console.log(index)
+            });
         });
+        //编写抛送的逻辑
+//            var length=$('fieldset').children().length-1;//获取提交的元素个数
+//            var contents= $('fieldset').html();           //获取整个表单的样式
+//            var formName=$('input[name="form_name"]').val();
+//            var  content={
+//                'content':contents,
+//                'length':length,
+//                'formName':formName
+//            };
+//            var url="{:url('form/formSubmit')}";
+//            // 抛送http
+//            $.post(url,content,function (result) {
+//                //逻辑
+////              if(result.code==1){
+////                  location.href=result.data;
+////              }else{
+////                  alert(result.msg);
+////              }
+//            },"json");
+//        });
 
     });
 </script>
