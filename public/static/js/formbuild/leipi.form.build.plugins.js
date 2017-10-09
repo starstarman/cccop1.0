@@ -22,10 +22,13 @@ LPB.plugins['text'] = function (active_component,leipiplugins) {
       {
           inputs.push($(popover).find("textarea")[0]);
       }
-      $("select.shenfen").val();
+      //给input 添加身份标签
+      var shenfen=$("select.shenfen").val();
+      $(leipiplugins).attr("shenfen", shenfen);
       $.each(inputs, function(i,e){
           var attr_name = $(e).attr("id");//属性名称
           var attr_val = $(e).val();
+
           switch(attr_name)
           {
             //要break
