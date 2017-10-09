@@ -9484,3 +9484,3672 @@
   4 => 'wait',
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.034088s][吞吐率：29.34req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.022803s][吞吐率：43.85req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.030296s][吞吐率：33.01req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.052469s][吞吐率：19.06req/s] [内存消耗：1,922.45kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:17+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024111s][吞吐率：41.47req/s] [内存消耗：1,566.51kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:20+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.021791s][吞吐率：45.89req/s] [内存消耗：1,568.12kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:20+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.023636s][吞吐率：42.31req/s] [内存消耗：1,568.12kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.031973s][吞吐率：31.28req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:30+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.022452s][吞吐率：44.54req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:32+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.025054s][吞吐率：39.91req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:33+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024931s][吞吐率：40.11req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:47+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.036033s][吞吐率：27.75req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:20:47+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025456s][吞吐率：39.28req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.023232s][吞吐率：43.04req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:01+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.026484s][吞吐率：37.76req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.038837s][吞吐率：25.75req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:01+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024788s][吞吐率：40.34req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.027675s][吞吐率：36.13req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:03+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.025534s][吞吐率：39.16req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:03+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025535s][吞吐率：39.16req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.047444s][吞吐率：21.08req/s] [内存消耗：1,925.39kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:21:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.037063s][吞吐率：26.98req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:22:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.039126s][吞吐率：25.56req/s] [内存消耗：1,925.39kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:22:13+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.038179s][吞吐率：26.19req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:22:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.024275s][吞吐率：41.19req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:22:17+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.032857s][吞吐率：30.43req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.031306s][吞吐率：31.94req/s] [内存消耗：1,924.69kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:38+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.038576s][吞吐率：25.92req/s] [内存消耗：1,568.80kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:47+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.024643s][吞吐率：40.58req/s] [内存消耗：1,924.69kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:47+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.037613s][吞吐率：26.59req/s] [内存消耗：1,568.80kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:58+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.027973s][吞吐率：35.75req/s] [内存消耗：1,924.69kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:24:58+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.036536s][吞吐率：27.37req/s] [内存消耗：1,568.80kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.032532s][吞吐率：30.74req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:05+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025285s][吞吐率：39.55req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.028323s][吞吐率：35.31req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:06+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024699s][吞吐率：40.49req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.027985s][吞吐率：35.73req/s] [内存消耗：1,924.69kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.031372s][吞吐率：31.88req/s] [内存消耗：1,568.80kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:21+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.033136s][吞吐率：30.18req/s] [内存消耗：1,924.46kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:25:21+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.038089s][吞吐率：26.25req/s] [内存消耗：1,568.58kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1506925828; PHPSESSID=311alii90v574afqek60tpos1o; UM_distinctid=15efbedc88e9-0090f083d7c17c8-4c322f7c-144000-15efbedc88f203; CNZZDATA155540=cnzz_eid%3D335284824-1507461206-%26ntime%3D1507461206',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.028274s][吞吐率：35.37req/s] [内存消耗：1,922.04kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:12+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024485s][吞吐率：40.84req/s] [内存消耗：1,565.60kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.025003s][吞吐率：40.00req/s] [内存消耗：1,924.18kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:17+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.029132s][吞吐率：34.33req/s] [内存消耗：1,567.67kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:29+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.xiaoqi.com/index/login/check.html [运行时间：0.027382s][吞吐率：36.52req/s] [内存消耗：1,927.86kb] [文件加载：47]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '31',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => '',
+  'password' => '',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:30+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.023768s][吞吐率：42.07req/s] [内存消耗：1,567.11kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.022237s][吞吐率：44.97req/s] [内存消耗：1,924.18kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:33+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025250s][吞吐率：39.60req/s] [内存消耗：1,567.67kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.031240s][吞吐率：32.01req/s] [内存消耗：1,924.18kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:33+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.028845s][吞吐率：34.67req/s] [内存消耗：1,567.67kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:35+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.036036s][吞吐率：27.75req/s] [内存消耗：1,924.18kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.024965s][吞吐率：40.06req/s] [内存消耗：1,924.18kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:28:37+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.035941s][吞吐率：27.82req/s] [内存消耗：1,567.67kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'cookie' => 'PHPSESSID=5v694d8nu4l8tck7allohjhjlk; UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.028674s][吞吐率：34.87req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.028083s][吞吐率：35.61req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.027626s][吞吐率：36.20req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.037436s][吞吐率：26.71req/s] [内存消耗：1,925.39kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:26+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.035508s][吞吐率：28.16req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.029700s][吞吐率：33.67req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025776s][吞吐率：38.80req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.028258s][吞吐率：35.39req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:29:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.026667s][吞吐率：37.50req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:30:31+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.031868s][吞吐率：31.38req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:30:31+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.036135s][吞吐率：27.67req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.031255s][吞吐率：31.99req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.024586s][吞吐率：40.67req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.025686s][吞吐率：38.93req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.022839s][吞吐率：43.78req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:42+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.026950s][吞吐率：37.11req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:43+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.031180s][吞吐率：32.07req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:44+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.029249s][吞吐率：34.19req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:46+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.029057s][吞吐率：34.42req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:47+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.027531s][吞吐率：36.32req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:32:48+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.029891s][吞吐率：33.45req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.036986s][吞吐率：27.04req/s] [内存消耗：1,925.39kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:22+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.038654s][吞吐率：25.87req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.xiaoqi.com/index/login/login.html [运行时间：0.035199s][吞吐率：28.41req/s] [内存消耗：1,925.39kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:23+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.xiaoqi.com/captcha.html [运行时间：0.044016s][吞吐率：22.72req/s] [内存消耗：1,568.49kb] [文件加载：38]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ F:\Apache24\htdocs\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:24+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.xiaoqi.com/index/login/check.html [运行时间：0.035123s][吞吐率：28.47req/s] [内存消耗：1,929.82kb] [文件加载：47]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.xiaoqi.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+  'username' => '',
+  'password' => '',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess
+[ info ] www.xiaoqi.com/index/login/loginsuccess [运行时间：0.036968s][吞吐率：27.05req/s] [内存消耗：1,924.87kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.xiaoqi.com/index/login/welcome.html [运行时间：0.027345s][吞吐率：36.57req/s] [内存消耗：1,859.28kb] [文件加载：44]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507463121; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T20:36:34+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.037544s][吞吐率：26.64req/s] [内存消耗：2,095.53kb] [文件加载：47]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:10:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.035958s][吞吐率：27.81req/s] [内存消耗：1,917.43kb] [文件加载：45]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:16:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess
+[ info ] www.xiaoqi.com/index/login/loginsuccess [运行时间：0.032738s][吞吐率：30.55req/s] [内存消耗：1,923.44kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:16:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.xiaoqi.com/index/login/welcome.html [运行时间：0.022518s][吞吐率：44.41req/s] [内存消耗：1,857.85kb] [文件加载：44]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.021533s][吞吐率：46.44req/s] [内存消耗：1,916.50kb] [文件加载：45]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/bootstrap/css/bootstrap.css?2024
+[ info ] www.xiaoqi.com/static/css/bootstrap/css/bootstrap.css?2024 [运行时间：0.030225s][吞吐率：33.09req/s] [内存消耗：1,534.70kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'bootstrap',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+  'css' => 'bootstrap.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/leipi.form.build.core.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/leipi.form.build.core.js?2024 [运行时间：0.032708s][吞吐率：30.57req/s] [内存消耗：1,534.34kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/bootstrap/js/bootstrap.min.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/bootstrap/js/bootstrap.min.js?2024 [运行时间：0.033278s][吞吐率：30.05req/s] [内存消耗：1,534.84kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+  'bootstrap' => 'js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/site.css?2024
+[ info ] www.xiaoqi.com/static/css/site.css?2024 [运行时间：0.034707s][吞吐率：28.81req/s] [内存消耗：1,534.02kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'site.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/leipi.form.build.plugins.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/leipi.form.build.plugins.js?2024 [运行时间：0.035713s][吞吐率：28.00req/s] [内存消耗：1,534.44kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/jquery-1.7.2.min.js?2024
+[ info ] www.xiaoqi.com/static/js/jquery-1.7.2.min.js?2024 [运行时间：0.019765s][吞吐率：50.59req/s] [内存消耗：1,534.16kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'jquery-1.7.2.min.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/bootstrap/js/bootstrap.min.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/bootstrap/js/bootstrap.min.js?2024 [运行时间：0.018821s][吞吐率：53.13req/s] [内存消耗：1,534.84kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+  'bootstrap' => 'js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/leipi.form.build.core.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/leipi.form.build.core.js?2024 [运行时间：0.017704s][吞吐率：56.48req/s] [内存消耗：1,534.34kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:17:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/formbuild/leipi.form.build.plugins.js?2024
+[ info ] www.xiaoqi.com/static/js/formbuild/leipi.form.build.plugins.js?2024 [运行时间：0.020065s][吞吐率：49.84req/s] [内存消耗：1,534.44kb] [文件加载：39]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'formbuild',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'cookie' => 'UM_distinctid=15efbf507eb9-00f33aca6d87b28-4c322f7c-144000-15efbf507ec43e; CNZZDATA155540=cnzz_eid%3D128716297-1507460805-%26ntime%3D1507460805; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507468618; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507468618',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:23:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/formmanage.html
+[ info ] www.xiaoqi.com/index/form/formmanage.html [运行时间：0.052616s][吞吐率：19.01req/s] [内存消耗：2,910.46kb] [文件加载：53]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'formmanage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->formManage[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'cop'[F:\Apache24\htdocs\cccop1.0\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2017-10-08T21:23:02+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.034710s][吞吐率：28.81req/s] [内存消耗：1,917.43kb] [文件加载：45]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:23:38+08:00 ] 127.0.0.1 127.0.0.1 POST /index/form/formsubmit.html
+[ info ] www.xiaoqi.com/index/form/formsubmit.html [运行时间：0.324049s][吞吐率：3.09req/s] [内存消耗：2,914.55kb] [文件加载：53]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'formsubmit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'content-length' => '1247',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.xiaoqi.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+  'content' => '
+                            <div id="legend" class="component" rel="popover" trigger="manual" data-content="
+                <form class=\'form\'>
+                  <div class=\'controls\'>
+                    <label class=\'control-label\'>表单名称</label> <input type=\'text\' id=\'orgvalue\' placeholder=\'请输入表单名称\'>
+                    <hr/>
+                    <button class=\'btn btn-info\' type=\'button\'>确定</button><button class=\'btn btn-danger\' type=\'button\'>取消</button>
+                  </div>
+                </form>" data-original-title="编辑属性">
+                                <input type="hidden" name="form_name" value="" class="leipiplugins" leipiplugins="form_name">
+                                <legend class="leipiplugins-orgvalue">点击填写表单名</legend>
+                            </div>
+                        ',
+  'length' => '1',
+  'formName' => '',
+)
+[ info ] [ RUN ] app\index\controller\Form->formSubmit[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'cop'[F:\Apache24\htdocs\cccop1.0\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2017-10-08T21:35:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess
+[ info ] www.xiaoqi.com/index/login/loginsuccess [运行时间：0.029301s][吞吐率：34.13req/s] [内存消耗：1,925.43kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:35:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.xiaoqi.com/index/login/welcome.html [运行时间：0.029930s][吞吐率：33.41req/s] [内存消耗：1,859.28kb] [文件加载：44]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:35:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/formmanage.html
+[ info ] www.xiaoqi.com/index/form/formmanage.html [运行时间：0.062573s][吞吐率：15.98req/s] [内存消耗：2,910.46kb] [文件加载：53]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'formmanage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->formManage[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'cop'[F:\Apache24\htdocs\cccop1.0\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2017-10-08T21:35:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.037008s][吞吐率：27.02req/s] [内存消耗：1,917.43kb] [文件加载：45]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507466191',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:41:40+08:00 ] 127.0.0.1 127.0.0.1 POST /index/form/formsubmit.html
+[ info ] www.xiaoqi.com/index/form/formsubmit.html [运行时间：0.049179s][吞吐率：20.33req/s] [内存消耗：2,933.80kb] [文件加载：53]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'formsubmit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'content-length' => '7735',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.xiaoqi.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.xiaoqi.com/index/form/createform.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507469728',
+)
+[ info ] [ PARAM ] array (
+  'content' => '
+                            <div id="legend" class="component" rel="popover" trigger="manual" data-content="
+                <form class=\'form\'>
+                  <div class=\'controls\'>
+                    <label class=\'control-label\'>表单名称</label> <input type=\'text\' id=\'orgvalue\' placeholder=\'请输入表单名称\'>
+                    <hr/>
+                    <button class=\'btn btn-info\' type=\'button\'>确定</button><button class=\'btn btn-danger\' type=\'button\'>取消</button>
+                  </div>
+                </form>" data-original-title="编辑属性" style="border-top: 1px solid white; border-bottom: none;">
+                                <input type="hidden" name="form_name" value="" class="leipiplugins" leipiplugins="form_name">
+                                <legend class="leipiplugins-orgvalue">点击填写表单名</legend>
+                            </div>
+                        <div class="control-group component span4" rel="popover" trigger="manual" data-content="
+  <form class=\'form\'>
+    <div class=\'controls\'>
+      <label class=\'control-label\'>控件名称</label> <input type=\'text\' id=\'orgname\' placeholder=\'必填项\'>
+      <label class=\'control-label\'>默认值</label> <input type=\'text\' id=\'orgvalue\' placeholder=\'默认值\'>
+      <label class=\'control-label\'>权限管理</label>
+      <select name=\'\'id=\'orgvalue\'>
+        <option>学生</option>
+        <option>班主任</option>
+        <option>导员</option>
+        <option>书记</option>
+        <option>指导教师</option>
+        <option>系主任</option>
+        <option>院长</option>
+      </select>
+      <hr/>
+      <button class=\'btn btn-info\' type=\'button\'>确定</button><button class=\'btn btn-danger\' type=\'button\'>取消</button>
+    </div>
+  </form>" data-original-title="文本框控件" style="border-top: 1px solid white; border-bottom: none;">
+                                    <!-- Text -->
+                                    <label class="control-label leipiplugins-orgname">文本框</label>
+                                    <div class="controls">
+                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value="" class="leipiplugins" leipiplugins="text">
+                                    </div>
+
+                                </div><div class="control-group component span4" rel="popover" trigger="manual" data-content="
+  <form class=\'form\'>
+    <div class=\'controls\'>
+      <label class=\'control-label\'>控件名称</label> <input type=\'text\' id=\'orgname\' placeholder=\'必填项\'>
+      <label class=\'control-label\'>默认值</label> <input type=\'text\' id=\'orgvalue\' placeholder=\'默认值\'>
+      <label class=\'control-label\'>权限管理</label>
+      <select name=\'\'id=\'orgvalue\'>
+        <option>学生</option>
+        <option>班主任</option>
+        <option>导员</option>
+        <option>书记</option>
+        <option>指导教师</option>
+        <option>系主任</option>
+        <option>院长</option>
+      </select>
+      <hr/>
+      <button class=\'btn btn-info\' type=\'button\'>确定</button><button class=\'btn btn-danger\' type=\'button\'>取消</button>
+    </div>
+  </form>" data-original-title="文本框控件" style="border-top: 1px solid white; border-bottom: none;">
+                                    <!-- Text -->
+                                    <label class="control-label leipiplugins-orgname">文本框</label>
+                                    <div class="controls">
+                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value="" class="leipiplugins" leipiplugins="text">
+                                    </div>
+
+                                </div>
+
+    <div class="control-group component span4" rel="popover" trigger="manual" data-content="
+  <form class=\'form\'>
+    <div class=\'controls\'>
+      <label class=\'control-label\'>控件名称</label> <input type=\'text\' id=\'orgname\' placeholder=\'必填项\'>
+      <label class=\'control-label\'>默认值</label> <input type=\'text\' id=\'orgvalue\' placeholder=\'默认值\'>
+      <label class=\'control-label\'>权限管理</label>
+      <select name=\'\'id=\'orgvalue\'>
+        <option>学生</option>
+        <option>班主任</option>
+        <option>导员</option>
+        <option>书记</option>
+        <option>指导教师</option>
+        <option>系主任</option>
+        <option>院长</option>
+      </select>
+      <hr/>
+      <button class=\'btn btn-info\' type=\'button\'>确定</button><button class=\'btn btn-danger\' type=\'button\'>取消</button>
+    </div>
+  </form>" data-original-title="文本框控件" style="border-top: 1px solid white; border-bottom: none;">
+                                    <!-- Text -->
+                                    <label class="control-label leipiplugins-orgname">文本框</label>
+                                    <div class="controls">
+                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value="" class="leipiplugins" leipiplugins="text">
+                                    </div>
+
+                                </div>
+
+    ',
+  'length' => '4',
+  'formName' => '',
+)
+[ info ] [ RUN ] app\index\controller\Form->formSubmit[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'cop'[F:\Apache24\htdocs\cccop1.0\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2017-10-08T21:48:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess
+[ info ] www.xiaoqi.com/index/login/loginsuccess [运行时间：0.041388s][吞吐率：24.16req/s] [内存消耗：1,925.43kb] [文件加载：46]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507469728',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:48:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.xiaoqi.com/index/login/welcome.html [运行时间：0.029223s][吞吐率：34.22req/s] [内存消耗：1,859.28kb] [文件加载：44]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507469728',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-08T21:48:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index/form/createform.html
+[ info ] www.xiaoqi.com/index/form/createform.html [运行时间：0.033437s][吞吐率：29.91req/s] [内存消耗：2,095.53kb] [文件加载：47]
+[ info ] [ LANG ] F:\Apache24\htdocs\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'form',
+    2 => 'createform',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.xiaoqi.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.xiaoqi.com/index/login/loginsuccess',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7325594624; UM_distinctid=15edb9d47f2702-0e1a1e68d333a8-761d3e48-144000-15edb9d47f3537; PHPSESSID=3kp6a3sed65ifu3tgrt75v1lc8; CNZZDATA155540=cnzz_eid%3D725850254-1506920916-%26ntime%3D1507461206; Hm_lvt_080836300300be57b7f34f4b3e97d911=1506999040,1507449239,1507460990,1507462217; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1507470506',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Form->createForm[ F:\Apache24\htdocs\cccop1.0\application\index\controller\Form.php ]
+[ info ] [ VIEW ] F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

@@ -76,7 +76,7 @@
                   </div>
                 </form>"
                             >
-                                <input type="hidden" name="form_name" value="" class="leipiplugins" leipiplugins="form_name"/>
+                                <input type="hidden" name="form_name" value="" class="leipiplugins" leipiplugins="form_name" shibie=""/>
                                 <legend class="leipiplugins-orgvalue">点击填写表单名</legend>
                             </div>
                         </fieldset>
@@ -105,15 +105,15 @@
     <div class='controls'>
       <label class='control-label'>控件名称</label> <input type='text' id='orgname' placeholder='必填项'>
       <label class='control-label'>默认值</label> <input type='text' id='orgvalue' placeholder='默认值'>
-      <label class='control-label'>权限管理</label>
-      <select name=''id='orgvalue'>
-        <option>学生</option>
-        <option>班主任</option>
-        <option>导员</option>
-        <option>书记</option>
-        <option>指导教师</option>
-        <option>系主任</option>
-        <option>院长</option>
+      <label class='control-label'>可写权限</label>
+      <select class='shenfen'>
+        <option value='user_1'>学生</option>
+        <option value='user_2'>班主任</option>
+        <option value='user_3'>导员</option>
+        <option value='user_4'>书记</option>
+        <option value='user_5'>指导教师</option>
+        <option value='user_6'>系主任</option>
+        <option value='user_7'>院长</option>
       </select>
       <hr/>
       <button class='btn btn-info' type='button'>确定</button><button class='btn btn-danger' type='button'>取消</button>
