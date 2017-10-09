@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1507538187;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1507553403;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -190,79 +190,71 @@
     $(document).ready(function () {
 
         $('#tijiao').click(function () {
-//            var user_1='';
-//            var user_2='';
-//            var user_3='';
-//            var user_4='';
-//            var user_5='';
-//            var user_6='';
-//            var user_7='';
+            var user_1='';
+            var user_2='';
+            var user_3='';
+            var user_4='';
+            var user_5='';
+            var user_6='';
+            var user_7='';
 //            .control-group .controls .leipiplugins
 
-            for (var i=1;i<=7;i++){
-                var user_i="user_"+i;
-                $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                    if(value.getAttribute("shenfen")==="user_1"){
-                        user_i += index+',';
-                    }
-                });
-                console.log(user_i);
-            }
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_1")
+                    user_1+=index+','
+            });
 
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_2")
+                    user_2+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_3")
+                    user_3+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_4")
+                    user_4+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_5")
+                    user_5+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_6")
+                    user_6+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_7")
+                    user_7+=index+','
+            });
 
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_2")
-//                    user_2+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_3")
-//                    user_3+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_4")
-//                    user_4+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_5")
-//                    user_5+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_6")
-//                    user_6+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_7")
-//                    user_7+=index+','
-//            });
-//
-//            console.log(user_1);
-//            console.log(user_2);
-//            console.log(user_3);
-//            console.log(user_4);
-//            console.log(user_5);
-//            console.log(user_6);
-//            console.log(user_7);
+            //var length=$('fieldset').children().length-1;//获取提交的元素个数
+            var contents= $('fieldset').html();           //获取整个表单的样式
+            //var formName=$('input[name="form_name"]').val();
+            var  content={
+                'html':contents,
+                'user_1':user_1,
+                'user_2':user_2,
+                'user_3':user_3,
+                'user_4':user_4,
+                'user_5':user_5,
+                'user_6':user_6,
+                'user_7':user_7,
+            };
+            var url="<?php echo url('form/formSubmit'); ?>";
+            // 抛送http
+            $.post(url,content,function (result) {
+                //逻辑
+//              if(result.code==1){
+//                  location.href=result.data;
+//              }else{
+//                  alert(result.msg);
+//              }
+            },"json");
         });
         //编写抛送的逻辑
-//            var length=$('fieldset').children().length-1;//获取提交的元素个数
-//            var contents= $('fieldset').html();           //获取整个表单的样式
-//            var formName=$('input[name="form_name"]').val();
-//            var  content={
-//                'content':contents,
-//                'length':length,
-//                'formName':formName
-//            };
-//            var url="<?php echo url('form/formSubmit'); ?>";
-//            // 抛送http
-//            $.post(url,content,function (result) {
-//                //逻辑
-////              if(result.code==1){
-////                  location.href=result.data;
-////              }else{
-////                  alert(result.msg);
-////              }
-//            },"json");
-//        });
+
 
     });
 </script>

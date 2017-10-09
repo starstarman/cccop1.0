@@ -228,34 +228,32 @@
                     user_7+=index+','
             });
 
-            console.log(user_1);
-            console.log(user_2);
-            console.log(user_3);
-            console.log(user_4);
-            console.log(user_5);
-            console.log(user_6);
-            console.log(user_7);
+            //var length=$('fieldset').children().length-1;//获取提交的元素个数
+            var contents= $('fieldset').html();           //获取整个表单的样式
+            //var formName=$('input[name="form_name"]').val();
+            var  content={
+                'html':contents,
+                'user_1':user_1,
+                'user_2':user_2,
+                'user_3':user_3,
+                'user_4':user_4,
+                'user_5':user_5,
+                'user_6':user_6,
+                'user_7':user_7,
+            };
+            var url="{:url('form/formSubmit')}";
+            // 抛送http
+            $.post(url,content,function (result) {
+                //逻辑
+//              if(result.code==1){
+//                  location.href=result.data;
+//              }else{
+//                  alert(result.msg);
+//              }
+            },"json");
         });
         //编写抛送的逻辑
-//            var length=$('fieldset').children().length-1;//获取提交的元素个数
-//            var contents= $('fieldset').html();           //获取整个表单的样式
-//            var formName=$('input[name="form_name"]').val();
-//            var  content={
-//                'content':contents,
-//                'length':length,
-//                'formName':formName
-//            };
-//            var url="{:url('form/formSubmit')}";
-//            // 抛送http
-//            $.post(url,content,function (result) {
-//                //逻辑
-////              if(result.code==1){
-////                  location.href=result.data;
-////              }else{
-////                  alert(result.msg);
-////              }
-//            },"json");
-//        });
+
 
     });
 </script>
