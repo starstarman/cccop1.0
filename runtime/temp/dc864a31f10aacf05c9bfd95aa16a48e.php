@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1507553604;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1507867261;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -115,6 +115,7 @@
       <label class='control-label'>默认值</label> <input type='text' id='orgvalue' placeholder='默认值'>
       <label class='control-label'>可写权限</label>
       <select class='shenfen'>
+        <option value=''>请选择</option>
         <option value='user_1'>学生</option>
         <option value='user_2'>班主任</option>
         <option value='user_3'>导员</option>
@@ -181,10 +182,10 @@
 </div> <!-- /container -->
 
 
-<script type="text/javascript" charset="utf-8" src="__STATIC__/js/jquery-1.7.2.min.js?2024"></script>
-<script type="text/javascript" src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js?2024"></script>
-<script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.core.js?2024"></script>
-<script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js?2024"></script>
+<script type="text/javascript" charset="utf-8" src="__STATIC__/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.core.js"></script>
+<script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function () {
