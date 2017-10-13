@@ -9,6 +9,7 @@ LPB.plugins['text'] = function (active_component,leipiplugins) {
   //右弹form  初始化值
   $(popover).find("#orgname").val($(leipiplugins).attr("title"));
   $(popover).find("#orgvalue").val($(leipiplugins).val());
+  $(popover).find("select.shenfen").val($(leipiplugins).attr("shenfen"));
   //右弹form  取消控件
   $(popover).delegate(".btn-danger", "click", function(e){
      

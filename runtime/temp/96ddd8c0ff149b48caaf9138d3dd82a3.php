@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1507462964;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\header.html";i:1507462964;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\footer.html";i:1507462982;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1507809313;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\header.html";i:1507462964;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\footer.html";i:1507462982;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -78,8 +78,8 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 审批事项管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="m_article_list.html" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
-                    <li><a data-href="m_article_add.html" data-title="发布公告" href="javascript:void(0)">发布公告</a></li>
+                    <li><a data-href="<?php echo url('announce/ann_list'); ?>" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
+                    <li><a data-href="<?php echo url('announce/ann_add'); ?>" data-title="发布公告" href="javascript:void(0)">发布公告</a></li>
                 </ul>
             </dd>
 
