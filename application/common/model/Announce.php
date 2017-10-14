@@ -6,14 +6,14 @@ class Announce extends Model
 {
      public function getAnnounceElemenById(){
          $order = [
-             'id' => 'asc',//降序desc
+             'id' => 'desc',//降序desc
          ];
 
          $data = [
          ];
          $result = $this->where($data)
              ->order($order)
-             ->paginate(1);
+             ->paginate(10);
          return $result;
      }
     public function getAnnounceElemenById1($id){
