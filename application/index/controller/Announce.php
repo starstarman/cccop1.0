@@ -33,6 +33,7 @@ class Announce extends Controller
             'ann_type'=>$data['articletype'],
             'ann_author'=>$data['author'],
             'ann_content'=>$data['content'],
+            'ann_time'=>date('Y-m-d H:i:s'),
         ];
         $res = Db::name('announce')->insert($content);
         if ($res){
@@ -72,6 +73,15 @@ class Announce extends Controller
         $data = input('param.');
         $content=[
             'id'=>$data['id'],
+        ];
+        $res = Db::name('announce')->delete($content['id']);
+    }
+
+    //公告的批量删除
+    public function del_l(){
+        $data = input('param.');
+        $content =[
+            'id'=>$data['ids'],
         ];
         $res = Db::name('announce')->delete($content['id']);
     }
