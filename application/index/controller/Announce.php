@@ -43,15 +43,20 @@ class Announce extends Controller
         }
 
     }
-
-    public function ann_edit($id){
-        $ann = $this->obj->getAnnounceElemenById1($id);
-        return $this->fetch('',[
-            'ann'=>$ann,
-        ]);
+    //公告编辑前的读取
+    public function ann_edit(){
+        return $this->fetch();
+//        {:url('ann_edit',array('id'=>$vo.id))}
+//        $id = 9;
+//        $ann = $this->obj->getAnnounceElemenById1($id);
+//        return $this->fetch('',[
+//            'ann'=>$ann,
+//        ]);
     }
 
+    //公告的编辑功能
     public function edit(){
+        echo 'neng';exit();
         echo 'nengxing ';exit();
         $data=input('post.');
         $content = [
@@ -84,5 +89,16 @@ class Announce extends Controller
             'id'=>$data['ids'],
         ];
         $res = Db::name('announce')->delete($content['id']);
+    }
+//获取了url的id
+    public function ann_article(){
+        $id = input('get.id');
+        if(empty($id)) {
+            return $this->error('ID错误');
+        }
+        $ann = $this->obj->getAnnouncecontentById($id);
+        return $this->fetch('',[
+            'ann'=>$ann,
+        ]);
     }
 }
