@@ -7,61 +7,33 @@ class Login extends Base
     {
         return $this->fetch();
     }
-
     //登录验证
     public function check(){
         if(request()->isPost()) {
             $data = input('post.');
-            if (!captcha_check($data['verifycode'])) {
-                $this->error('验证码正确');
-            } else {
 
-            $value = $data['username'];
-            $username = $data['username'];
-            if ($value == '学生') {
-                $result = Db::query("select * from cop_student WHERE username = '$username'");
-                foreach ($result as $ret) {
-                }
-                if (!$ret == 1) {
-                    return '该用户不存在！';
-                }
-                if ($data['password'] == $ret['password']) {
-                    return $this->success('登录成功', url('login/loginSuccess'));
-                } else {
-                    return '密码错误';
-                }
-            } else if ($value == '老师') {
-                $result = Db::query("select * from cop_teacher WHERE username = '$username'");
-                foreach ($result as $ret2) {
-                }
-                if (!$ret2 == 2) {
-                    return '该用户不存在！';
-                }
-                if ($data['password'] == $ret2['password']) {
-                    return $this->success('登录成功', url('login/loginSuccess'));
-                } else {
-                    return '密码错误';
-                }
-            } elseif ($value == '管理员') {
-                $result = Db::query("select * from cop_manage WHERE username = '$username'");
-                foreach ($result as $ret3) {
-                }
-                if (!$ret3 == 3) {
-                    return '该用户不存在！';
-                }
-                if ($data['password'] == $ret3['password']) {
-                    return $this->success('登录成功', url('login/loginSuccess'));
-                } else {
-                    return '密码错误';
-                }
+            //进行验证码验证v
+            if (!captcha_check($data['verifycode'])) {
+                $this->error('验证码不正确');
             } else {
-                return '该用户不合法！';
+                $username = $data['username'];
+                //根据姓名获取登陆者的信息
+                $result = Db::query("select * from cop_user WHERE username = '$username'");
+                $_SESSION['username']=$data['username'];
+                if ($result){
+                    foreach ($result as $ret) {
+                    }
+                    //进行密码验证
+                    if ($ret['password']==$data['password']){
+                        return $this->success('登录成功！','login/loginSuccess');
+                    }else{
+                        return $this->error('密码不正确！');
+                    }
+                }
+                else{
+                    return $this->error('该用户不存在');
+                }
             }
-        }
-//            if(!captcha_check($data['verifycode'])) {
-//                //校验失败
-//                $this->error('验证码不正确');
-//            }exit;
         }
     }
 
