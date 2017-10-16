@@ -17,15 +17,18 @@ class Announce extends Model
          return $result;
      }
     public function getAnnounceElemenById1($id){
-        $order = [
-            'id' => 'asc',//降序desc
-        ];
-
         $data = [
             'id'=>$id,
         ];
         $result = $this->where($data)
-            ->order($order)
+            ->select();
+        return $result;
+    }
+    public function getAnnouncecontentById($id){
+        $data = [
+            'id'=>$id,
+        ];
+        $result = $this->where($data)
             ->select();
         return $result;
     }
