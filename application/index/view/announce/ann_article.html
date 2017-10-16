@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .article-title h2 {
+            font-size: 28px;
+            line-height: 40px;
+            font-weight: 700;
+            font-family: "Microsoft Yahei", 微软雅黑, 宋体;
+            text-align:center;
+        }
+        .article .article-source span {
+            font-size: 13px;
+            line-height: 2;
+            color: #999;
+        }
+        .article-source{
+            text-align:right;
+            margin-right: 500px;
+        }
+        .article .article-source .date {
+            margin: 0 9px 0 6px;
+            text-align:center;
+        }
+        .article-content {
+            margin:17px 350px;
+        }
+        div {
+            display: block;
+        }
+        body{
+
+        }
+    </style>
+</head>
+<body>
+{volist name='ann' id='vo'}
+<div class="article-title">
+    <h2>{$vo.ann_title}</h2>
+</div>
+
+<div class="article-source">
+    <span class="source">{$vo.ann_author}</span>
+    <span class="date">{$vo.ann_time}</span>
+</div>
+
+<div class="article-content">
+    {$vo.ann_content}
+</div>
+{/volist}
+
+</body>
+</html>

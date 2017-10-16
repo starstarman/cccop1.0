@@ -1,0 +1,3 @@
+.cccop .pagination li{display: inline;padding-left: 10px;}
+.pagination.active{color: red}
+.pagination.disabled{color: #888888}
