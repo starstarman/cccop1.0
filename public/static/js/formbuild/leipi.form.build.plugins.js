@@ -96,6 +96,26 @@ LPB.plugins['textarea'] = function (active_component,leipiplugins) {
 
   });
 }
+/*
+ 签字控件
+ */
+LPB.plugins['textarea'] = function (active_component,leipiplugins) {
+    var plugins = 'textarea',popover = $(".popover");
+    //右弹form  初始化值
+    $(popover).find("select.shenfen").val($(leipiplugins).attr("shenfen"));
+    //右弹form  取消控件
+    $(popover).delegate(".btn-danger", "click", function(e){
+
+        active_component.popover("hide");
+    });
+    //右弹form  确定控件
+    $(popover).delegate(".btn-info", "click", function(e){
+        var shenfen=$("select.shenfen").val();
+        $(leipiplugins).attr("shenfen", shenfen);
+        active_component.popover("hide");
+
+    });
+}
 /* 下拉框控件 select
 acc  是 class="component" 的DIV 
 e 是 class="leipiplugins" 的控件
