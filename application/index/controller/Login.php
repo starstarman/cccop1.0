@@ -23,6 +23,7 @@ class Login extends Base
                 if ($result){
                     foreach ($result as $ret) {
                     }
+                session('userinfo',$result,'index');
                     //进行密码验证
                     if ($ret['password']==$data['password']){
                         return $this->success('登录成功！','login/loginSuccess');

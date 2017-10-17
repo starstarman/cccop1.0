@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1507867261;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1508153023;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -232,9 +232,10 @@
 
             //var length=$('fieldset').children().length-1;//获取提交的元素个数
             var contents= $('fieldset').html();           //获取整个表单的样式
-            //var formName=$('input[name="form_name"]').val();
+            var formName=$('input[name="form_name"]').val();
             var  content={
                 'html':contents,
+                'formName':formName,
                 'user_1':user_1,
                 'user_2':user_2,
                 'user_3':user_3,

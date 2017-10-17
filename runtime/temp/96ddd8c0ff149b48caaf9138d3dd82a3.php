@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1507809313;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\header.html";i:1507462964;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\footer.html";i:1507462982;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1508151487;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\header.html";i:1508150757;s:79:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\public\footer.html";i:1507462982;}*/ ?>
+<?php session_start(); ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -19,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="__STATIC__/index/lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/common.css" />
     <!--[if IE 6]>
     <script type="text/javascript" src="__STATIC__/index/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
@@ -38,21 +40,23 @@
                     <li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onclick="m_article_add('添加公告','m_article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 公告</a></li>
+
                             <li><a href="javascript:;" onclick="m_picture_add('添加表单','m_article-add1.html')"><i class="Hui-iconfont">&#xe613;</i> 表单</a></li>
-                            <li><a href="javascript:;" onclick="m_member_add('添加用户','m_member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
+                            <li><a href="javascript:;" onclick="m_member_add('添加用户','m_member-a dd.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
-                    <li>超级管理员</li>
                     <li class="dropDown dropDown_hover">
-                        <a href="#" class="dropDown_A">admin <i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <option>欢迎你 </option>
+                    </li>
+                    <li class="dropDown dropDown_hover">
+                        <a class="dropDown_A"><?php echo $_SESSION['username'];?><i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-                            <li><a href="#">切换账户</a></li>
-                            <li><a href="#">退出</a></li>
+                            <li><a href="#">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
                     <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -73,11 +77,13 @@
 </header>
 <!--根据用户的不同将不同的aside进行遍历-->
 <aside class="Hui-aside">
+    <?php if($_SESSION['username'] == 'admin'): ?>
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 审批事项管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
+                    <li><a data-href="<?php echo url('announce/ann_add'); ?>" data-title="审批管理" href="javascript:void(0)">审批管理</a></li>
                     <li><a data-href="<?php echo url('announce/ann_list'); ?>" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
                     <li><a data-href="<?php echo url('announce/ann_add'); ?>" data-title="发布公告" href="javascript:void(0)">发布公告</a></li>
                 </ul>
@@ -106,7 +112,91 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 数据管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="" data-title="数据备份" href="javascript:void(0)">数据备份</a></li>
+                    <li><a data-href="" data-title="数据恢复" href="javascript:void(0)">数据恢复</a></li>
+                </ul>
+            </dd>
+
+        </dl>
     </div>
+<?php elseif($_SESSION['username'] == '教师'): ?>
+        <div class="menu_dropdown bk_2">
+            <dl id="menu-article">
+                <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="<?php echo url('user/user_info'); ?>" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>
+                    </ul>
+                </dd>
+
+            </dl>
+            <dl id="menu-article">
+                <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="<?php echo url('announce/ann_list'); ?>" data-title="查看公告" href="javascript:void(0)">查看公告</a></li>
+                    </ul>
+                </dd>
+
+            </dl>
+            <dl id="menu-member">
+                <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
+                        <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
+                        <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
+                        <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    <?php elseif($_SESSION['username'] == '学生'): ?>
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="<?php echo url('user/user_info'); ?>" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="<?php echo url('announce/ann_list'); ?>" data-title="查看公告" href="javascript:void(0)">查看公告</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 实习审批表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="<?php echo url('Form/studentShowFrom'); ?>" data-title="查看表单" href="javascript:void(0)">查看表单</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+        <dl id="menu-member">
+            <dt><i class="Hui-iconfont">&#xe60d;</i> 审批进度管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
+                    <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
+                    <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
+                    <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <?php endif; ?>
 </aside>
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
 <section class="Hui-article-box">

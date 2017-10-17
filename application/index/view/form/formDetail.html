@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>表单详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="leipi.org">
+    <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css"/>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/bootstrap-ie6.css?2024">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/ie.css?2024">
+    <![endif]-->
+    <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
+    </script>
+
+    <style>
+
+        #components {
+            min-height: 600px;
+        }
+
+        #target {
+            min-height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #target .component {
+            border: 1px solid #fff;
+        }
+
+        #temp {
+            width: 500px;
+            background: white;
+            border: 1px dotted #ccc;
+            border-radius: 10px;
+        }
+
+        .popover-content form {
+            margin: 0 auto;
+            width: 213px;
+        }
+
+        .popover-content form .btn {
+            margin-right: 10px
+        }
+
+        #source {
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body>
+{$html}
+<script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+  //刚进入页面就渲染js
+    $(document).ready(function () {
+        var identity={$identity};
+        switch (identity){
+            case 1:$("input[shenfen!='user_1']").attr("readonly",true);
+            break;
+            case 2:$("input[shenfen!='user_2']").attr("readonly",true);
+            break;
+            case 3:$("input[shenfen!='user_3']").attr("readonly",true);
+            break;
+            case 4:$("input[shenfen!='user_4']").attr("readonly",true);
+            break;
+            case 5:$("input[shenfen!='user_5']").attr("readonly",true);
+            break;
+            case 6:$("input[shenfen!='user_6']").attr("readonly",true);
+            break;
+            case 7:$("input[shenfen!='user_7']").attr("readonly",true);
+            break;
+        }
+    })
+</script>
+
+
+</body>
+</html>
