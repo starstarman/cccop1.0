@@ -57,7 +57,13 @@
     </style>
 </head>
 <body>
-{$html}
+
+<fieldset>
+    {$html}
+</fieldset>
+
+
+<button class='btn btn-info' id="tijiao" type='submit'>提交</button>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
   //刚进入页面就渲染js
@@ -79,7 +85,81 @@
             case 7:$("input[shenfen!='user_7']").attr("readonly",true);
             break;
         }
-    })
+
+        //给input 添加value 属性
+        $("input").blur(function () {
+          $(this).attr("value",$(this).val());
+        });
+
+        $('#tijiao').click(function () {
+            var user_1='';
+            var user_2='';
+            var user_3='';
+            var user_4='';
+            var user_5='';
+            var user_6='';
+            var user_7='';
+//            .control-group .controls .leipiplugins
+
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_1")
+                    user_1+=index+','
+            });
+
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_2")
+                    user_2+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_3")
+                    user_3+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_4")
+                    user_4+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_5")
+                    user_5+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_6")
+                    user_6+=index+','
+            });
+            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+                if(value.getAttribute("shenfen")==="user_7")
+                    user_7+=index+','
+            });
+
+            //var length=$('fieldset').children().length-1;//获取提交的元素个数
+            var contents= $('fieldset').html();           //获取整个表单的样式
+            var formName=$('input[name="form_name"]').val();
+            var f_id={$f_id};
+            var  content={
+                'f_id':f_id,
+                'html':contents,
+                'formName':formName,
+                'user_1':user_1,
+                'user_2':user_2,
+                'user_3':user_3,
+                'user_4':user_4,
+                'user_5':user_5,
+                'user_6':user_6,
+                'user_7':user_7,
+            };
+            var url="{:url('form/studentformSubmit')}";
+            // 抛送http
+            $.post(url,content,function (result) {
+                //逻辑
+//              if(result.code==1){
+//                  location.href=result.data;
+//              }else{
+//                  alert(result.msg);
+//              }
+            },"json");
+        });
+    });
+
 </script>
 
 
