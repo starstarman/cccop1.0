@@ -26,7 +26,7 @@ class Login extends Base
                 session('userinfo',$result,'index');
                     //进行密码验证
                     if ($ret['password']==$data['password']){
-                        return $this->success('登录成功！','login/loginSuccess');
+                        return $this->success('登录成功！','login/loginSuccess',5);
                     }else{
                         return $this->error('密码不正确！');
                     }
