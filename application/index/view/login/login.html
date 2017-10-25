@@ -98,14 +98,14 @@
             <form class="registerform" action="{:url('login/check')}" method="post">
                 <div class="fm-item">
                     <label for="logonId" class="form-label">系统登录：</label>
-                    <input type="text" name="username" value="" id="username" class="i-text"/>
+                    <input type="text" name="username" value="" placeholder="用户名不能为空" id="username" class="i-text"/>
                     <!--<input type="username" value="输入账号" maxlength="100" id="username" class="i-text" ajaxurl="demo/valid.jsp"  datatype="s6-18" errormsg="用户名至少2个字符,最多18个字符！"  >-->
                     <div class="ui-form-explain"></div>
                 </div>
 
                 <div class="fm-item">
                     <label for="logonId" class="form-label">登录密码：</label>
-                    <input type="password" name="password" id="password" class="i-text"/>
+                    <input type="password" name="password" id="password" placeholder="密码不能为空" class="i-text"/>
                     <!--<input type="password" value="输入密码" maxlength="100" id="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！">-->
                     <div class="ui-form-explain"></div>
                 </div>
@@ -119,10 +119,10 @@
                 <div class="fm-item">
                     <label for="logonId" class="form-label"></label>
                     <!--<input type="submit" value="" tabindex="4" id="send-btn" class="btn-login">-->
-                    <input type="submit" value="" class="btn-login"/>
+                    <input type="submit" value="" class="btn-login" />
                     <div class="ui-form-explain"></div>
                 </div>
-
+。
             </form>
 
         </div>
@@ -131,7 +131,7 @@
 
     <div class="bd">
         <ul>
-            <li style="background:url(/static/new/themes/theme-pic1.jpg) #CCE1F3 center 0 no-repeat;"></li>
+            <li style="background:url(__STATIC__/new/themes/theme-pic1.jpg) #CCE1F3 center 0 no-repeat;"></li>
         </ul>
     </div>
 </div>
@@ -142,5 +142,100 @@
     <p>Copyright &copy; 2017.Company name All rights reserved 黑龙江科技大学</p>
 </div>
 <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+<script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
+<script src="__STATIC__/js/src/jquery."></script>
+<script src="__STATIC__/js/src/jquery.gDialog.js"></script>
+<link href="__STATIC__/js/src/normalize.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="__STATIC__/js/src/animate.min.css">
+<link rel="stylesheet" href="__STATIC__/js/src/jquery.gDialog.css">
+<script type="text/javascript">
+        /*$(".btn-login").click(function() {
+        layer.alert('即将进入系统', {
+             type: 0
+             , skin: 'layui-layer-molv' //样式类名  自定义样式
+             , closeBtn: 0    // 是否显示关闭按钮
+             , time: 0
+             , shift: 1
+             , anim: 4 //动画类型
+             , title: '小样'//标题输出
+             , btn: ['进入', '退出'] //按钮
+             , icon: 6    // icon
+             , yes: function (index, layero) {
+                 window.location.href = 'loginSuccess.html';
+                 layer.close(index);
+             }
+             , btn2: function (index, layero) {
+                 window.location.href = 'login.html';
+                 layer.close(index);
+
+             }
+         });
+     });*/
+         /*layer.confirm('is not?', function(index){
+           window.location.href="loginSuccess.html";
+
+             layer.close(index);
+         });
+     })*/
+        /*$.gDialog.prompt("站长素材", "loginSuccess.html",{
+                title: "Prompt Dialog Box",
+                required: true,
+                animateIn : "rollIn",
+                animateOut: "rollOut"
+            });
+        });*/
+    /*$.gDialog.alert("我的小芳在哪里，哈哈哈哈", {
+        animateIn: "bounceIn",
+        animateOut: "bounceOut"
+    });
+});*/
+        /*$.gDialog.confirm("Are you Sure?", {
+            title: "Confirm Dialog Box",
+            animateIn : "bounceInDown",
+            animateOut: "bounceOutUp",
+            buttons: {
+                "Ok": function () {
+                    $(this).dialog('close');
+                },
+                "Cancel": function () {
+                    $(this).dialog('close');
+                }
+            }
+        });
+    });*/
+         /*$(document).ready(function () {
+             $(".btn-login").click(function () {
+                 var id = $(this).attr("title");
+                 var oper = "check";
+                 $.ajax({
+                     type: "post",
+                     url: "login.html",
+                     data:{name:"admin"},
+                     dataType: "Text",
+                     success: function (data) {
+                         location.href ='loginSuccess.html';
+                     }
+                 });
+             });
+         });*/
+        function check1(){
+            var name = document.getElementById("username").value;
+            if(name ==  null || name == ''){
+                alert("用户名不能为空");
+                return false;
+            }
+            return true;
+        }
+        function check2(){
+            var password = document.getElementById("password").value;
+            if(password ==  null || name == ''){
+                alert("密码不能为空");
+                return false;
+            }
+            return true;
+        }
+</script>
 </body>
 </html>
+

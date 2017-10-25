@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!--包含头部文件-->
 {include file="public/header" /}
 <body>
@@ -25,10 +25,10 @@
                         <option>欢迎你 </option>
                     </li>
                     <li class="dropDown dropDown_hover">
-                        <a class="dropDown_A"><?php echo $_SESSION['username'];?><i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <a class="dropDown_A"><?php echo $_SESSION['username']?><i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-                            <li><a href="#">退&emsp;&emsp;出</a></li>
+                            <li><a href="javascript:;" onClick="logout()">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
                     <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -95,38 +95,38 @@
 
         </dl>
     </div>
-{elseif condition="$_SESSION['username'] eq '教师'" /}
-        <div class="menu_dropdown bk_2">
-            <dl id="menu-article">
-                <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-                <dd>
-                    <ul>
-                        <li><a data-href="{:url('user/user_info')}" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>
-                    </ul>
-                </dd>
+    {elseif condition="$_SESSION['username'] eq '教师'" /}
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="{:url('user/user_info')}" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>
+                </ul>
+            </dd>
 
-            </dl>
-            <dl id="menu-article">
-                <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-                <dd>
-                    <ul>
-                        <li><a data-href="{:url('announce/ann_list')}" data-title="查看公告" href="javascript:void(0)">查看公告</a></li>
-                    </ul>
-                </dd>
+        </dl>
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="{:url('announce/ann_list')}" data-title="查看公告" href="javascript:void(0)">查看公告</a></li>
+                </ul>
+            </dd>
 
-            </dl>
-            <dl id="menu-member">
-                <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-                <dd>
-                    <ul>
-                        <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
-                        <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
-                        <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
-                        <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
-                    </ul>
-                </dd>
-            </dl>
-        </div>
+        </dl>
+        <dl id="menu-member">
+            <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
+                    <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
+                    <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
+                    <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
     {elseif condition="$_SESSION['username'] eq '学生'" /}
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
@@ -227,7 +227,12 @@
             content: '<div>管理员信息</div>'
         });
     }
-
+    /*个人信息*/
+    function logout() {
+        layer.alert('点击确定跳转', function (index) {
+            window.location.href = 'login.html';
+        });
+    }
     /*资讯-添加*/
     function article_add(title,url){
         var index = layer.open({
@@ -259,8 +264,6 @@
     function member_add(title,url,w,h){
         layer_show(title,url,w,h);
     }
-
-
 </script>
 
 <!--此乃百度统计代码，请自行删除-->
