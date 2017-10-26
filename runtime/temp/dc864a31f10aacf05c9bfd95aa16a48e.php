@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1508247673;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1508938817;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -68,6 +68,7 @@
             <div class="clearfix">
                 <h2>我的表单
                     <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+                    <button class='btn btn-info' id="set" type='submit'>设置审批流程</button>
                 </h2>
                 <hr>
                 <div id="build">
@@ -133,7 +134,7 @@
                                     <label class="control-label leipiplugins-orgname">文本框</label>
                                     <div class="controls">
                                         <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value=""
-                                               class="leipiplugins" leipiplugins="text" shenfen="">
+                                               class="leipiplugins" leipiplugins="text" shenfen=""/>
                                     </div>
 
                                 </div>
@@ -215,6 +216,7 @@
 <script type="text/javascript" src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.core.js"></script>
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -284,8 +286,38 @@
 //              }
             },"json");
         });
-        //编写抛送的逻辑
 
+        //管理员定义审批流程
+        $('#set').click(function () {
+            //获取数据
+            var str='';
+            $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
+                str += $(this).attr("shenfen")+'/';
+            });
+            var data_post={
+                'data_po':str,
+            };
+            //抛送逻辑
+            var url ="<?php echo url('form/flow'); ?>";
+            $.post(url,data_post,function (data) {
+                attrbut(data);
+            },"json");
+            //弹窗
+            function attrbut(re) {
+                var title = "请设置审批流程";
+                var index = layer.open({
+                    type: 1,
+                    title: title,
+                    offset:['10px','400px',],
+                    content: re
+                });
+                layer.style(index, {
+                    width: '370px',
+                    height:'550px',
+                });
+                layer(index);
+            }
+        });
 
     });
 </script>
@@ -294,6 +326,6 @@
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1e6fd3a46a5046661159c6bf55aad1cf' type='text/javascript'%3E%3C/script%3E"));
 </script-->
-
+//占为己有
 </body>
 </html>
