@@ -34,41 +34,6 @@ class Form extends Controller
         ];
         model('Adminform')->save($content);
     }
-/*
- * 学生提交表单
- */
-    public function studentformSubmit(){
-        //获取学生的id
-        $userinfo=session('userinfo','','index');
-        $s_id=$userinfo[0]['id'];
-        //获取提交表单的内容
-        $data=input('param.');
-        $content=[
-            'f_id'=>$data['f_id'],
-            's_id'=>$s_id,
-            'formName'=>$data['formName'],
-            'html'=>$data['html'],
-            'user_1'=>$data['user_1'],
-            'user_2'=>$data['user_2'],
-            'user_3'=>$data['user_3'],
-            'user_4'=>$data['user_4'],
-            'user_5'=>$data['user_5'],
-            'user_6'=>$data['user_6'],
-            'user_7'=>$data['user_7'],
-        ];
-        //把内容存到总表Form中
-        $id=[
-            'f_id'=>$data['f_id'],
-            's_id'=>$s_id,
-        ];
-        //如果总表里有数据 更新总表的  总表里没有数据就添加到总表
-        if (model('Form')->where($id)->select()){
-            model('Form')->isUpdate(true)->save($content);
-        }else{
-            model('Form')->save($content);
-        }
-
-    }
 
     /**
      *  实习审批表查看表单   查询管理员建的表单
@@ -85,47 +50,78 @@ class Form extends Controller
      */
     public function formDetail(){
 
-            //首先获得是哪张表
-            $f_id=$_GET['f_id'];
-            model('User')->select();
-            //在获取学生的id
-            $userinfo=session('userinfo','','index');
-            $s_id=$userinfo[0]['id'];
-            $identity=$userinfo[0]['identity'];
-            //去总表查询是否有表单   如果没有去管理员表单填写
-            $data=[
-                'f_id'=>$f_id,
-                's_id'=>$s_id,
-            ];
-            $result=model('Form')->where($data)->select();
-            if (!empty($result)){
-                return $this->fetch('',[
-                    'f_id'=>$f_id,
-                    'html'=>$result[0]['html'],
-                    'identity'=>$identity,
-                    'user_1'=>$result[0]['user_1'],
-                    'user_2'=>$result[0]['user_2'],
-                    'user_3'=>$result[0]['user_3'],
-                    'user_4'=>$result[0]['user_4'],
-                    'user_5'=>$result[0]['user_5'],
-                    'user_6'=>$result[0]['user_6'],
-                    'user_7'=>$result[0]['user_7'],
-                ]);
-            }else{
-                $data=model('Adminform')->where('id',$f_id)->select();
-            }
-        //返给学生提交用的必用f_id
+        //首先获得是哪张表
+        $f_id=$_GET['f_id'];
+        model('User')->select();
+        //在获取学生的id
+        $userinfo=session('userinfo','','index');
+        $s_id=$userinfo[0]['id'];
+        $identity=$userinfo[0]['identity'];
+        //去总表查询是否有表单   如果没有去管理员表单填写
+        $data=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id,
+        ];
+        $result=model('Form')->where($data)->select();
+        if (!empty($result)){
+            echo '这里有数据';
+        }else{
+            $data=model('Adminform')->where('id',$f_id)->select();
+        }
+
         return $this->fetch('',[
-                'f_id'=>$f_id,
-                'html'=>$data[0]['html'],
-                'identity'=>$identity,
-                'user_1'=>$data[0]['user_1'],
-                'user_2'=>$data[0]['user_2'],
-                'user_3'=>$data[0]['user_3'],
-                'user_4'=>$data[0]['user_4'],
-                'user_5'=>$data[0]['user_5'],
-                'user_6'=>$data[0]['user_6'],
-                'user_7'=>$data[0]['user_7'],
+            'html'=>$data[0]['html'],
+            'identity'=>$identity,
+            'user_1'=>$data[0]['user_1'],
+            'user_2'=>$data[0]['user_2'],
+            'user_3'=>$data[0]['user_3'],
+            'user_4'=>$data[0]['user_4'],
+            'user_5'=>$data[0]['user_5'],
+            'user_6'=>$data[0]['user_6'],
+            'user_7'=>$data[0]['user_7'],
+        ]);
+    }
+
+    /**
+     * 审批流程数据接收
+     */
+    public function flow(){
+        $data=input('param.');
+        $flow = explode('/',$data['data_po']);
+        array_filter($flow);
+        for($i=0;$i<count($flow);$i++){
+            //将接收到的数据进行转换
+            switch ($flow[$i]){
+                case 'user_1':
+                    $flow[$i]='学生';
+                    break;
+                case 'user_2':
+                    $flow[$i]='班主任';
+                    break;
+                case 'user_3':
+                    $flow[$i]='导员';
+                    break;
+                case 'user_4':
+                    $flow[$i]='书记';
+                    break;
+                case 'user_5':
+                    $flow[$i]='指导教师';
+                    break;
+                case 'user_6':
+                    $flow[$i]='系主任';
+                    break;
+                case 'user_7':
+                    $flow[$i]='院长';
+                    break;
+                case '':
+                    $flow[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow = array_filter($flow);
+        return $this->fetch('',[
+            'flow'=>$flow,
         ]);
     }
 }
