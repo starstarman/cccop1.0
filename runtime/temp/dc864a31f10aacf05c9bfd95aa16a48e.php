@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1508938817;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -18,6 +19,7 @@
     <script type="text/javascript">
         var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
+
     <style>
 
         #components {
@@ -273,7 +275,7 @@
                 'user_6':user_6,
                 'user_7':user_7,
             };
-            var url="{:url('form/formSubmit')}";
+            var url="<?php echo url('form/formSubmit'); ?>";
             // 抛送http
             $.post(url,content,function (result) {
                 //逻辑
@@ -296,7 +298,7 @@
                 'data_po':str,
             };
             //抛送逻辑
-            var url ="{:url('form/flow')}";
+            var url ="<?php echo url('form/flow'); ?>";
             $.post(url,data_post,function (data) {
                 attrbut(data);
             },"json");

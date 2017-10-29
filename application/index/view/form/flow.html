@@ -1,0 +1,29 @@
+{include file="public/header"}
+<body>
+
+<table class="table table-border table-bordered table-bg table-hover table-sort">
+    <thead>
+    <tr class="text-c">
+        <th width="100">教师名称</th>
+        <th width="30">审批顺序</th>
+    </tr>
+    </thead>
+    <tbody>
+    {volist name='flow' id='vo'}
+    <tr class="text-c">
+        <td>{$vo}</td>
+        <td class="text-c listorder"><input size="3" attr-id="4"  name="listorder" value="{$key+1}"/></td>
+   </tr>
+    {/volist}
+    </tbody>
+</table>
+
+<button class='' id="sub" style="margin:5px 0px 0px 320px;" type='submit'>确定</button>
+{include file="public/footer"}
+<script type="text/javascript">
+    $('#sub').click(function () {
+        alert();
+    })
+</script>
+</body>
+</html>
