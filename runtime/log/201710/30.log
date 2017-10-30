@@ -1,0 +1,2754 @@
+---------------------------------------------------------------
+[ 2017-10-30T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/logout
+[ info ] www.tp7.com/index/login/logout [运行时间：0.080366s][吞吐率：12.44req/s] [内存消耗：1,937.73kb] [文件加载：48]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509283358; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.064871s][吞吐率：15.42req/s] [内存消耗：2,104.04kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509283358; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.055692s][吞吐率：17.96req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509283358; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.070299s][吞吐率：14.22req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509283358; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.053028s][吞吐率：18.86req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.066523s][吞吐率：15.03req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.072085s][吞吐率：13.87req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.057470s][吞吐率：17.40req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:30+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.078970s][吞吐率：12.66req/s] [内存消耗：2,097.84kb] [文件加载：51]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+  'password' => '',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011649s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '' [ RunTime:0.001193s ]
+---------------------------------------------------------------
+[ 2017-10-30T11:09:32+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.059007s][吞吐率：16.95req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:09:32+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.060209s][吞吐率：16.61req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:23:10+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.081760s][吞吐率：12.23req/s] [内存消耗：2,103.88kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:23:10+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.078599s][吞吐率：12.72req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:23:10+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.070306s][吞吐率：14.22req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:23:18+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.077481s][吞吐率：12.91req/s] [内存消耗：2,094.14kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '32',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'password' => '333333',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011124s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '1' [ RunTime:0.001197s ]
+---------------------------------------------------------------
+[ 2017-10-30T11:23:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.057999s][吞吐率：17.24req/s] [内存消耗：1,925.51kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:23:31+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.058499s][吞吐率：17.09req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:10+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.058213s][吞吐率：17.18req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:10+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.056629s][吞吐率：17.66req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:11+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.058442s][吞吐率：17.11req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:11+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.071825s][吞吐率：13.92req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.059417s][吞吐率：16.83req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:17+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.069668s][吞吐率：14.35req/s] [内存消耗：2,163.77kb] [文件加载：52]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'password' => '44444',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001738s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '1' [ RunTime:0.000956s ]
+---------------------------------------------------------------
+[ 2017-10-30T11:24:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess.html
+[ info ] www.tp7.com/index/login/loginsuccess.html [运行时间：0.062564s][吞吐率：15.98req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/check.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T11:24:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.087690s][吞吐率：11.40req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509285732; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.059209s][吞吐率：16.89req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:39+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.056639s][吞吐率：17.66req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.059565s][吞吐率：16.79req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:41+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.077207s][吞吐率：12.95req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:41+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.077977s][吞吐率：12.82req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T11:24:49+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.086828s][吞吐率：11.52req/s] [内存消耗：2,163.87kb] [文件加载：52]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1111111115',
+  'password' => '666666',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011999s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '1111111115' [ RunTime:0.000754s ]
+---------------------------------------------------------------
+[ 2017-10-30T11:24:53+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess.html
+[ info ] www.tp7.com/index/login/loginsuccess.html [运行时间：0.064208s][吞吐率：15.57req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/check.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T11:24:53+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.059850s][吞吐率：16.71req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333865',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/logout
+[ info ] www.tp7.com/index/login/logout [运行时间：0.081923s][吞吐率：12.21req/s] [内存消耗：1,937.74kb] [文件加载：48]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.061476s][吞吐率：16.27req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.064539s][吞吐率：15.49req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.070577s][吞吐率：14.17req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509332169; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.061391s][吞吐率：16.29req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509337573',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:58:04+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.092214s][吞吐率：10.84req/s] [内存消耗：2,104.29kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509337573',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:58:04+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.066880s][吞吐率：14.95req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509337573',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:58:04+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.073913s][吞吐率：13.53req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509337573',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:58:04+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.042731s][吞吐率：23.40req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:59:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.060769s][吞吐率：16.46req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:59:28+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.060651s][吞吐率：16.49req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T13:59:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.057610s][吞吐率：17.36req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:54:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.080358s][吞吐率：12.44req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:54:15+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.066820s][吞吐率：14.97req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:54:15+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.075733s][吞吐率：13.20req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509342974',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:54:15+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.046735s][吞吐率：21.40req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.082592s][吞吐率：12.11req/s] [内存消耗：2,104.29kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:06+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.101613s][吞吐率：9.84req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.069314s][吞吐率：14.43req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginSuccess.html
+[ info ] www.tp7.com/index/login/loginSuccess.html [运行时间：0.065893s][吞吐率：15.18req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginSuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T15:59:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.061310s][吞吐率：16.31req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509333894; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/logout
+[ info ] www.tp7.com/index/login/logout [运行时间：0.055840s][吞吐率：17.91req/s] [内存消耗：1,937.74kb] [文件加载：48]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.055086s][吞吐率：18.15req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.065428s][吞吐率：15.28req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.057777s][吞吐率：17.31req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T15:59:48+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginSuccess.html
+[ info ] www.tp7.com/index/login/loginSuccess.html [运行时间：0.063562s][吞吐率：15.73req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginSuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T15:59:48+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.071818s][吞吐率：13.92req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350363',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.081452s][吞吐率：12.28req/s] [内存消耗：2,104.04kb] [文件加载：49]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350389',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.070415s][吞吐率：14.20req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350389',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginSuccess.html
+[ info ] www.tp7.com/index/login/loginSuccess.html [运行时间：0.075976s][吞吐率：13.16req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginSuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350389',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T16:19:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.070920s][吞吐率：14.10req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509350389',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.057889s][吞吐率：17.27req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:24+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.059037s][吞吐率：16.94req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.058724s][吞吐率：17.03req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:25+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.059825s][吞吐率：16.72req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.066465s][吞吐率：15.05req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginSuccess.html
+[ info ] www.tp7.com/index/login/loginSuccess.html [运行时间：0.069073s][吞吐率：14.48req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginSuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T16:19:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.069582s][吞吐率：14.37req/s] [内存消耗：1,858.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351563',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/logout
+[ info ] www.tp7.com/index/login/logout [运行时间：0.061873s][吞吐率：16.16req/s] [内存消耗：1,937.74kb] [文件加载：48]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.059185s][吞吐率：16.90req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:29+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.069450s][吞吐率：14.40req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.064882s][吞吐率：15.41req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.061390s][吞吐率：16.29req/s] [内存消耗：1,926.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginSuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:31+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.086804s][吞吐率：11.52req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:31+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.058671s][吞吐率：17.04req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:48+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.108394s][吞吐率：9.23req/s] [内存消耗：2,163.87kb] [文件加载：52]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1111111115',
+  'password' => '666666',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003034s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '1111111115' [ RunTime:0.001335s ]
+---------------------------------------------------------------
+[ 2017-10-30T16:19:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess.html
+[ info ] www.tp7.com/index/login/loginsuccess.html [运行时间：0.065438s][吞吐率：15.28req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/check.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T16:19:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.060304s][吞吐率：16.58req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351568',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/logout
+[ info ] www.tp7.com/index/login/logout [运行时间：0.061363s][吞吐率：16.30req/s] [内存消耗：1,937.74kb] [文件加载：48]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/login.html
+[ info ] www.tp7.com/index/login/login.html [运行时间：0.059334s][吞吐率：16.85req/s] [内存消耗：1,925.92kb] [文件加载：47]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/src/jquery.
+[ info ] www.tp7.com/static/js/src/jquery. [运行时间：0.069510s][吞吐率：14.39req/s] [内存消耗：1,537.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'src',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:19:51+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ info ] www.tp7.com/captcha.html [运行时间：0.075883s][吞吐率：13.18req/s] [内存消耗：1,570.64kb] [文件加载：38]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Apache24\htdocs\GitHub\cccop1.0\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-30T16:20:14+08:00 ] 127.0.0.1 127.0.0.1 POST /index/login/check.html
+[ info ] www.tp7.com/index/login/check.html [运行时间：0.083502s][吞吐率：11.98req/s] [内存消耗：2,163.87kb] [文件加载：52]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://www.tp7.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2015025540',
+  'password' => '666666',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->check[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003226s ] mysql:dbname=db_cccop;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from cop_user WHERE id = '2015025540' [ RunTime:0.000745s ]
+---------------------------------------------------------------
+[ 2017-10-30T16:20:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/loginsuccess.html
+[ info ] www.tp7.com/index/login/loginsuccess.html [运行时间：0.061930s][吞吐率：16.15req/s] [内存消耗：1,966.29kb] [文件加载：50]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'loginsuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/check.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->loginSuccess[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\Apache24\htdocs\GitHub\cccop1.0\runtime\temp\61370c08eecdf9deeac9da6d6f8649b6.php:2]
+---------------------------------------------------------------
+[ 2017-10-30T16:20:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index/login/welcome.html
+[ info ] www.tp7.com/index/login/welcome.html [运行时间：0.058567s][吞吐率：17.07req/s] [内存消耗：1,859.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\Apache24\htdocs\GitHub\cccop1.0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.tp7.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.18 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.tp7.com/index/login/loginsuccess.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Huiskin=default; UM_distinctid=15efb0770fe4da-0b6788ecc45066-c303767-144000-15efb0770ff6d8; PHPSESSID=vqkeb95qv77e5r3gioclq8rn7g; Hm_lvt_080836300300be57b7f34f4b3e97d911=1507897348,1509265572; CNZZDATA155540=cnzz_eid%3D185202777-1507893728-%26ntime%3D1509348374; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1509351590',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Login->welcome[ D:\Apache24\htdocs\GitHub\cccop1.0\application\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
