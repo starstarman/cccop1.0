@@ -18,16 +18,16 @@
                 $(this).removeClass('h-light');
             });
 
-            $("#username").focus(function(){
-                var username = $(this).val();
-                if(username=='输入账号'){
+            $("#id").focus(function(){
+                var id = $(this).val();
+                if(id=='输入账号'){
                     $(this).val('');
                 }
             });
 
-            $("#username").focusout(function(){
-                var username = $(this).val();
-                if(username==''){
+            $("#id").focusout(function(){
+                var id = $(this).val();
+                if(id==''){
                     $(this).val('输入账号');
                 }
             });
@@ -97,14 +97,14 @@
             <div class="error-box"></div>
             <form class="registerform" action="{:url('login/check')}" method="post">
                 <div class="fm-item">
-                    <label for="logonId" class="form-label">系统登录：</label>
-                    <input type="text" name="username" value="" placeholder="用户名不能为空" id="username" class="i-text"/>
+                    <label for="logonId" class="form-label" >系统登录：</label>
+                    <input type="text" name="id" value="" placeholder="账号不能为空" id="id" class="i-text"/>
                     <!--<input type="username" value="输入账号" maxlength="100" id="username" class="i-text" ajaxurl="demo/valid.jsp"  datatype="s6-18" errormsg="用户名至少2个字符,最多18个字符！"  >-->
                     <div class="ui-form-explain"></div>
                 </div>
 
                 <div class="fm-item">
-                    <label for="logonId" class="form-label">登录密码：</label>
+                    <label for="logonId" class="form-label" >登录密码：</label>
                     <input type="password" name="password" id="password" placeholder="密码不能为空" class="i-text"/>
                     <!--<input type="password" value="输入密码" maxlength="100" id="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！">-->
                     <div class="ui-form-explain"></div>
@@ -150,8 +150,8 @@
 <link rel="stylesheet" href="__STATIC__/js/src/animate.min.css">
 <link rel="stylesheet" href="__STATIC__/js/src/jquery.gDialog.css">
 <script type="text/javascript">
-        /*$(".btn-login").click(function() {
-        layer.alert('即将进入系统', {
+        $(".btn-login").click(function() {
+        /*layer.alert('即将进入系统', {
              type: 0
              , skin: 'layui-layer-molv' //样式类名  自定义样式
              , closeBtn: 0    // 是否显示关闭按钮
@@ -172,12 +172,11 @@
              }
          });
      });*/
-         /*layer.confirm('is not?', function(index){
+         layer.confirm('is not?', function(index){
            window.location.href="loginSuccess.html";
 
-             layer.close(index);
          });
-     })*/
+     })
         /*$.gDialog.prompt("站长素材", "loginSuccess.html",{
                 title: "Prompt Dialog Box",
                 required: true,
@@ -205,23 +204,19 @@
         });
     });*/
          /*$(document).ready(function () {
-             $(".btn-login").click(function () {
+             $(".button-ok").click(function () {
                  var id = $(this).attr("title");
                  var oper = "check";
                  $.ajax({
-                     type: "post",
-                     url: "login.html",
-                     data:{name:"admin"},
-                     dataType: "Text",
                      success: function (data) {
                          location.href ='loginSuccess.html';
                      }
                  });
-             });
-         });*/
-        function check1(){
-            var name = document.getElementById("username").value;
-            if(name ==  null || name == ''){
+             });*/
+         //});
+       /* function check1(){
+            var id = document.getElementById("id").value;
+            if(id ==  null || id == ''){
                 alert("用户名不能为空");
                 return false;
             }
@@ -229,12 +224,12 @@
         }
         function check2(){
             var password = document.getElementById("password").value;
-            if(password ==  null || name == ''){
+            if(password ==  null || password == ''){
                 alert("密码不能为空");
                 return false;
             }
             return true;
-        }
+        }*/
 </script>
 </body>
 </html>

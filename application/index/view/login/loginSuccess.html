@@ -1,24 +1,12 @@
-<?php session_start();?>
+<?php session_start()?>
 <!--包含头部文件-->
 {include file="public/header" /}
 <body>
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
-        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">管理员</span>
+        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 2"}指导教师{elseif condition="$_SESSION['identity'] eq 3"}班主任{elseif condition="$_SESSION['identity'] eq 4"}主任{elseif condition="$_SESSION['identity'] eq 5"}辅导员{elseif condition="$_SESSION['identity'] eq 6"}书记{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}</span>
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
-            <nav class="nav navbar-nav">
-                <ul class="cl">
-                    <li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
-                        <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="javascript:;" onclick="m_article_add('添加公告','m_article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 公告</a></li>
-
-                            <li><a href="javascript:;" onclick="m_picture_add('添加表单','m_article-add1.html')"><i class="Hui-iconfont">&#xe613;</i> 表单</a></li>
-                            <li><a href="javascript:;" onclick="m_member_add('添加用户','m_member-a dd.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
                     <li class="dropDown dropDown_hover">
@@ -28,7 +16,7 @@
                         <a class="dropDown_A"><?php echo $_SESSION['username']?><i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-                            <li><a href="javascript:;" onClick="logout()">退&emsp;&emsp;出</a></li>
+                            <li><a href="logout">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
                     <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -49,7 +37,7 @@
 </header>
 <!--根据用户的不同将不同的aside进行遍历-->
 <aside class="Hui-aside">
-    {if condition="$_SESSION['username'] eq 'admin'"}
+    {if condition="$_SESSION['identity'] eq 0"}
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 审批事项管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -95,7 +83,7 @@
 
         </dl>
     </div>
-    {elseif condition="$_SESSION['username'] eq '教师'" /}
+    {elseif condition="($_SESSION['identity'] eq 2)OR ($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)" /}
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -127,7 +115,7 @@
             </dd>
         </dl>
     </div>
-    {elseif condition="$_SESSION['username'] eq '学生'" /}
+    {elseif condition="$_SESSION['identity'] eq 1" /}
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -230,7 +218,7 @@
     /*个人信息*/
     function logout() {
         layer.alert('点击确定跳转', function (index) {
-            window.location.href = 'login.html';
+            window.location.href = 'login';
         });
     }
     /*资讯-添加*/
