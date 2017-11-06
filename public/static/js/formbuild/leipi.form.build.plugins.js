@@ -10,6 +10,7 @@ LPB.plugins['text'] = function (active_component,leipiplugins) {
   $(popover).find("#orgname").val($(leipiplugins).attr("title"));
   $(popover).find("#orgvalue").val($(leipiplugins).val());
   $(popover).find("select.shenfen").val($(leipiplugins).attr("shenfen"));
+  $(popover).find("select.flow").val($(leipiplugins).attr("flow"));
   //右弹form  取消控件
   $(popover).delegate(".btn-danger", "click", function(e){
      
@@ -26,10 +27,11 @@ LPB.plugins['text'] = function (active_component,leipiplugins) {
       //给input 添加身份标签
       var shenfen=$("select.shenfen").val();
       $(leipiplugins).attr("shenfen", shenfen);
+      var flow=$("select.flow").val();
+      $(leipiplugins).attr("flow", flow);
       $.each(inputs, function(i,e){
           var attr_name = $(e).attr("id");//属性名称
           var attr_val = $(e).val();
-
           switch(attr_name)
           {
             //要break

@@ -64,8 +64,9 @@
     <div class="row clearfix">
         <div class="span6">
             <div class="clearfix">
-                <h2>我的表单
+                <h2>我的表单{$data}
                     <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+                    <button class='btn btn-info' id="tijiao2" type='submit'>提交2</button>
                     <button class='btn btn-info' id="set" type='submit'>设置审批流程</button>
                 </h2>
                 <hr>
@@ -122,6 +123,12 @@
         <option value='user_5'>指导教师</option>
         <option value='user_6'>系主任</option>
         <option value='user_7'>院长</option>
+      </select>
+      <label class='control-label'>双流程设置</label>
+      <select class='flow'>
+        <option value=''>请选择</option>
+        <option value='flowA'>流程A</option>
+        <option value='flowB'>流程B</option>
       </select>
       <hr/>
       <button class='btn btn-info' type='button'>确定</button><button class='btn btn-danger' type='button'>取消</button>
@@ -218,6 +225,15 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+        $('#tijiao2').click(function () {
+            var  content={
+                'test':'处理好的字符串',
+            };
+            var url="{:url('form/createForm')}";
+            // 抛送http
+            $.post(url,content,function (result) {
+            },"json");
+        });
 
         $('#tijiao').click(function () {
             var user_1='';
@@ -273,7 +289,7 @@
                 'user_6':user_6,
                 'user_7':user_7,
             };
-            var url="{:url('form/formSubmit')}";
+            var url="{:url('form/formSubmit',['test'=>$data])}";
             // 抛送http
             $.post(url,content,function (result) {
                 //逻辑
