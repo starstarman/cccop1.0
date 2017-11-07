@@ -53,6 +53,36 @@
         #source {
             min-height: 500px;
         }
+        .dropDown{display:inline-block}.dropDown_A{display:inline-block}
+        .dropDown-menu{ display:none;transition: all 0.3s ease 0s}
+        .dropDown:focus,.dropDown-menu:focus {outline:0}
+        .dropDown-menu li.arrow{ position:absolute;display:block; width:12px; height:8px; margin-top:-13px; margin-left:20%; line-height:0;background:url(../images/icon-jt.png) no-repeat 0 0}
+
+        /*鼠标经过	*/
+        .dropDown.hover.dropDown_A,.dropDown.open.dropDown_A{text-decoration:none;background-color:rgba(255,255,255,0.2)}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transform: rotate(180deg)}
+        .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
+        .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
+        .menu.box-shadow{border-top:none}
+        .menu > li{ position: relative; float: none;display:block}
+        .menu > li > a{ display: block;clear: both;border-bottom:solid 1px #f2f2f2;padding:6px 20px;text-align:left;line-height:1.5;font-weight: normal;white-space:nowrap}
+        .menu > li:last-child > a{ border-bottom:none}
+        .menu > li > a:hover,.menu > li > a:focus,.menu > li.open > a{ text-decoration:none;background-color:#fafafa}
+        .menu > li > a.arrow{ position:absolute; top:50%; margin-top:-10px; right:5px;line-height: 20px; height: 20px; color: #999}
+        .menu > li >.menu{ display: none}
+        .menu > li.open >.menu{ display: inline-block;position: absolute; left:100%;top:-1px;min-width:100%}
+        /*禁用菜单*/
+        .menu > li.disabled > a{color:#999;text-decoration:none; cursor:no-drop; background-color:transparent}
+        /*线条*/
+        .menu > li.divider{ display:block;height:0px; line-height:0px;margin:9px 0;overflow:hidden; border-top:solid 1px #eee}
+        /*打开菜单*/
+        .dropDown >.dropDown-menu{ display: none}
+        .dropDown.open{position:relative;z-index:990}
+        /*默认左对齐*/
+        .dropDown.open >.dropDown-menu{position:absolute;z-index:1000;display:inline-block;top:100%;left:-25px;min-width:100%;background-color:#fff;border:solid 1px #f2f2f2}
+        /*右对齐*/
+        .dropDown.open.right >.dropDown-menu{right:-1px!important;left:auto!important}
     </style>
     <!--link href="__STATIC__/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"-->
 
@@ -69,6 +99,12 @@
                     <button class='btn btn-info' id="tijiao2" type='submit'>提交2</button>
                     <button class='btn btn-info' id="set" type='submit'>设置审批流程</button>
                 </h2>
+                <span class="dropDown"> <a class="dropDown_A btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">点击菜单</a>
+	<ul class="dropDown-menu menu radius box-shadow">
+		<li><a href="#">菜单一</a></li>
+		<li><a href="#">菜单二</a></li>
+	</ul>
+</span>
                 <hr>
                 <div id="build">
                     <form id="target" class="form-horizontal">
