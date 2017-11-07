@@ -19,37 +19,30 @@
         var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
     <style>
-
         #components {
             min-height: 600px;
         }
-
         #target {
             min-height: 200px;
             border: 1px solid #ccc;
             padding: 5px;
         }
-
         #target .component {
             border: 1px solid #fff;
         }
-
         #temp {
             width: 500px;
             background: white;
             border: 1px dotted #ccc;
             border-radius: 10px;
         }
-
         .popover-content form {
             margin: 0 auto;
             width: 213px;
         }
-
         .popover-content form .btn {
             margin-right: 10px
         }
-
         #source {
             min-height: 500px;
         }
@@ -97,14 +90,15 @@
                 <h2>我的表单{$data}
                     <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
                     <button class='btn btn-info' id="tijiao2" type='submit'>提交2</button>
-                    <button class='btn btn-info' id="set" type='submit'>设置审批流程</button>
+                    <span class="dropDown"> <a class="dropDown_A btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批流程</a>
+	                    <ul class="dropDown-menu menu radius box-shadow">
+		                    <li><a href="#" id="set">单流程</a></li>
+		                    <li><a href="#" id="set1">双流程</a></li>
+	                    </ul>
+                    </span>
                 </h2>
-                <span class="dropDown"> <a class="dropDown_A btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">点击菜单</a>
-	<ul class="dropDown-menu menu radius box-shadow">
-		<li><a href="#">菜单一</a></li>
-		<li><a href="#">菜单二</a></li>
-	</ul>
-</span>
+
+
                 <hr>
                 <div id="build">
                     <form id="target" class="form-horizontal">
@@ -160,7 +154,7 @@
         <option value='user_6'>系主任</option>
         <option value='user_7'>院长</option>
       </select>
-      <label class='control-label'>双流程设置</label>
+      <label class='control-label'>流程设置（如是双流程请选择）</label>
       <select class='flow'>
         <option value=''>请选择</option>
         <option value='flowA'>流程A</option>
@@ -259,7 +253,6 @@
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript">
-
     $(document).ready(function () {
         $('#tijiao2').click(function () {
             var  content={
@@ -270,7 +263,6 @@
             $.post(url,content,function (result) {
             },"json");
         });
-
         $('#tijiao').click(function () {
             var user_1='';
             var user_2='';
@@ -280,12 +272,10 @@
             var user_6='';
             var user_7='';
 //            .control-group .controls .leipiplugins
-
             $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
                 if(value.getAttribute("shenfen")==="user_1")
                     user_1+=index+','
             });
-
             $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
                 if(value.getAttribute("shenfen")==="user_2")
                     user_2+=index+','
@@ -310,7 +300,6 @@
                 if(value.getAttribute("shenfen")==="user_7")
                     user_7+=index+','
             });
-
             //var length=$('fieldset').children().length-1;//获取提交的元素个数
             var contents= $('fieldset').html();           //获取整个表单的样式
             var formName=$('input[name="form_name"]').val();
@@ -336,13 +325,15 @@
 //              }
             },"json");
         });
-
         //管理员定义审批流程
+        //单流程弹窗
         $('#set').click(function () {
             //获取数据
             var str='';
             $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
-                str += $(this).attr("shenfen")+'/';
+                if($(this).attr("flow")==''){
+                    str += $(this).attr("shenfen")+'/';
+                }
             });
             var data_post={
                 'data_po':str,
@@ -369,6 +360,45 @@
             }
         });
 
+        //双流程弹窗
+        $('#set1').click(function () {
+            //获取数据
+            var str1='',str2='';
+            $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
+                if ($(this).attr("flow")=='flowA') {
+                    str1 += $(this).attr("shenfen") + '/';
+                }
+                else {
+                    if ($(this).attr("flow")=='flowB'){
+                        str2 += $(this).attr("shenfen") + '/';
+                    }
+                }
+            });
+            var data_post={
+                'data_po':str1,
+                'data_po2':str2,
+            };
+            //抛送逻辑
+            var url ="{:url('form/flow_d')}";
+            $.post(url,data_post,function (data) {
+                attrbut(data);
+            },"json");
+            //弹窗
+            function attrbut(re) {
+                var title = "请设置审批流程";
+                var index = layer.open({
+                    type: 1,
+                    title: title,
+                    offset:['10px','400px',],
+                    content: re
+                });
+                layer.style(index, {
+                    width: '370px',
+                    height:'550px',
+                });
+                layer(index);
+            }
+        });
     });
 </script>
 

@@ -6,103 +6,41 @@
     <style>
         *{ margin:0; padding:0; list-style:none;}
         body{ font-size:12px;}
-
-        #menu{width:360px; overflow:hidden; margin:2px auto;border:1px solid #BF9660;border-bottom: 0px;border-left: 0px;border-right: 0px}
-        #menu #nav {display:block;width:100%;padding:0;margin:0;list-style:none;}
-        #menu #nav li {float:left;width:120px;}
-        #menu #nav li a {display:block;line-height:27px;text-decoration:none;padding:0 0 0 5px; text-align:center; color:#333;}
-        #menu_con{ width:258px; border-top:none}
-        .tag{ padding:10px; overflow:hidden;}
-        .selected{background:#C5A069; color:#fff;}
     </style>
 </head>
 <body>
 
 <!--代码部分begin-->
 <div id="menu">
-    <!--tag标题-->
-    <ul id="nav">
-        <li><a href="#" class="selected">单流程</a></li>
-        <li><a href="#" class="">双流程</a></li>
-    </ul>
     <!--二级菜单-->
     <div id="menu_con">
         <div class="tag" style="display:block">
             <table class="table table-border table-bordered table-bg table-hover table-sort">
                 <thead>
                 <tr class="text-c">
-                    <th width="100">教师名称</th>
-                    <th width="30">审批顺序</th>
+                    <th width="150">教师名称</th>
+                    <th width="150">调整审批顺序</th>
                 </tr>
                 </thead>
                 <tbody>
                 {volist name='flow' id='vo'}
                 <tr class="text-c text-c2">
                     <td class="shenfen">{$vo}</td>
-                    <td class="text-c listorder"><input size="3" attr-id="4" class="list" name="listorder" value="{$key+1}"/></td>
+                    <td class="text-c listorder"><input  style="width:30px;" attr-id="4" class="list" name="listorder" value="{$key+1}"/></td>
                 </tr>
                 {/volist}
                 </tbody>
             </table>
         </div>
-        <div class="tag" style="display:none">
-
-        </div>
         <input type="submit" id="menu_sub" class="menu_sub2" name="提交"/>
     </div>
 </div>
 <script>
-    //Tab标签切换
-    var tabs=function(){
-        function tag(name,elem){
-            return (elem||document).getElementsByTagName(name);
-        }
-        //获得相应ID的元素
-        function id(name){
-            return document.getElementById(name);
-        }
-        function first(elem){
-            elem=elem.firstChild;
-            return elem&&elem.nodeType==1? elem:next(elem);
-        }
-        function next(elem){
-            do{
-                elem=elem.nextSibling;
-            }while(
-                elem&&elem.nodeType!=1
-                )
-            return elem;
-        }
-        return {
-            set:function(elemId,tabId){
-                var elem=tag("li",id(elemId));
-                var tabs=tag("div",id(tabId));
-                var listNum=elem.length;
-                var tabNum=tabs.length;
-                for(var i=0;i<listNum;i++){
-                    elem[i].onclick=(function(i){
-                        return function(){
-                            for(var j=0;j<tabNum;j++){
-                                if(i==j){
-                                    tabs[j].style.display="block";
-                                    //alert(elem[j].firstChild);
-                                    elem[j].firstChild.className="selected";
-                                }
-                                else{
-                                    tabs[j].style.display="none";
-                                    elem[j].firstChild.className="";
-                                }
-                            }
-                        }
-                    })(i)
-                }
-            }
-        }
-    }();
-    tabs.set("nav","menu_con");//执行
-
-    //排序处理
+    //审批流程的顺序设置
     $('.menu_sub2').click(function () {
+        //先判断单、双流程
+        var options=$('.selected').text();
+        //单流程的审批流程设置
         var str='';
         var conf=new Array();
         $('.text-c2').each(function (con) {
@@ -131,7 +69,6 @@
             }
         });
         alert(conf);
-
     });
 </script>
 <!--代码部分end-->
