@@ -124,4 +124,81 @@ class Form extends Controller
             'flow'=>$flow,
         ]);
     }
+
+    //双流程设置
+    public function flow_d(){
+        $data=input('param.');
+        $flow = explode('/',$data['data_po']);
+        $flow2 = explode('/',$data['data_po2']);
+        array_filter($flow);
+        array_filter($flow2);
+        //流程1
+        for($i=0;$i<count($flow);$i++){
+            //将接收到的数据进行转换
+            switch ($flow[$i]){
+                case 'user_1':
+                    $flow[$i]='学生';
+                    break;
+                case 'user_2':
+                    $flow[$i]='班主任';
+                    break;
+                case 'user_3':
+                    $flow[$i]='导员';
+                    break;
+                case 'user_4':
+                    $flow[$i]='书记';
+                    break;
+                case 'user_5':
+                    $flow[$i]='指导教师';
+                    break;
+                case 'user_6':
+                    $flow[$i]='系主任';
+                    break;
+                case 'user_7':
+                    $flow[$i]='院长';
+                    break;
+                case '':
+                    $flow[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow = array_filter($flow);
+        //流程2
+        for($i=0;$i<count($flow2);$i++){
+            //将接收到的数据进行转换
+            switch ($flow2[$i]){
+                case 'user_1':
+                    $flow2[$i]='学生';
+                    break;
+                case 'user_2':
+                    $flow2[$i]='班主任';
+                    break;
+                case 'user_3':
+                    $flow2[$i]='导员';
+                    break;
+                case 'user_4':
+                    $flow2[$i]='书记';
+                    break;
+                case 'user_5':
+                    $flow2[$i]='指导教师';
+                    break;
+                case 'user_6':
+                    $flow2[$i]='系主任';
+                    break;
+                case 'user_7':
+                    $flow2[$i]='院长';
+                    break;
+                case '':
+                    $flow2[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow2 = array_filter($flow2);
+        return $this->fetch('',[
+            'flow'=>$flow,
+            'flow2'=>$flow2,
+        ]);
+    }
 }
