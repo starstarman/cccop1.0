@@ -120,6 +120,7 @@ class Form extends Controller
         }
         //清除数组中为空的元素
         $flow = array_filter($flow);
+        $flow = array_unique($flow);
         return $this->fetch('',[
             'flow'=>$flow,
         ]);
@@ -164,6 +165,7 @@ class Form extends Controller
         }
         //清除数组中为空的元素
         $flow = array_filter($flow);
+        $flow = array_unique($flow);
         //流程2
         for($i=0;$i<count($flow2);$i++){
             //将接收到的数据进行转换
@@ -196,6 +198,8 @@ class Form extends Controller
         }
         //清除数组中为空的元素
         $flow2 = array_filter($flow2);
+        $flow2 = array_unique($flow2);
+
         return $this->fetch('',[
             'flow'=>$flow,
             'flow2'=>$flow2,
