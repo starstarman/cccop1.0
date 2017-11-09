@@ -332,7 +332,9 @@
             var str='';
             $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
                 if($(this).attr("flow")==''){
-                    str += $(this).attr("shenfen")+'/';
+                    if ($(this).attr("shenfen")!='user_1') {
+                        str += $(this).attr("shenfen") + '/';
+                    }
                 }
             });
             var data_post={
@@ -366,11 +368,13 @@
             var str1='',str2='';
             $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
                 if ($(this).attr("flow")=='flowA') {
-                    str1 += $(this).attr("shenfen") + '/';
+                    if ($(this).attr("shenfen")!='user_1'){
+                        str1 += $(this).attr("shenfen") + '/';
+                    }
                 }
-                else {
-                    if ($(this).attr("flow")=='flowB'){
-                        str2 += $(this).attr("shenfen") + '/';
+                else if ($(this).attr("flow")=='flowB'){
+                    if ($(this).attr("shenfen")!='user_1'){
+                    str2 += $(this).attr("shenfen") + '/';
                     }
                 }
             });
