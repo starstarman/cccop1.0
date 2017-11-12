@@ -48,31 +48,35 @@
             conf[str] = $(this).find(".shenfen").text();
             switch (conf[str]){
                 case '班主任':
-                    conf[str]=1;
-                    break;
-                case '导员':
-                    conf[str]=2;
-                    break;
-                case '书记':
                     conf[str]=3;
                     break;
-                case '指导教师':
-                    conf[str]=4;
-                    break;
-                case '系主任':
+                case '导员':
                     conf[str]=5;
                     break;
-                case '院长':
+                case '书记':
                     conf[str]=6;
+                    break;
+                case '指导教师':
+                    conf[str]=2;
+                    break;
+                case '系主任':
+                    conf[str]=4;
+                    break;
+                case '院长':
+                    conf[str]=7;
                     break;
 
             }
         });
         //需要保存到数据库的数据
         //conf 流程顺序
-        var flow='单流程';
-        alert(flow);
         alert(conf);
+        var flowurl="{:url('form/createFlow')}";
+        var content={
+            'singleflow':conf
+        };
+        $.post(flowurl,content,function (result) {
+        },"json");
     });
 </script>
 <!--代码部分end-->

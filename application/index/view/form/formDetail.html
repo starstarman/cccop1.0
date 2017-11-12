@@ -8,17 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="leipi.org">
     <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css"/>
-    <!--[if lte IE 6]>
-    <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/bootstrap-ie6.css?2024">
-    <![endif]-->
-    <!--[if lte IE 7]>
-    <link rel="stylesheet" type="text/css" href="__STATIC__/css/bootstrap/css/ie.css?2024">
-    <![endif]-->
     <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript">
-        var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
-    </script>
-
     <style>
 
         #components {
@@ -57,111 +47,145 @@
     </style>
 </head>
 <body>
+<button class='btn btn-info' id="" type='submit'>提交</button>
+    <span class="dropDown">
+        <a class="dropDown_A btn btn-info" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
+    </span>
 
-<fieldset>
-    {$html}
-</fieldset>
+    <fieldset>
+        {$html}
+    </fieldset>
 
 
 <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 <script type="text/javascript">
-  //刚进入页面就渲染js
-    $(document).ready(function () {
-        var identity={$identity};
-        switch (identity){
-            case 1:$("input[shenfen!='user_1']").attr("readonly",true);
-            break;
-            case 2:$("input[shenfen!='user_2']").attr("readonly",true);
-            break;
-            case 3:$("input[shenfen!='user_3']").attr("readonly",true);
-            break;
-            case 4:$("input[shenfen!='user_4']").attr("readonly",true);
-            break;
-            case 5:$("input[shenfen!='user_5']").attr("readonly",true);
-            break;
-            case 6:$("input[shenfen!='user_6']").attr("readonly",true);
-            break;
-            case 7:$("input[shenfen!='user_7']").attr("readonly",true);
-            break;
+    //刚进入页面就渲染js
+//    $(document).ready(function () {
+//        var identity={$identity};
+//        switch (identity){
+//            case 1:$("input[shenfen!='user_1']").attr("readonly",true);
+//                break;
+//            case 2:$("input[shenfen!='user_2']").attr("readonly",true);
+//                break;
+//            case 3:$("input[shenfen!='user_3']").attr("readonly",true);
+//                break;
+//            case 4:$("input[shenfen!='user_4']").attr("readonly",true);
+//                break;
+//            case 5:$("input[shenfen!='user_5']").attr("readonly",true);
+//                break;
+//            case 6:$("input[shenfen!='user_6']").attr("readonly",true);
+//                break;
+//            case 7:$("input[shenfen!='user_7']").attr("readonly",true);
+//                break;
+//        }
+//
+//        //给input 添加value 属性
+//        $("input").blur(function () {
+//            $(this).attr("value",$(this).val());
+//        });
+//
+//        $('#tijiao').click(function () {
+//            var user_1='';
+//            var user_2='';
+//            var user_3='';
+//            var user_4='';
+//            var user_5='';
+//            var user_6='';
+//            var user_7='';
+////            .control-group .controls .leipiplugins
+//
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_1")
+//                    user_1+=index+','
+//            });
+//
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_2")
+//                    user_2+=index+','
+//            });
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_3")
+//                    user_3+=index+','
+//            });
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_4")
+//                    user_4+=index+','
+//            });
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_5")
+//                    user_5+=index+','
+//            });
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_6")
+//                    user_6+=index+','
+//            });
+//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
+//                if(value.getAttribute("shenfen")==="user_7")
+//                    user_7+=index+','
+//            });
+//
+//            //var length=$('fieldset').children().length-1;//获取提交的元素个数
+//            var contents= $('fieldset').html();           //获取整个表单的样式
+//            var formName=$('input[name="form_name"]').val();
+//            var f_id={$f_id};
+//            var  content={
+//                'f_id':f_id,
+//                'html':contents,
+//                'formName':formName,
+//                'user_1':user_1,
+//                'user_2':user_2,
+//                'user_3':user_3,
+//                'user_4':user_4,
+//                'user_5':user_5,
+//                'user_6':user_6,
+//                'user_7':user_7,
+//            };
+//            var url="{:url('form/studentformSubmit')}";
+//            // 抛送http
+//            $.post(url,content,function (result) {
+//                //逻辑
+////              if(result.code==1){
+////                  location.href=result.data;
+////              }else{
+////                  alert(result.msg);
+////              }
+//            },"json");
+//        });
+//    });
+    $('#set').click(function () {
+        var str='';
+        $("fieldset").find(".control-group .controls .leipiplugins").each(function (index,data) {
+                if ($(this).attr("shenfen")!='user_1') {
+                    str += $(this).attr("shenfen") + '/';
+                }
+        });
+
+        alert(str);
+        var url='{:url('form/findTeacher')}';
+        var data={
+            'data_po':str,
+        };
+        $.post(url,data,function (data) {
+            attrbut(data);
+        });
+        function attrbut(re) {
+            var title = "请设置审批人员";
+            var index = layer.open({
+                type: 1,
+                title: title,
+                offset:['10px','400px',],
+                content:re
+            });
+            layer.style(index, {
+                width: '370px',
+                height:'550px',
+            });
+            layer(index);
         }
-
-        //给input 添加value 属性
-        $("input").blur(function () {
-          $(this).attr("value",$(this).val());
-        });
-
-        $('#tijiao').click(function () {
-            var user_1='';
-            var user_2='';
-            var user_3='';
-            var user_4='';
-            var user_5='';
-            var user_6='';
-            var user_7='';
-//            .control-group .controls .leipiplugins
-
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_1")
-                    user_1+=index+','
-            });
-
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_2")
-                    user_2+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_3")
-                    user_3+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_4")
-                    user_4+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_5")
-                    user_5+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_6")
-                    user_6+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_7")
-                    user_7+=index+','
-            });
-
-            //var length=$('fieldset').children().length-1;//获取提交的元素个数
-            var contents= $('fieldset').html();           //获取整个表单的样式
-            var formName=$('input[name="form_name"]').val();
-            var f_id={$f_id};
-            var  content={
-                'f_id':f_id,
-                'html':contents,
-                'formName':formName,
-                'user_1':user_1,
-                'user_2':user_2,
-                'user_3':user_3,
-                'user_4':user_4,
-                'user_5':user_5,
-                'user_6':user_6,
-                'user_7':user_7,
-            };
-            var url="{:url('form/studentformSubmit')}";
-            // 抛送http
-            $.post(url,content,function (result) {
-                //逻辑
-//              if(result.code==1){
-//                  location.href=result.data;
-//              }else{
-//                  alert(result.msg);
-//              }
-            },"json");
-        });
     });
-
 </script>
 
-
-</body>
-</html>

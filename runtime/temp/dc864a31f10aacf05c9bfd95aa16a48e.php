@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1508938817;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1510210548;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,42 +19,64 @@
     <script type="text/javascript">
         var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
-
     <style>
-
         #components {
             min-height: 600px;
         }
-
         #target {
             min-height: 200px;
             border: 1px solid #ccc;
             padding: 5px;
         }
-
         #target .component {
             border: 1px solid #fff;
         }
-
         #temp {
             width: 500px;
             background: white;
             border: 1px dotted #ccc;
             border-radius: 10px;
         }
-
         .popover-content form {
             margin: 0 auto;
             width: 213px;
         }
-
         .popover-content form .btn {
             margin-right: 10px
         }
-
         #source {
             min-height: 500px;
         }
+        .dropDown{display:inline-block}.dropDown_A{display:inline-block}
+        .dropDown-menu{ display:none;transition: all 0.3s ease 0s}
+        .dropDown:focus,.dropDown-menu:focus {outline:0}
+        .dropDown-menu li.arrow{ position:absolute;display:block; width:12px; height:8px; margin-top:-13px; margin-left:20%; line-height:0;background:url(../images/icon-jt.png) no-repeat 0 0}
+
+        /*鼠标经过	*/
+        .dropDown.hover.dropDown_A,.dropDown.open.dropDown_A{text-decoration:none;background-color:rgba(255,255,255,0.2)}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transform: rotate(180deg)}
+        .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
+        .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
+        .menu.box-shadow{border-top:none}
+        .menu > li{ position: relative; float: none;display:block}
+        .menu > li > a{ display: block;clear: both;border-bottom:solid 1px #f2f2f2;padding:6px 20px;text-align:left;line-height:1.5;font-weight: normal;white-space:nowrap}
+        .menu > li:last-child > a{ border-bottom:none}
+        .menu > li > a:hover,.menu > li > a:focus,.menu > li.open > a{ text-decoration:none;background-color:#fafafa}
+        .menu > li > a.arrow{ position:absolute; top:50%; margin-top:-10px; right:5px;line-height: 20px; height: 20px; color: #999}
+        .menu > li >.menu{ display: none}
+        .menu > li.open >.menu{ display: inline-block;position: absolute; left:100%;top:-1px;min-width:100%}
+        /*禁用菜单*/
+        .menu > li.disabled > a{color:#999;text-decoration:none; cursor:no-drop; background-color:transparent}
+        /*线条*/
+        .menu > li.divider{ display:block;height:0px; line-height:0px;margin:9px 0;overflow:hidden; border-top:solid 1px #eee}
+        /*打开菜单*/
+        .dropDown >.dropDown-menu{ display: none}
+        .dropDown.open{position:relative;z-index:990}
+        /*默认左对齐*/
+        .dropDown.open >.dropDown-menu{position:absolute;z-index:1000;display:inline-block;top:100%;left:-25px;min-width:100%;background-color:#fff;border:solid 1px #f2f2f2}
+        /*右对齐*/
+        .dropDown.open.right >.dropDown-menu{right:-1px!important;left:auto!important}
     </style>
     <!--link href="__STATIC__/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"-->
 
@@ -66,10 +88,17 @@
     <div class="row clearfix">
         <div class="span6">
             <div class="clearfix">
-                <h2>我的表单
+                <h2>我的表单<?php echo $data; ?>
                     <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
-                    <button class='btn btn-info' id="set" type='submit'>设置审批流程</button>
+                    <span class="dropDown"> <a class="dropDown_A btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批流程</a>
+	                    <ul class="dropDown-menu menu radius box-shadow">
+		                    <li style="font-size: 18px"><a href="#" id="set">单流程</a></li>
+		                    <li style="font-size: 18px"><a href="#" id="set1">双流程</a></li>
+	                    </ul>
+                    </span>
                 </h2>
+
+
                 <hr>
                 <div id="build">
                     <form id="target" class="form-horizontal">
@@ -124,6 +153,12 @@
         <option value='user_5'>指导教师</option>
         <option value='user_6'>系主任</option>
         <option value='user_7'>院长</option>
+      </select>
+      <label class='control-label'>流程设置（如是双流程请选择）</label>
+      <select class='flow'>
+        <option value=''>请选择</option>
+        <option value='flowA'>流程A</option>
+        <option value='flowB'>流程B</option>
       </select>
       <hr/>
       <button class='btn btn-info' type='button'>确定</button><button class='btn btn-danger' type='button'>取消</button>
@@ -218,9 +253,7 @@
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/formbuild/leipi.form.build.plugins.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript">
-
     $(document).ready(function () {
-
         $('#tijiao').click(function () {
             var user_1='';
             var user_2='';
@@ -230,12 +263,10 @@
             var user_6='';
             var user_7='';
 //            .control-group .controls .leipiplugins
-
             $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
                 if(value.getAttribute("shenfen")==="user_1")
                     user_1+=index+','
             });
-
             $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
                 if(value.getAttribute("shenfen")==="user_2")
                     user_2+=index+','
@@ -260,7 +291,6 @@
                 if(value.getAttribute("shenfen")==="user_7")
                     user_7+=index+','
             });
-
             //var length=$('fieldset').children().length-1;//获取提交的元素个数
             var contents= $('fieldset').html();           //获取整个表单的样式
             var formName=$('input[name="form_name"]').val();
@@ -275,7 +305,7 @@
                 'user_6':user_6,
                 'user_7':user_7,
             };
-            var url="<?php echo url('form/formSubmit'); ?>";
+            var url="<?php echo url('form/formSubmit',['test'=>$data]); ?>";
             // 抛送http
             $.post(url,content,function (result) {
                 //逻辑
@@ -286,13 +316,17 @@
 //              }
             },"json");
         });
-
         //管理员定义审批流程
+        //单流程弹窗
         $('#set').click(function () {
             //获取数据
             var str='';
             $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
-                str += $(this).attr("shenfen")+'/';
+                if($(this).attr("flow")==''){
+                    if ($(this).attr("shenfen")!='user_1') {
+                        str += $(this).attr("shenfen") + '/';
+                    }
+                }
             });
             var data_post={
                 'data_po':str,
@@ -319,6 +353,47 @@
             }
         });
 
+        //双流程弹窗
+        $('#set1').click(function () {
+            //获取数据
+            var str1='',str2='';
+            $("#build").find(".control-group .controls .leipiplugins").each(function (index,data) {
+                if ($(this).attr("flow")=='flowA') {
+                    if ($(this).attr("shenfen")!='user_1'){
+                        str1 += $(this).attr("shenfen") + '/';
+                    }
+                }
+                else if ($(this).attr("flow")=='flowB'){
+                    if ($(this).attr("shenfen")!='user_1'){
+                    str2 += $(this).attr("shenfen") + '/';
+                    }
+                }
+            });
+            var data_post={
+                'data_po':str1,
+                'data_po2':str2,
+            };
+            //抛送逻辑
+            var url ="<?php echo url('form/flow_d'); ?>";
+            $.post(url,data_post,function (data) {
+                attrbut(data);
+            },"json");
+            //弹窗
+            function attrbut(re) {
+                var title = "请设置审批流程";
+                var index = layer.open({
+                    type: 1,
+                    title: title,
+                    offset:['10px','400px',],
+                    content: re
+                });
+                layer.style(index, {
+                    width: '370px',
+                    height:'550px',
+                });
+                layer(index);
+            }
+        });
     });
 </script>
 

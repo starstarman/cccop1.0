@@ -89,11 +89,10 @@
             <div class="clearfix">
                 <h2>我的表单{$data}
                     <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
-                    <button class='btn btn-info' id="tijiao2" type='submit'>提交2</button>
                     <span class="dropDown"> <a class="dropDown_A btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批流程</a>
 	                    <ul class="dropDown-menu menu radius box-shadow">
-		                    <li><a href="#" id="set">单流程</a></li>
-		                    <li><a href="#" id="set1">双流程</a></li>
+		                    <li style="font-size: 18px"><a href="#" id="set">单流程</a></li>
+		                    <li style="font-size: 18px"><a href="#" id="set1">双流程</a></li>
 	                    </ul>
                     </span>
                 </h2>
@@ -254,15 +253,6 @@
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#tijiao2').click(function () {
-            var  content={
-                'test':'处理好的字符串',
-            };
-            var url="{:url('form/createForm')}";
-            // 抛送http
-            $.post(url,content,function (result) {
-            },"json");
-        });
         $('#tijiao').click(function () {
             var user_1='';
             var user_2='';

@@ -151,7 +151,7 @@
 <link rel="stylesheet" href="__STATIC__/js/src/jquery.gDialog.css">
 <script type="text/javascript">
         $(".btn-login").click(function() {
-        /*layer.alert('即将进入系统', {
+        layer.alert('即将进入系统', {
              type: 0
              , skin: 'layui-layer-molv' //样式类名  自定义样式
              , closeBtn: 0    // 是否显示关闭按钮
@@ -171,12 +171,12 @@
 
              }
          });
-     });*/
-         layer.confirm('is not?', function(index){
+     });
+         /*layer.confirm('is not?', function(index){
            window.location.href="loginSuccess.html";
 
          });
-     })
+     })*/
         /*$.gDialog.prompt("站长素材", "loginSuccess.html",{
                 title: "Prompt Dialog Box",
                 required: true,
@@ -189,20 +189,20 @@
         animateOut: "bounceOut"
     });
 });*/
-        /*$.gDialog.confirm("Are you Sure?", {
-            title: "Confirm Dialog Box",
-            animateIn : "bounceInDown",
-            animateOut: "bounceOutUp",
-            buttons: {
-                "Ok": function () {
-                    $(this).dialog('close');
-                },
-                "Cancel": function () {
-                    $(this).dialog('close');
-                }
-            }
-        });
-    });*/
+//        $.gDialog.confirm("Are you Sure?", {
+//            title: "Confirm Dialog Box",
+//            animateIn : "bounceInDown",
+//            animateOut: "bounceOutUp",
+//            buttons: {
+//                "Ok": function () {
+//                    $(this).dialog('close');
+//                },
+//                "Cancel": function () {
+//                    $(this).dialog('close');
+//                }
+//            }
+//        });
+//    });
          /*$(document).ready(function () {
              $(".button-ok").click(function () {
                  var id = $(this).attr("title");

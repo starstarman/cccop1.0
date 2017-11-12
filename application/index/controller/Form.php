@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-
+use think\Cache;
 class Form extends Controller
 {
     public function formManage()
@@ -11,19 +11,36 @@ class Form extends Controller
             'test'=>$test
         ]);
     }
-
+    public function createFlow(){
+        $data=input('param.');
+        print_r($data);
+        Cache::set('singleflow',$data['singleflow'],3600);
+    }
     public function createForm()
     {
+//        $data=input('param.');
+//        if (!empty($data)){
+//            print_r($data);
+//            Cache::set('singleflow',$data['test'],3600);
+//        }else{
+//            return $this->fetch();
+//        }
         return $this->fetch();
     }
 
     public function formSubmit(){
-        //获取提交表单的内容
+        //获取缓存的流程
+        $flow=Cache::get('singleflow');
+        //处理流程
+        $flows=array_splice($flow,1);
+        $flows=implode(",",$flows);
         $data=input('param.');
+        print_r($data);
         $content=[
             'id'=>'',
             'formName'=>$data['formName'],
             'html'=>$data['html'],
+            'single'=>$flows,
             'user_1'=>$data['user_1'],
             'user_2'=>$data['user_2'],
             'user_3'=>$data['user_3'],
@@ -31,6 +48,7 @@ class Form extends Controller
             'user_5'=>$data['user_5'],
             'user_6'=>$data['user_6'],
             'user_7'=>$data['user_7'],
+
         ];
         model('Adminform')->save($content);
     }
@@ -203,6 +221,53 @@ class Form extends Controller
         return $this->fetch('',[
             'flow'=>$flow,
             'flow2'=>$flow2,
+        ]);
+    }
+
+    /*
+     * 学生选择老师
+     */
+    public function findTeacher(){
+        $data=input('param.');
+        $flow = explode('/',$data['data_po']);
+        $flow = array_unique($flow);
+        $flow = array_filter($flow);
+        print_r($flow);
+        die();
+        for($i=0;$i<count($flow);$i++){
+            //将接收到的数据进行转换
+            switch ($flow[$i]){
+                case 'user_1':
+                    $flow[$i]='学生';
+                    break;
+                case 'user_2':
+                    $flow[$i]='班主任';
+                    break;
+                case 'user_3':
+                    $flow[$i]='导员';
+                    break;
+                case 'user_4':
+                    $flow[$i]='书记';
+                    break;
+                case 'user_5':
+                    $flow[$i]='指导教师';
+                    break;
+                case 'user_6':
+                    $flow[$i]='系主任';
+                    break;
+                case 'user_7':
+                    $flow[$i]='院长';
+                    break;
+                case '':
+                    $flow[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow = array_filter($flow);
+        $flow = array_unique($flow);
+        return $this->fetch('',[
+            'flow'=>$flow,
         ]);
     }
 }
