@@ -47,10 +47,7 @@
     </style>
 </head>
 <body>
-<button class='btn btn-info' id="" type='submit'>提交</button>
-    <span class="dropDown">
-        <a class="dropDown_A btn btn-info" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
-    </span>
+
 
     <fieldset>
         {$html}
@@ -58,6 +55,9 @@
 
 
 <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+    <span class="dropDown">
+        <a class="dropDown_A btn btn-info" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
+    </span>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
@@ -156,18 +156,34 @@
 //            },"json");
 //        });
 //    });
+
+    $('#tijiao').click(function () {
+        var contents= $('fieldset').html();
+        var formName=$('input[name="form_name"]').val();
+        var f_id={$f_id};
+        var url="{:url('form/studentSub')}";
+        var data={
+            'f_id':f_id,
+            'html':contents,
+            'formName':formName
+        };
+        $.post(url,data,function () {
+
+        });
+    });
     $('#set').click(function () {
         var str='';
+        var f_id={$f_id};
         $("fieldset").find(".control-group .controls .leipiplugins").each(function (index,data) {
                 if ($(this).attr("shenfen")!='user_1') {
                     str += $(this).attr("shenfen") + '/';
                 }
         });
 
-        alert(str);
         var url='{:url('form/findTeacher')}';
         var data={
             'data_po':str,
+            'f_id':f_id,
         };
         $.post(url,data,function (data) {
             attrbut(data);
@@ -184,7 +200,6 @@
                 width: '370px',
                 height:'550px',
             });
-            layer(index);
         }
     });
 </script>

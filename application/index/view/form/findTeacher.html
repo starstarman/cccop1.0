@@ -23,18 +23,87 @@
                 </tr>
                 </thead>
                 <tbody>
-
+                {volist name="flow" id="vo"}
                 <tr class="text-c text-c2">
-                    <td class="shenfen"></td>
-                    <td class="text-c listorder"><input  style="width:30px;" attr-id="4" class="list" name="listorder" value=""/></td>
+                    <td class="shenfen">{$vo}</td>
+                    <input type="hidden" class="identity" value="{$identity[$key]}">
+                    <td class="text-c listorder">
+                        <select style="width:120px;" >
+                            <option value ="" >请选择</option>
+                            <option value ="" ></option>
+                            <option value ="" ></option>
+                            <option value ="" ></option>
+                            <option value ="" ></option>
+                            <option value ="" ></option>
+                        </select>
+                    </td>
                 </tr>
+                {/volist}
                 </tbody>
             </table>
         </div>
-        <input type="submit" id="menu_sub" class="menu_sub2" name="提交"/>
+        <input type="submit" id="sub" class="menu_sub2" name="提交"/>
     </div>
 </div>
 <!--代码部分end-->
+<script type="text/javascript">
+    //点击select动态添加数据
+    $('select').click(function () {
+        //获取选中人员的身份
+        var sel=$(this);
+       var identity=$(this).parent().siblings('input').val();
+       var url='{:url('form/selectIdentity')}';
+       //抛送要查询人员的identity
+        var data={
+          'identity':identity,
+        };
+       $.post(url,data,function (result) {
+           if(result.status==1){
+            user=result.data;
+               select_html = " <option value =\"\">请选择</option>";
+               $(user).each(function(i){
+                   select_html += "<option value='"+this.id+"'>"+this.username+"</option>";
+               });
+               //清空并向里添加html
+               sel.html(select_html);
+               console.log('nihao');
+           }
+       },'json');
+    });
+    //当点击option时取消select绑定的事件
+    $('select').change(function () {
+        $(this).unbind("click");
 
+    });
+    //提交数据
+    $('#sub').click(function () {
+        //表单的id
+        var f_id={$f_id};
+        var id_str='';
+        var ident_str='';
+        //处理老师的id将其传给后台
+        $('select').each(function (i) {
+           id_str+=$(this).val()+',';
+        });
+        //处理identity 将其拼接传给后台
+        $("input[class='identity']").each(function () {
+            ident_str+='f'+$(this).val()+',';
+        });
+
+        //后台提交选择的老师
+
+        var url="{:url('form/subTeacher')}";
+        var data={
+            'f_id':f_id,
+            'id_str':id_str,
+            'ident_str':ident_str
+        };
+
+        $.post(url,data,function (result) {
+
+        });
+
+    });
+</script>
 </body>
 </html>

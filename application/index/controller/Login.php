@@ -38,6 +38,7 @@ class Login extends Base
                     foreach ($result as $ret) {
                         $_SESSION['username']=$ret['username'];
                         $_SESSION['identity']=$ret['identity'];
+                        session('id',$ret['id']);
                     }
                     //session('userinfo', $result, 'index');
                     //进行密码验证
