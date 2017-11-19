@@ -88,14 +88,15 @@ class Form extends Controller
         $userinfo=session('userinfo','','index');
         $s_id=$userinfo[0]['id'];
         $identity=$userinfo[0]['identity'];
+        $s_id=session('id');
         //去总表查询是否有表单   如果没有去管理员表单填写
         $data=[
             'f_id'=>$f_id,
             's_id'=>$s_id,
         ];
-        $result=model('Form')->where($data)->select();
-        if (!empty($result)){
-            echo '这里有数据';
+        $data=model('Form')->where($data)->select();
+        if (!empty($data)){
+
         }else{
             $data=model('Adminform')->where('id',$f_id)->select();
         }
@@ -340,14 +341,20 @@ class Form extends Controller
      */
     public function studentSub($f_id){
         $data=input('param.');
-        print_r($data);
-        die();
         $s_id=session('id');
+        //将所需要的数据存入总Form
+        $formData=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id,
+            'html'=>$data['html'],
+            'formName'=>$data['formName'],
+        ];
+        model('form')->allowField(true)->save($formData);
+        //找到第一个转发的对象
         $where=[
             'f_id'=>$f_id,
-            's_id'=>$s_id
+            's_id'=>$s_id,
         ];
-        //找到第一个转发的对象
         $single=model('findteacher')->where($where)->column('single');
         $single=explode(',',$single[0]);
         //拼接查找的字段
@@ -362,6 +369,7 @@ class Form extends Controller
             'to'  =>$identity[0],
             'status'=>1
         ];
+        print_r($data);
         $result=model('log')->save($data);
     }
 
@@ -371,8 +379,28 @@ class Form extends Controller
     public function formshow(){
         $id=session('id');
         $data=model('log')->where('to',$id)->select();
-        print_r($data[0]['s_id']);
-        die();
-        return $this->fetch();
+//        print_r($data[0]['s_id']);
+//        die();
+        $result=Db::view('user','id,username')
+            ->view('log','s_id,status','log.s_id=user.id')
+            ->view('adminform','id,formName','log.f_id=adminform.id')
+            ->where('status','=',1)
+            ->select();
+        print_r($result);
+        return $this->fetch('',[
+            'data'=>$result
+        ]);
+    }
+
+    /**
+     * 进入审批流程
+     */
+    public function spflow(){
+        $data=input('param.');
+        $result=model('form')->where($data)->select();
+
+        return $this->fetch('',[
+            'html'=>$result[0]['html']
+        ]);
     }
 }
