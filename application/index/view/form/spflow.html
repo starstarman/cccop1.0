@@ -46,13 +46,13 @@
 </head>
 <body>
 
-
+    {$f_id}{$s_id}
     <fieldset>
         {$html}
     </fieldset>
 
 
-<button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+<button class='btn btn-info' id="sub" type='submit'>提交</button>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
@@ -152,51 +152,34 @@
 //        });
 //    });
 
-    $('#tijiao').click(function () {
+    /**
+     * 两步骤
+     * 第一步：把内容保存到改学生的html中
+     * 第二部：把log中的状态设置0，然后转发给下一个老师
+     */
+    $('#sub').click(function () {
 
-        var contents= $('fieldset').html();
-        var formName=$('input[name="form_name"]').val();
-        var f_id={$f_id};
-        var url="{:url('form/studentSub')}";
+        var url="{:url('form/addForm')}";
+        var html=$('fieldset').html();
         var data={
-            'f_id':f_id,
-            'html':contents,
-            'formName':formName
+            'f_id':{$f_id},
+            's_id':{$s_id},
+            'html':html
         };
-        $.post(url,data,function () {
-
-        });
-    });
-    $('#set').click(function () {
-        var str='';
-        var f_id={$f_id};
-        $("fieldset").find(".control-group .controls .leipiplugins").each(function (index,data) {
-                if ($(this).attr("shenfen")!='user_1') {
-                    str += $(this).attr("shenfen") + '/';
+        $.post(url,data,function (result) {
+            if(result.status=1){
+                var url2="{:url('form/relay')}";
+                var data2={
+                    'f_id':{$f_id},
+                    's_id':{$s_id},
                 }
+                $.post(url2,data2,function () {
+                    
+                })
+            }
         });
 
-        var url='{:url('form/findTeacher')}';
-        var data={
-            'data_po':str,
-            'f_id':f_id,
-        };
-        $.post(url,data,function (data) {
-            attrbut(data);
-        });
-        function attrbut(re) {
-            var title = "请设置审批人员";
-            var index = layer.open({
-                type: 1,
-                title: title,
-                offset:['10px','400px',],
-                content:re
-            });
-            layer.style(index, {
-                width: '370px',
-                height:'550px',
-            });
-        }
+
     });
 </script>
 

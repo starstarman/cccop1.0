@@ -133,22 +133,22 @@
                 conf1[str] = $(this).find(".shenfen").text();
                 switch (conf1[str]) {
                     case '班主任':
-                        conf1[str] = 1;
-                        break;
-                    case '导员':
                         conf1[str] = 2;
                         break;
-                    case '书记':
+                    case '导员':
                         conf1[str] = 3;
                         break;
-                    case '指导教师':
+                    case '书记':
                         conf1[str] = 4;
                         break;
-                    case '系主任':
+                    case '指导教师':
                         conf1[str] = 5;
                         break;
-                    case '院长':
+                    case '系主任':
                         conf1[str] = 6;
+                        break;
+                    case '院长':
+                        conf1[str] = 7;
                         break;
 
                 }
@@ -160,31 +160,37 @@
                 conf[str] = $(this).find(".shenfen").text();
                 switch (conf[str]) {
                     case '班主任':
-                        conf[str] = 1;
-                        break;
-                    case '导员':
                         conf[str] = 2;
                         break;
-                    case '书记':
+                    case '导员':
                         conf[str] = 3;
                         break;
-                    case '指导教师':
+                    case '书记':
                         conf[str] = 4;
                         break;
-                    case '系主任':
+                    case '指导教师':
                         conf[str] = 5;
                         break;
-                    case '院长':
+                    case '系主任':
                         conf[str] = 6;
+                        break;
+                    case '院长':
+                        conf[str] = 7;
                         break;
 
                 }
             });
         //需要保存到数据库的数据
         //conf 流程1 conf1流程二 flow单双流程的判断
-        var flow='双流程';
-        alert(flow);
-        alert(conf+conf1);
+        var url="{:url('form/createFlow')}";
+        var data={
+            'double':1,
+            'singleflow':conf,
+            'coupleflow':conf1
+        };
+        $.post(url,data,function () {
+
+        });
     });
 </script>
 <!--代码部分end-->

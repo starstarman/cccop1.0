@@ -6,6 +6,14 @@
     <style>
         *{ margin:0; padding:0; list-style:none;}
         body{ font-size:12px;}
+
+        #menu{width:360px; overflow:hidden; margin:2px auto;border:1px solid #BF9660;border-bottom: 0px;border-left: 0px;border-right: 0px}
+        #menu #nav {display:block;width:100%;padding:0;margin:0;list-style:none;}
+        #menu #nav li {float:left;width:120px;}
+        #menu #nav li a {display:block;line-height:27px;text-decoration:none;padding:0 0 0 5px; text-align:center; color:#333;}
+        #menu_con{ width:258px; border-top:none}
+        .tag{ padding:10px; overflow:hidden;}
+        .selected{background:#C5A069; color:#fff;}
     </style>
 </head>
 <body>
@@ -32,7 +40,7 @@
                 </tbody>
             </table>
         </div>
-        <input type="submit" id="menu_sub" class="menu_sub2" name="提交"/>
+        <input type="submit" id="menu_sub" class="menu_sub2 " name="提交"/>
     </div>
 </div>
 <script>
@@ -73,7 +81,8 @@
         alert(conf);
         var flowurl="{:url('form/createFlow')}";
         var content={
-            'singleflow':conf
+            'singleflow':conf,
+            'double':0
         };
         $.post(flowurl,content,function (result) {
         },"json");

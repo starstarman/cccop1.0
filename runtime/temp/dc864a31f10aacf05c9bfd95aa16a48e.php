@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1510993308;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1511869409;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,6 +20,7 @@
         var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
     <style>
+
         #components {
             min-height: 600px;
         }
@@ -77,6 +78,19 @@
         .dropDown.open >.dropDown-menu{position:absolute;z-index:1000;display:inline-block;top:100%;left:-25px;min-width:100%;background-color:#fff;border:solid 1px #f2f2f2}
         /*右对齐*/
         .dropDown.open.right >.dropDown-menu{right:-1px!important;left:auto!important}
+        .span1-4{
+            width: 235px;
+        }
+        .span1-5{
+            width: 1000px;
+        }
+        .span1-5 textarea{
+            height: 50px;
+            width: 980px;
+        }
+        .span1-6{
+            width: 480px;
+        }
     </style>
     <!--link href="__STATIC__/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"-->
 
@@ -115,7 +129,7 @@
                             >
                                 <input type="hidden" name="form_name" value="" class="leipiplugins"
                                        leipiplugins="form_name" shibie=""/>
-                                <legend class="leipiplugins-orgvalue">点击填写表单名</legend>
+                                <legend class="title1 leipiplugins-orgvalue">点击填写表单名</legend>
                             </div>
                         </fieldset>
                     </form>
@@ -137,7 +151,7 @@
                             <div class="tab-pane active" id="1">
 
                                 <!-- Text start -->
-                                <div class="control-group component span4" rel="popover" title="文本框控件" trigger="manual"
+                                <div class="control-group component span1-4" rel="popover" title="文本框控件" trigger="manual"
                                      data-content="
   <form class='form'>
     <div class='controls'>
@@ -207,7 +221,7 @@
                                     </div>
                                 </div>
 
-                                <div class="control-group component span6" rel="popover" title="签字控件" trigger="manual"
+                                <div class="control-group component span1-6" rel="popover" title="签字控件" trigger="manual"
                                      data-content="
   <form class='form'>
     <div class='controls'>
