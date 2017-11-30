@@ -398,9 +398,17 @@ class Form extends Controller
     public function spflow(){
         $data=input('param.');
         $result=model('form')->where($data)->select();
-
+        print_r($result[0]['html']);
         return $this->fetch('',[
             'html'=>$result[0]['html']
+        ]);
+    }
+
+    //表单预览
+    public function preview(){
+        $data=input('param.');
+        return $this->fetch('', [
+            'html'=>$data
         ]);
     }
 }
