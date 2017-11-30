@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+
+        #components {
+            min-height: 600px;
+        }
+
+        #target {
+            min-height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #target .component {
+            border: 1px solid #fff;
+        }
+
+        #temp {
+            width: 500px;
+            background: white;
+            border: 1px dotted #ccc;
+            border-radius: 10px;
+        }
+
+        .popover-content form {
+            margin: 0 auto;
+            width: 213px;
+        }
+
+        .popover-content form .btn {
+            margin-right: 10px
+        }
+
+        #source {
+            min-height: 500px;
+        }
+        .title1{
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 30px;
+            line-height: 40px;
+            color: #ffffff;
+            background-color: #5bc0de ;
+            text-align: center;
+        }
+        .span1-4{
+            width: 235px;
+        }
+        .span1-5{
+            width: 1000px;
+        }
+        .span1-5 textarea{
+            height: 100px;
+            width: 970px;
+        }
+
+        .span1-6{
+            width: 480px;
+            text-align: center;
+        }
+
+        .span1-66{
+            width: 321px;
+        }
+        .span1-66 textarea{
+            width: 280px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin:35px 50px;width:829px; height:636px; border:2px solid; border-color: #c6bebe" >
+    <fieldset>
+        {$html}
+    </fieldset>
+</div>
+<script>
+    //审批流程的顺序设置
+    $('.menu_sub2').click(function () {
+        //先判断单、双流程
+        var options=$('.selected').text();
+        //单流程的审批流程设置
+        var str='';
+        var conf=new Array();
+        $('.text-c2').each(function (con) {
+            str=$(this).find(".list").attr("value");
+            conf[str] = $(this).find(".shenfen").text();
+            switch (conf[str]){
+                case '班主任':
+                    conf[str]=2;
+                    break;
+                case '导员':
+                    conf[str]=3;
+                    break;
+                case '书记':
+                    conf[str]=4;
+                    break;
+                case '指导教师':
+                    conf[str]=5;
+                    break;
+                case '系主任':
+                    conf[str]=6;
+                    break;
+                case '院长':
+                    conf[str]=7;
+                    break;
+
+            }
+        });
+        //需要保存到数据库的数据
+        //conf 流程顺序
+        alert(conf);
+        var flowurl="{:url('form/createFlow')}";
+        var content={
+            'singleflow':conf
+        };
+        $.post(flowurl,content,function (result) {
+        },"json");
+    });
+</script>
+<!--代码部分end-->
+
+</body>
+</html>
