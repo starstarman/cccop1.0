@@ -408,7 +408,7 @@ class Form extends Controller
     public function preview(){
         $data=input('param.');
         return $this->fetch('', [
-            'html'=>$data
+            'html'=>$data['data_po']
         ]);
     }
 }
