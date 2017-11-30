@@ -109,6 +109,8 @@
 		                    <li style="font-size: 18px"><a href="#" id="set1">双流程</a></li>
 	                    </ul>
                     </span>
+
+                    <button class='btn btn-info' id="preview" type='submit'>预览</button>
                 </h2>
 
 
@@ -407,6 +409,35 @@
                 layer(index);
             }
         });
+    });
+
+    //预览弹窗
+        $('#preview').click(function () {
+        //获取数据
+        var str= $('fieldset').html();
+        var data_post={
+            'data_po':str,
+        };
+        //抛送逻辑
+        var url ="{:url('form/preview')}";
+        $.post(url,data_post,function (data) {
+            attrbut(data);
+        },"json");
+        //弹窗
+        function attrbut(re) {
+            var title = "表单预览";
+            var index = layer.open({
+                type: 1,
+                title: title,
+                offset:['10px','200px',],
+                content: re
+            });
+            layer.style(index, {
+                width: '929px',
+                height:'700px',
+            });
+            layer(index);
+        }
     });
 </script>
 
