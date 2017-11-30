@@ -6,7 +6,6 @@ use think\Db;
 
 class Form extends Controller
 {
-
     /**
      * 表单管理
      */
@@ -23,15 +22,7 @@ class Form extends Controller
     public function createFlow(){
         $data=input('param.');
         print_r($data);
-        if ($data['double']==0){
-            Cache::set('singleflow',$data['singleflow'],3600);
-            Cache::set('double',$data['double'],3600);
-        }else{
-            Cache::set('singleflow',$data['singleflow'],3600);
-            Cache::set('coupleflow',$data['coupleflow'],3600);
-            Cache::set('double',$data['double'],3600);
-        }
-
+        Cache::set('singleflow',$data['singleflow'],3600);
     }
     /**
      * 表单创建
@@ -52,33 +43,27 @@ class Form extends Controller
      */
     public function formSubmit(){
         //获取缓存的流程
-        $double=Cache::get('double');
-        if ($double==0){
-            $flow=Cache::get('singleflow');
-            //处理流程
-            $flows=array_splice($flow,1);
-            $flows=implode(",",$flows);
-            $data=input('param.');
-            print_r($data);
-            $content=[
-                'id'=>'',
-                'formName'=>$data['formName'],
-                'html'=>$data['html'],
-                'single'=>$flows,
-                'user_1'=>$data['user_1'],
-                'user_2'=>$data['user_2'],
-                'user_3'=>$data['user_3'],
-                'user_4'=>$data['user_4'],
-                'user_5'=>$data['user_5'],
-                'user_6'=>$data['user_6'],
-                'user_7'=>$data['user_7'],
+        $flow=Cache::get('singleflow');
+        //处理流程
+        $flows=array_splice($flow,1);
+        $flows=implode(",",$flows);
+        $data=input('param.');
+        print_r($data);
+        $content=[
+            'id'=>'',
+            'formName'=>$data['formName'],
+            'html'=>$data['html'],
+            'single'=>$flows,
+            'user_1'=>$data['user_1'],
+            'user_2'=>$data['user_2'],
+            'user_3'=>$data['user_3'],
+            'user_4'=>$data['user_4'],
+            'user_5'=>$data['user_5'],
+            'user_6'=>$data['user_6'],
+            'user_7'=>$data['user_7'],
 
-            ];
-            model('Adminform')->save($content);
-        }else{
-            echo '这是双流程';
-        }
-
+        ];
+        model('Adminform')->save($content);
     }
 
     /**
@@ -393,13 +378,15 @@ class Form extends Controller
      */
     public function formshow(){
         $id=session('id');
+        $data=model('log')->where('to',$id)->select();
+//        print_r($data[0]['s_id']);
+//        die();
         $result=Db::view('user','id,username')
-            ->view('log','s_id,status,to','log.s_id=user.id')
+            ->view('log','s_id,status','log.s_id=user.id')
             ->view('adminform','id,formName','log.f_id=adminform.id')
             ->where('status','=',1)
-            ->where('to','=',$id)
             ->select();
-       // print_r($result);
+        print_r($result);
         return $this->fetch('',[
             'data'=>$result
         ]);
@@ -411,77 +398,9 @@ class Form extends Controller
     public function spflow(){
         $data=input('param.');
         $result=model('form')->where($data)->select();
+
         return $this->fetch('',[
-            'html'=>$result[0]['html'],
-            'f_id'=>$result[0]['f_id'],
-            's_id'=>$result[0]['s_id']
+            'html'=>$result[0]['html']
         ]);
     }
-
-    /**
-     * 老师向学生的表单中添加数据
-     */
-    public function addForm(){
-        $data=input('param.');
-        $user = model('Form');
-// save方法第二个参数为更新条件
-         $status=$user->save([
-            'html'  => $data['html'],
-        ],['s_id' => $data['s_id'],'f_id'=>$data['f_id']]);
-
-        return show($status);
-    }
-
-    /**
-     * 给下个人进行转发(单流程)
-     */
-    public function relay(){
-        $data=input('param.');
-        $s_id=$data['s_id'];
-        $f_id=$data['f_id'];
-        $whereData=[
-            's_id'=>$s_id,
-            'f_id'=>$f_id
-        ];
-        //如果转发到最后一位，直接给该学生的表单增加数据否则继续转发
-        $sin=model('Findteacher')->where($whereData)->value('single');
-        $sin=explode(',',$sin);
-        $fl=model('Findteacher')->where($whereData)->value('flow');
-        if ($fl+1==count($sin)){
-            $resData=[
-                's_id'=>$s_id,
-                'f_id'=>$f_id,
-                'to'=>session('id')
-            ];
-            model('Log')->where($resData)->update(['status'=>0]);
-        }else{
-            //首先找到findTeacher这个表里面的顺序，然后根据flow进行标记，然后找到标记的人的ID，然后在向log中添加数据
-            $result=model('Findteacher')->where($whereData)->select();
-            $flow=$result[0]['flow'];
-            $single=explode(',',$result[0]['single']);
-            $next=$result[0]['f'.$single[$flow+1]];
-
-            //向log添加数据
-            $saveData=[
-                's_id'=>$s_id,
-                'f_id'=>$f_id,
-                'from'=>session('id'),
-                'to'=>$next,
-                'status'=>1
-            ];
-            $res=model('Log')->save($saveData);
-            //如果数据添加成功把log中该操作用户的状态调为0
-            if ($res=1){
-                $wheData=[
-                    's_id'=>$s_id,
-                    'f_id'=>$f_id,
-                    'to'=>session('id')
-                ];
-                model('Log')->where($wheData)->update(['status'=>0]);
-                model('Findteacher')->where($whereData)->update(['flow'=>$flow+1]);
-            }
-        }
-
-    }
-
 }
