@@ -44,15 +44,38 @@
         #source {
             min-height: 500px;
         }
+
+        .title1{
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 30px;
+            line-height: 40px;
+            color: #ffffff;
+            background-color: #5bc0de ;
+            text-align: center;
+        }
+        .span1-4{
+            width: 235px;
+        }
+        .span1-5{
+            width: 1000px;
+        }
+        .span1-5 textarea{
+            height: 50px;
+            width: 980px;
+        }
+        .span1-6{
+            width: 480px;
+        }
     </style>
 </head>
 <body>
 
-
+ <div style="margin:50px 110px;border:2px solid; border-color: #c6bebe" >
     <fieldset>
         {$html}
     </fieldset>
-
+    </div>
 
 <button class='btn btn-info' id="tijiao" type='submit'>提交</button>
     <span class="dropDown">
@@ -157,6 +180,7 @@
 //        });
 //    });
 
+    //学生填完表单做第一次转发
     $('#tijiao').click(function () {
 
         var contents= $('fieldset').html();
@@ -172,6 +196,8 @@
 
         });
     });
+
+    //设置审批人员
     $('#set').click(function () {
         var str='';
         var f_id={$f_id};
@@ -202,6 +228,17 @@
                 height:'550px',
             });
         }
+    });
+
+    $('.qianzi').click(function () {
+        layer.open({
+            type: 2,
+            title:'签字区域',
+            area: ['700px', '450px'],
+            fixed: false, //不固定
+            maxmin: true,
+            content: "{:url('form/qianzi')}"
+        });
     });
 </script>
 

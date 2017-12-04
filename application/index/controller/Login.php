@@ -1,6 +1,8 @@
 <?php
 namespace app\index\controller;
 use think\Db;
+use think\Session;
+
 class Login extends Base
 {
     public function login()
@@ -67,7 +69,9 @@ class Login extends Base
     public function logout()
     {
         //清空session
-        session('null','index');
+       Session::start();
+
+       Session::destroy();
         //跳转
         $this->redirect('login/login');
     }
