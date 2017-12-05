@@ -77,14 +77,14 @@ label.form-label {
  
 #o-box-down{ padding:30px 0 0 40px;}
 
-.i-text{ 
+.i-text{
   width:240px;
   height:37px;
   line-height:37px;
   border:1px solid #858585;
   background:#eef3f8;
   color:#9cb5cd;
-  font-size:14px; 
+  font-size:14px;
   text-indent:12px; 
   box-shadow:1px 1px 1px #dfe4e8 inset;
   -moz-box-shadow:1px 1px 1px #dfe4e8 inset;
@@ -92,7 +92,20 @@ label.form-label {
   -o-box-shadow:1px 1px 1px #dfe4e8 inset;
   -mis-box-shadow:1px 1px 1px #dfe4e8 inset;
  }
- 
+span#userid.tips{
+    width: 240px;
+    font-size: 10px;
+}
+span#userpassword.tips{
+    width: 240px;
+    font-size: 10px;
+}
+font.tips_false{
+    color: red;
+}
+font.tips_true{
+    color:blue;
+}
  .yzm{ width:112px;}
  .yzm-img{ position:absolute; left:130px; top:30px; cursor:pointer;}
 

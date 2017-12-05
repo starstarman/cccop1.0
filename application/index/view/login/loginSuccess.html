@@ -1,22 +1,23 @@
-<?php session_start()?>
+<?php use think\Session; Session::start();?>
 <!--包含头部文件-->
+{if condition="$_SESSION['username'] neq ''"}
 {include file="public/header" /}
 <body>
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 2"}指导教师{elseif condition="$_SESSION['identity'] eq 3"}班主任{elseif condition="$_SESSION['identity'] eq 4"}主任{elseif condition="$_SESSION['identity'] eq 5"}辅导员{elseif condition="$_SESSION['identity'] eq 6"}书记{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}</span>
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 2"}班主任{elseif condition="$_SESSION['identity'] eq 3"}辅导员{elseif condition="$_SESSION['identity'] eq 4"}书记{elseif condition="$_SESSION['identity'] eq 5"}指导教师{elseif condition="$_SESSION['identity'] eq 6"}主任{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}</span>
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
                     <li class="dropDown dropDown_hover">
-                        <option>欢迎你 </option>
+                        <option>欢迎你</option>
                     </li>
                     <li class="dropDown dropDown_hover">
-                        <a class="dropDown_A"><?php echo $_SESSION['username']?><i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <a class="dropDown_A">{if condition="$_SESSION['username'] eq ''"}错误{else}<?php echo $_SESSION['username'];?>{/if}<i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-                            <li><a href="logout">退&emsp;&emsp;出</a></li>
+                            <li><a href="{:url('login/logout')}">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
                     <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -83,7 +84,7 @@
 
         </dl>
     </div>
-    {elseif condition="($_SESSION['identity'] eq 2)OR ($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)" /}
+    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -161,7 +162,7 @@
         <div class="Hui-tabNav-wp">
             <ul id="min_title_list" class="acrossTab cl">
                 <li class="active">
-                    <span title="我的桌面" data-href="welcome.html">我的桌面</span>
+                    <span title="我的桌面" data-href="welcome.html"> 我 的 桌 面 </span>
                     <em></em></li>
             </ul>
         </div>
@@ -211,12 +212,21 @@
             title: '查看信息',
             content: '<div>管理员信息</div>'
         });
-    }
     /*个人信息*/
-    function logout() {
+    /*function logout() {
         layer.alert('点击确定跳转', function (index) {
             window.location.href = 'login';
         });
+    }*/
+    // function alert(){
+    //     layer.alert('请重新登陆',{
+    //         icon:2
+    //         ,button:[确定]
+    //         ,yes: function (index, layero) {
+    //         window.location.href = 'login.html';
+    //         layer.close(index);
+    //     }
+    //     })
     }
     /*资讯-添加*/
     function article_add(title,url){
@@ -261,3 +271,5 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+{else}<?php header("Location:login.html");exit();?>
+{/if}
