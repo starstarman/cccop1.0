@@ -32,10 +32,9 @@
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/form/js/esign.js"></script>
 <script type="text/javascript">
+        var num="{$num}";
         //初始化动作，根据DOM的ID不同进行自定义，如果不写则内部默认取这四个
-        $().esign("canvasEdit", parent.$('.qianzi'), "sign_clear", "sign_ok");
-
-
+        $().esign("canvasEdit", $('.qianzi').eq(num), "sign_clear", "sign_ok");
 
 </script>
 

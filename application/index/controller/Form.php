@@ -528,7 +528,11 @@ class Form extends Controller
     }
     public function qianzi(){
 
-        return $this->fetch();
+        $data=input('param.');
+        return $this->fetch('',[
+            'num'=>$data['num']
+        ]);
+
     }
 
 }
