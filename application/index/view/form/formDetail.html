@@ -70,17 +70,16 @@
     </style>
 </head>
 <body>
-
+<button class='btn btn-info' id="tijiao" type='submit'>提交</button>
+<span class="dropDown">
+        <a class="dropDown_A btn btn-info" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
+    </span>
  <div style="margin:50px 110px;border:2px solid; border-color: #c6bebe" >
     <fieldset>
         {$html}
     </fieldset>
     </div>
 
-<button class='btn btn-info' id="tijiao" type='submit'>提交</button>
-    <span class="dropDown">
-        <a class="dropDown_A btn btn-info" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
-    </span>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
@@ -192,7 +191,7 @@
             'html':contents,
             'formName':formName
         };
-        $.post(url,data,function () {
+        $.post(url,data,function (result) {
 
         });
     });
@@ -206,17 +205,37 @@
                     str += $(this).attr("shenfen") + '/';
                 }
         });
-
-        var url='{:url('form/findTeacher')}';
-        var data={
-            'data_po':str,
-            'f_id':f_id,
+        //判断是否已经选择老师
+        var url2="{:url('form/judge')}";
+        var da2={
+          'f_id':f_id
         };
-        $.post(url,data,function (data) {
-            attrbut(data);
+        $.post(url2,da2,function (result) {
+            //如果已经选择显示选择了谁
+            if (result.status==1){
+                var url1="{:url('form/selectTeacher')}";
+                var da={
+                    'f_id':f_id,
+                    'data_po':str,
+                };
+                $.post(url1,da,function (data) {
+                    attrbut(data,'以设置的审批人员');
+                });
+            }else{
+
+                var url='{:url('form/findTeacher')}';
+                var data={
+                    'data_po':str,
+                    'f_id':f_id,
+                };
+                $.post(url,data,function (data) {
+                    attrbut(data,'请设置审批人员');
+                });
+            }
         });
-        function attrbut(re) {
-            var title = "请设置审批人员";
+
+        function attrbut(re,title) {
+            var title = title;
             var index = layer.open({
                 type: 1,
                 title: title,

@@ -348,6 +348,7 @@ class Form extends Controller
             'total'=>count($id),
             'single'=>$single[0],
             'couple'=>$couple[0],
+            'name_str'=>$data['name_str']
             ])->allowField(true)->save();
 
     }
@@ -533,6 +534,77 @@ class Form extends Controller
             'num'=>$data['num']
         ]);
 
+    }
+
+    public function selectTeacher(){
+        $data=input('param.');
+        $identity=[];
+        $flow = explode('/',$data['data_po']);
+        $flow = array_unique($flow);
+        $flow = array_filter($flow);
+        for($i=0;$i<count($flow);$i++){
+            //将接收到的数据进行转换
+            switch ($flow[$i]){
+                case 'user_2':
+                    $flow[$i]='班主任';
+                    $identity[$i]=2;
+                    break;
+                case 'user_3':
+                    $flow[$i]='导员';
+                    $identity[$i]=3;
+                    break;
+                case 'user_4':
+                    $flow[$i]='书记';
+                    $identity[$i]=4;
+                    break;
+                case 'user_5':
+                    $flow[$i]='指导教师';
+                    $identity[$i]=5;
+                    break;
+                case 'user_6':
+                    $flow[$i]='系主任';
+                    $identity[$i]=6;
+                    break;
+                case 'user_7':
+                    $flow[$i]='院长';
+                    $identity[$i]=7;
+                    break;
+                case '':
+                    $flow[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow = array_filter($flow);
+        $flow = array_unique($flow);
+
+        $where=[
+            'f_id'=>$data['f_id'],
+            's_id'=>session('id')
+        ];
+        $name_str=model('findteacher')->where($where)->column('name_str');
+        $name=explode(',',$name_str[0]);
+        $name = array_filter($name);
+
+        return $this->fetch('',[
+            'f_id'=>$data['f_id'],
+            'flow'=>$flow,
+            'identity'=>$identity,
+            'name'=>$name
+        ]);
+    }
+    public function judge($f_id){
+        $s_id=session('id');
+        $where=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id
+        ];
+        $result=model('findteacher')->where($where)->select();
+        if (!empty($result)){
+            return show('1','已选择');
+        }else{
+            return show('0','没选择');
+        }
     }
 
 }

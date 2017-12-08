@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        *{ margin:0; padding:0; list-style:none;}
+        body{ font-size:12px;}
+    </style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<div id="menu">
+    <!--二级菜单-->
+    <div id="menu_con">
+        <div class="tag" style="display:block">
+            <table class="table table-border table-bordered table-bg table-hover table-sort">
+                <thead>
+                <tr class="text-c">
+                    <th width="150">教师职位</th>
+                    <th width="150">已选择教师</th>
+                </tr>
+                </thead>
+                <tbody>
+                {volist name="flow" id="vo"}
+                <tr class="text-c text-c2">
+                    <td class="shenfen">{$vo}</td>
+                    <input type="hidden" class="identity" value="{$identity[$key]}">
+                    <td class="text-c listorder" style="height: 35px">
+                   {$name[$key]}
+                    </td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+        </div>
+        <input type="submit" id="sub"  name="update" value="修改">
+    </div>
+</div>
+<!--代码部分end-->
+<script type="text/javascript">
+    $('#sub').click(function () {
+        layer_close();
+    })
+</script>
+</body>
+</html>
