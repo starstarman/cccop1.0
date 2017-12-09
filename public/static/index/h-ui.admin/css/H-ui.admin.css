@@ -34,6 +34,7 @@ h4{line-height:30px}
 
 /*导航*/
 #Hui-nav > ul > li{ font-weight:normal}
+option{margin:13px 0 13px 0}
 @media (max-width: 767px) {
 	#Hui-nav{display: block; top: 0; left: 65px; right: 65px}
 	#Hui-nav > ul { width: 100%}
