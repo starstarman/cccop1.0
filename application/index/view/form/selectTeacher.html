@@ -41,7 +41,14 @@
 <!--代码部分end-->
 <script type="text/javascript">
     $('#sub').click(function () {
-        layer_close();
+        layer.close(layer.index);
+        var url="{:url('form/deleteteacher')}";
+        var data={
+          'f_id':{$f_id}
+        };
+        $.post(url,data,function () {
+
+        });
     })
 </script>
 </body>

@@ -607,4 +607,12 @@ class Form extends Controller
         }
     }
 
+    public function deleteteacher(){
+        $data=input('param.');
+        $where=[
+            'f_id'=>$data['f_id'],
+            's_id'=>session('id')
+        ];
+        $status=model('findteacher')->where($where)->delete();
+    }
 }
