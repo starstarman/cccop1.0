@@ -1,5 +1,6 @@
 <?php
 namespace app\index\controller;
+use think\Session;
 use think\Db;
 class Login extends Base
 {
@@ -36,6 +37,7 @@ class Login extends Base
                 //$_SESSION['username'] = $data['username'];
                 if ($result) {
                     foreach ($result as $ret) {
+                        session('login',$ret,'index');
                         $_SESSION['username']=$ret['username'];
                         $_SESSION['identity']=$ret['identity'];
                         session('id',$ret['id']);
@@ -43,7 +45,7 @@ class Login extends Base
                     //session('userinfo', $result, 'index');
                     //进行密码验证
                     if ($ret['password'] == $data['password']) {
-                        $this->success('登陆成功！','login/loginSuccess',1,1);
+                        $this->success('','login/loginSuccess');
 
                     } else {
                         return $this->error('密码不正确！');
@@ -66,8 +68,11 @@ class Login extends Base
     }
     public function logout()
     {
+        Session::start();
         //清空session
-        session('null','index');
+        Session::destroy();
+        //Session::set('username','null','index');
+        //session('null','index');
         //跳转
         $this->redirect('login/login');
     }

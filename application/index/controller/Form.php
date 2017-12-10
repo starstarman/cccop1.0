@@ -6,15 +6,13 @@ use think\Db;
 
 class Form extends Controller
 {
+
     /**
      * 表单管理
      */
     public function formManage()
     {
-        $test=model('form')->select();
-        return $this->fetch('',[
-            'test'=>$test
-        ]);
+        return $this->fetch();
     }
     /**
      * 流程创建
@@ -22,7 +20,15 @@ class Form extends Controller
     public function createFlow(){
         $data=input('param.');
         print_r($data);
-        Cache::set('singleflow',$data['singleflow'],3600);
+        if ($data['double']==0){
+            Cache::set('singleflow',$data['singleflow'],3600);
+            Cache::set('double',$data['double'],3600);
+        }else{
+            Cache::set('singleflow',$data['singleflow'],3600);
+            Cache::set('coupleflow',$data['coupleflow'],3600);
+            Cache::set('double',$data['double'],3600);
+        }
+
     }
     /**
      * 表单创建
@@ -38,32 +44,48 @@ class Form extends Controller
 //        }
         return $this->fetch();
     }
+
     /**
      * 表单提交
      */
     public function formSubmit(){
         //获取缓存的流程
-        $flow=Cache::get('singleflow');
-        //处理流程
-        $flows=array_splice($flow,1);
-        $flows=implode(",",$flows);
-        $data=input('param.');
-        print_r($data);
-        $content=[
-            'id'=>'',
-            'formName'=>$data['formName'],
-            'html'=>$data['html'],
-            'single'=>$flows,
-            'user_1'=>$data['user_1'],
-            'user_2'=>$data['user_2'],
-            'user_3'=>$data['user_3'],
-            'user_4'=>$data['user_4'],
-            'user_5'=>$data['user_5'],
-            'user_6'=>$data['user_6'],
-            'user_7'=>$data['user_7'],
+        $double=Cache::get('double');
+        if ($double==0){
+            $flow=Cache::get('singleflow');
+            //处理流程
+            $flows=array_splice($flow,1);
+            $flows=implode(",",$flows);
+            $data=input('param.');
+            print_r($data);
+            $content=[
+                'id'=>'',
+                'formName'=>$data['formName'],
+                'html'=>$data['html'],
+                'single'=>$flows,
+            ];
+            model('Adminform')->save($content);
+        }else{
+          //双流程定义
+            $single=Cache::get('singleflow');
+            $couple=Cache::get('coupleflow');
+            $single=array_splice($single,1);
+            $couple=array_splice($couple,1);
+            $single=implode(",",$single);
+            $couple=implode(",",$couple);
+            $data=input('param.');
+            $content=[
+                'id'=>'',
+                'formName'=>$data['formName'],
+                'html'=>$data['html'],
+                'single'=>$single,
+                'couple'=>$couple,
+                'double'=>$double
+            ];
 
-        ];
-        model('Adminform')->save($content);
+            model('Adminform')->save($content);
+        }
+
     }
 
     /**
@@ -105,13 +127,6 @@ class Form extends Controller
             'f_id'=>$f_id,
             'html'=>$data[0]['html'],
             'identity'=>$identity,
-            'user_1'=>$data[0]['user_1'],
-            'user_2'=>$data[0]['user_2'],
-            'user_3'=>$data[0]['user_3'],
-            'user_4'=>$data[0]['user_4'],
-            'user_5'=>$data[0]['user_5'],
-            'user_6'=>$data[0]['user_6'],
-            'user_7'=>$data[0]['user_7'],
         ]);
     }
 
@@ -316,7 +331,8 @@ class Form extends Controller
         $ident=explode(',',$data['ident_str']);
         $id = array_filter($id);
         $ident = array_filter($ident);
-        $form=model('Adminform')->where('id',$data['f_id'])->column('single','single');
+        $single=model('Adminform')->where('id',$data['f_id'])->column('single','single');
+        $couple=model('Adminform')->where('id',$data['f_id'])->column('couple','couple');
         //添加数据  过滤掉没有的字段
         $set=model('findteacher');
         $set->data([
@@ -330,7 +346,9 @@ class Form extends Controller
             $ident[5]=>$id[5],
             $ident[6]=>$id[6],
             'total'=>count($id),
-            'single'=>$form[0],
+            'single'=>$single[0],
+            'couple'=>$couple[0],
+            'name_str'=>$data['name_str']
             ])->allowField(true)->save();
 
     }
@@ -355,38 +373,54 @@ class Form extends Controller
             'f_id'=>$f_id,
             's_id'=>$s_id,
         ];
-        $single=model('findteacher')->where($where)->column('single');
-        $single=explode(',',$single[0]);
-        //拼接查找的字段
-        $identity='f'.$single[0];
-        //获得转发对象的id
-        $identity=model('findteacher')->where($where)->column($identity);
-        //开始向log转发
-        $data=[
-            's_id'=>$s_id,
-            'f_id'=>$f_id,
-            'from'=>$s_id,
-            'to'  =>$identity[0],
-            'status'=>1
-        ];
-        print_r($data);
-        $result=model('log')->save($data);
+        $result=model('findteacher')->where($where)->find();
+        if (count(explode(',',$result['single']))==$result['total']){
+            //单流程的逻辑
+            $single=model('findteacher')->where($where)->column('single');
+            $single=explode(',',$single[0]);
+            //拼接查找的字段
+            $identity='f'.$single[0];
+            //获得转发对象的id
+            $identity=model('findteacher')->where($where)->column($identity);
+            //开始向log转发
+            $data=[
+                's_id'=>$s_id,
+                'f_id'=>$f_id,
+                'from'=>$s_id,
+                'to'  =>$identity[0],
+                'status'=>1
+            ];
+            $result=model('log')->save($data);
+        }else{
+            //双流成的逻辑
+            $single=explode(',',$result['single']);
+            $couple=explode(',',$result['couple']);
+            $identity1='f'.$single[0];
+            $identity2='f'.$couple[0];
+
+            //转发两次
+            $data= [
+                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity1], 'status'=>1],
+                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity2], 'status'=>1]
+            ];
+            model('log')->saveAll($data);
+        }
+
     }
+
 
     /**
      * 老师查看审批表
      */
     public function formshow(){
         $id=session('id');
-        $data=model('log')->where('to',$id)->select();
-//        print_r($data[0]['s_id']);
-//        die();
         $result=Db::view('user','id,username')
-            ->view('log','s_id,status','log.s_id=user.id')
+            ->view('log','s_id,status,to','log.s_id=user.id')
             ->view('adminform','id,formName','log.f_id=adminform.id')
             ->where('status','=',1)
+            ->where('to','=',$id)
             ->select();
-        print_r($result);
+       // print_r($result);
         return $this->fetch('',[
             'data'=>$result
         ]);
@@ -398,17 +432,187 @@ class Form extends Controller
     public function spflow(){
         $data=input('param.');
         $result=model('form')->where($data)->select();
-        print_r($result[0]['html']);
         return $this->fetch('',[
-            'html'=>$result[0]['html']
+            'html'=>$result[0]['html'],
+            'f_id'=>$result[0]['f_id'],
+            's_id'=>$result[0]['s_id']
         ]);
     }
 
-    //表单预览
-    public function preview(){
+    /**
+     * 老师向学生的表单中添加数据
+     */
+    public function addForm(){
         $data=input('param.');
-        return $this->fetch('', [
-            'html'=>$data['data_po']
+        $user = model('Form');
+// save方法第二个参数为更新条件
+         $status=$user->save([
+            'html'  => $data['html'],
+        ],['s_id' => $data['s_id'],'f_id'=>$data['f_id']]);
+
+        return show($status);
+    }
+
+    /**
+     * 给下个人进行转发
+     */
+    public function relay(){
+        $data=input('param.');
+        $s_id=$data['s_id'];
+        $f_id=$data['f_id'];
+
+        $whereData=[
+            's_id'=>$s_id,
+            'f_id'=>$f_id
+        ];
+        //判断回复的人是属于单流程的还是双流程的
+
+        $id= session('id');
+        $identity=model('user')->where(['id'=>$id])->column('identity');
+        //找到findTeacher里的所有数据
+        $find=model('Findteacher')->where($whereData)->select();
+        //把identity转化成字符串类型
+        settype($identity[0],"string");
+
+        //单流程或者双流程参数设置
+       $y1=strpos($find[0]['couple'], $identity[0])!==false;
+
+       $y2=strpos($find[0]['single'], $identity[0])!==false;
+        //设置需要的参数
+       if ($y1){
+           $liucheng='couple';
+           $tag='flows';
+       }
+       if ($y2){
+           $liucheng='single';
+           $tag='flow';
+       }
+            //如果转发到最后一位，直接给该学生的表单增加数据否则继续转发
+            $sin=model('Findteacher')->where($whereData)->value($liucheng);
+            $sin=explode(',',$sin);
+            $fl=model('Findteacher')->where($whereData)->value($tag);
+            if ($fl+1==count($sin)){
+                $resData=[
+                    's_id'=>$s_id,
+                    'f_id'=>$f_id,
+                    'to'=>session('id')
+                ];
+                model('Log')->where($resData)->update(['status'=>0]);
+            }else{
+                //首先找到findTeacher这个表里面的顺序，然后根据flow进行标记，然后找到标记的人的ID，然后在向log中添加数据
+                $result=model('Findteacher')->where($whereData)->select();
+                $flow=$result[0][$tag];
+                $single=explode(',',$result[0][$liucheng]);
+                $next=$result[0]['f'.$single[$flow+1]];
+
+                //向log添加数据
+                $saveData=[
+                    's_id'=>$s_id,
+                    'f_id'=>$f_id,
+                    'from'=>session('id'),
+                    'to'=>$next,
+                    'status'=>1
+                ];
+                $res=model('Log')->save($saveData);
+                //如果数据添加成功把log中该操作用户的状态调为0
+                if ($res=1){
+                    $wheData=[
+                        's_id'=>$s_id,
+                        'f_id'=>$f_id,
+                        'to'=>session('id')
+                    ];
+                    model('Log')->where($wheData)->update(['status'=>0]);
+                    model('Findteacher')->where($whereData)->update([$tag=>$flow+1]);
+                }
+            }
+
+    }
+    public function qianzi(){
+
+        $data=input('param.');
+        return $this->fetch('',[
+            'num'=>$data['num']
         ]);
+
+    }
+
+    public function selectTeacher(){
+        $data=input('param.');
+        $identity=[];
+        $flow = explode('/',$data['data_po']);
+        $flow = array_unique($flow);
+        $flow = array_filter($flow);
+        for($i=0;$i<count($flow);$i++){
+            //将接收到的数据进行转换
+            switch ($flow[$i]){
+                case 'user_2':
+                    $flow[$i]='班主任';
+                    $identity[$i]=2;
+                    break;
+                case 'user_3':
+                    $flow[$i]='导员';
+                    $identity[$i]=3;
+                    break;
+                case 'user_4':
+                    $flow[$i]='书记';
+                    $identity[$i]=4;
+                    break;
+                case 'user_5':
+                    $flow[$i]='指导教师';
+                    $identity[$i]=5;
+                    break;
+                case 'user_6':
+                    $flow[$i]='系主任';
+                    $identity[$i]=6;
+                    break;
+                case 'user_7':
+                    $flow[$i]='院长';
+                    $identity[$i]=7;
+                    break;
+                case '':
+                    $flow[$i]='';
+                    break;
+            }
+        }
+        //清除数组中为空的元素
+        $flow = array_filter($flow);
+        $flow = array_unique($flow);
+
+        $where=[
+            'f_id'=>$data['f_id'],
+            's_id'=>session('id')
+        ];
+        $name_str=model('findteacher')->where($where)->column('name_str');
+        $name=explode(',',$name_str[0]);
+        $name = array_filter($name);
+
+        return $this->fetch('',[
+            'f_id'=>$data['f_id'],
+            'flow'=>$flow,
+            'identity'=>$identity,
+            'name'=>$name
+        ]);
+    }
+    public function judge($f_id){
+        $s_id=session('id');
+        $where=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id
+        ];
+        $result=model('findteacher')->where($where)->select();
+        if (!empty($result)){
+            return show('1','已选择');
+        }else{
+            return show('0','没选择');
+        }
+    }
+
+    public function deleteteacher(){
+        $data=input('param.');
+        $where=[
+            'f_id'=>$data['f_id'],
+            's_id'=>session('id')
+        ];
+        $status=model('findteacher')->where($where)->delete();
     }
 }

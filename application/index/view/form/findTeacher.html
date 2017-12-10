@@ -66,7 +66,6 @@
                });
                //清空并向里添加html
                sel.html(select_html);
-               console.log('nihao');
            }
        },'json');
     });
@@ -81,10 +80,14 @@
         var f_id={$f_id};
         var id_str='';
         var ident_str='';
+        var name_str='';
         //处理老师的id将其传给后台
+        //将老师的姓名也存到后台
         $('select').each(function (i) {
            id_str+=$(this).val()+',';
+           name_str+=$(this).find("option:selected").text()+',';
         });
+
         //处理identity 将其拼接传给后台
         $("input[class='identity']").each(function () {
             ident_str+='f'+$(this).val()+',';
@@ -96,7 +99,8 @@
         var data={
             'f_id':f_id,
             'id_str':id_str,
-            'ident_str':ident_str
+            'ident_str':ident_str,
+            'name_str':name_str
         };
 
         $.post(url,data,function (result) {
