@@ -1,8 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+
+    <title> Formbuild.leipi.org</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="leipi.org">
+    <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css"/>
     <style>
 
         #components {
@@ -51,16 +56,20 @@
             width: 235px;
         }
         .span1-5{
-            width: 1000px;
+            width: 200px;
         }
         .span1-5 textarea{
-            height: 100px;
-            width: 970px;
+            height: 36px;
+            width: 200px;
+        }
+        .span1-5 input, textarea, .uneditable-input {
+            width: 200px;
         }
 
         .span1-6{
-            width: 480px;
+            width: 200px;
             text-align: center;
+            height: 30px;
         }
 
         .span1-66{
@@ -68,60 +77,41 @@
         }
         .span1-66 textarea{
             width: 280px;
-            height: 60px;
+        }
+        div.controls{
+            width: 235px;
+        }
+        div.control-group.component.span4{
+            width: 236px;
+        }
+        .span6{
+            width: 200px;
         }
     </style>
 </head>
 <body>
 
-<div style="margin:35px 50px;width:829px; height:636px; border:2px solid; border-color: #c6bebe" >
-    <fieldset>
+<div style="margin:35px 50px;width:1029px; height:636px; border:2px solid; border-color: #c6bebe" >
+    <fieldset class="myfieldset">
         {$html}
     </fieldset>
 </div>
-<script>
-    //审批流程的顺序设置
-    $('.menu_sub2').click(function () {
-        //先判断单、双流程
-        var options=$('.selected').text();
-        //单流程的审批流程设置
-        var str='';
-        var conf=new Array();
-        $('.text-c2').each(function (con) {
-            str=$(this).find(".list").attr("value");
-            conf[str] = $(this).find(".shenfen").text();
-            switch (conf[str]){
-                case '班主任':
-                    conf[str]=2;
-                    break;
-                case '导员':
-                    conf[str]=3;
-                    break;
-                case '书记':
-                    conf[str]=4;
-                    break;
-                case '指导教师':
-                    conf[str]=5;
-                    break;
-                case '系主任':
-                    conf[str]=6;
-                    break;
-                case '院长':
-                    conf[str]=7;
-                    break;
+<div>
+    <button class='btn btn-info set' id="tijiao1" type='submit'>设置表单样式</button>
+</div>
+<script type="text/javascript">
+$('#tijiao1').click(function () {
+    $("textarea").css("resize","none");//将多行文本设置为不可抻拉 resize:none
+    var contents= $('.myfieldset').html();//获取表单
+    var formName=$('input[name="form_name"]').val();
+    var url="{:url('form/modifyHtml')}";
+    var content={
+        'html':contents
+    };
+    $.post(url,content,function (){
 
-            }
-        });
-        //需要保存到数据库的数据
-        //conf 流程顺序
-        alert(conf);
-        var flowurl="{:url('form/createFlow')}";
-        var content={
-            'singleflow':conf
-        };
-        $.post(flowurl,content,function (result) {
-        },"json");
     });
+});
 </script>
 <!--代码部分end-->
 
