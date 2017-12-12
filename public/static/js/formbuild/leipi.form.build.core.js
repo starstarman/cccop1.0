@@ -79,10 +79,10 @@ $(document).ready(function(){
 
     var delayed = setTimeout(function(){
       if(type === "main"){
-        $temp = $("<form class='form-horizontal span6' id='temp'></form>").append($this.clone());
+        $temp = $("<form class='form-horizontal' style='width: 250px; padding: 0px' id='temp'></form>").append($this.clone());
       } else {
         if($this.attr("id") !== "legend"){
-          $temp = $("<form class='form-horizontal span6' id='temp'></form>").append($this);
+          $temp = $("<form class='form-horizontal span6'style='width: 250px; padding: 0px' id='temp'></form>").append($this);
         }
       }
 

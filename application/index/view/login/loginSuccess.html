@@ -11,7 +11,7 @@
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
                     <li class="dropDown dropDown_hover">
-                        <option>欢迎你</option>
+                        欢迎你
                     </li>
                     <li class="dropDown dropDown_hover">
                         <a class="dropDown_A">{if condition="$_SESSION['username'] eq ''"}错误{else}<?php echo $_SESSION['username'];?>{/if}<i class="Hui-iconfont">&#xe6d5;</i></a>
@@ -56,7 +56,7 @@
             <dd>
                 <ul>
                     <li><a data-href="{:url('Form/formManage')}" data-title="表单管理" href="javascript:void(0)">表单管理</a></li>
-                    <li><a data-href="{:url('Form/createForm')}" data-title="新增表单" href="javascript:void(0)">新增表单</a></li>
+                    <li><a data-href="{:url('Form/createForm')}" data-title="新增表单" href="javascript:void(0) " onClick="displaynavbar('.pngfix')">新增表单</a></li>
                 </ul>
             </dd>
 

@@ -12,7 +12,10 @@ class Form extends Controller
      */
     public function formManage()
     {
-        return $this->fetch();
+        $test=model('form')->select();
+        return $this->fetch('',[
+            'test'=>$test
+        ]);
     }
     /**
      * 流程创建
@@ -29,6 +32,12 @@ class Form extends Controller
             Cache::set('double',$data['double'],3600);
         }
 
+    }
+
+    public function modifyHtml(){
+        $data=input('param.');
+//        return $data;
+        Cache::set('html',$data['html'],3600);
     }
     /**
      * 表单创建
@@ -51,6 +60,7 @@ class Form extends Controller
     public function formSubmit(){
         //获取缓存的流程
         $double=Cache::get('double');
+        $html=Cache::get('html');
         if ($double==0){
             $flow=Cache::get('singleflow');
             //处理流程
@@ -61,7 +71,7 @@ class Form extends Controller
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
-                'html'=>$data['html'],
+                'html'=>$html,
                 'single'=>$flows,
             ];
             model('Adminform')->save($content);
@@ -77,7 +87,7 @@ class Form extends Controller
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
-                'html'=>$data['html'],
+                'html'=>$html,
                 'single'=>$single,
                 'couple'=>$couple,
                 'double'=>$double
@@ -614,5 +624,15 @@ class Form extends Controller
             's_id'=>session('id')
         ];
         $status=model('findteacher')->where($where)->delete();
+    }
+
+    /**
+     * @return mixed设置表单样式
+     */
+    public function preview(){
+        $data=input('param.');
+        return $this->fetch('', [
+            'html'=>$data['data_po']
+        ]);
     }
 }

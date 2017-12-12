@@ -1,0 +1,118 @@
+<html>
+<head>
+
+    <title> Formbuild.leipi.org</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="leipi.org">
+    <link href="__STATIC__/css/bootstrap/css/bootstrap.css?2024" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/css/site.css?2024" rel="stylesheet" type="text/css"/>
+    <style>
+
+        #components {
+            min-height: 600px;
+        }
+
+        #target {
+            min-height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #target .component {
+            border: 1px solid #fff;
+        }
+
+        #temp {
+            width: 500px;
+            background: white;
+            border: 1px dotted #ccc;
+            border-radius: 10px;
+        }
+
+        .popover-content form {
+            margin: 0 auto;
+            width: 213px;
+        }
+
+        .popover-content form .btn {
+            margin-right: 10px
+        }
+
+        #source {
+            min-height: 500px;
+        }
+        .title1{
+            margin: 0 0 13px 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            line-height: 43px;
+            color: #544f4f;
+            text-align: center;
+        }
+        .span1-4{
+            width: auto;
+        }
+        .span1-5{
+            width: 200px;
+        }
+        .span1-5 textarea{
+            height: 36px;
+            width: 200px;
+        }
+        .span1-5 input, textarea, .uneditable-input {
+            width: 200px;
+        }
+
+        .span1-6{
+            width: 200px;
+            text-align: center;
+            height: 30px;
+        }
+
+        .span1-66{
+            width: 321px;
+        }
+        .span1-66 textarea{
+            width: 280px;
+        }
+        div.controls{
+            width: 235px;
+        }
+        div.control-group.component.span4{
+            width: 236px;
+        }
+        .span6{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin:35px 50px;width:1029px; height:636px; border:2px solid; border-color: #c6bebe" >
+    <fieldset class="myfieldset">
+        {$html}
+    </fieldset>
+</div>
+<div>
+    <button class='btn btn-info set' id="tijiao1" type='submit'>设置表单样式</button>
+</div>
+<script type="text/javascript">
+    $('#tijiao1').click(function () {
+        var contents= $('.myfieldset').html();//获取表单
+        $("textarea").css("resize","none");//将多行文本设置为不可抻拉 resize:none
+        var formName=$('input[name="form_name"]').val();
+        var url="{:url('form/modifyHtml')}";
+        var content={
+            'html':contents
+        };
+        $.post(url,content,function (){
+
+        });
+    });
+</script>
+<!--代码部分end-->
+
+</body>
+</html>
