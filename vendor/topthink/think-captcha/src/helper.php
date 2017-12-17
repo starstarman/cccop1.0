@@ -46,7 +46,7 @@ function captcha_src($id = "")
  */
 function captcha_img($id = "")
 {
-    $js_src = "this.src='".captcha_src()."'";
+    $js_src = "this.src='".captcha_src()."?'+Math.random()";
     return '<img src="' . captcha_src($id) . '" alt="点击更新验证码" onclick="'.$js_src.'"/>';
     //return '<img src="' . captcha_src($id) . '" alt="captcha" />';
 }

@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Session;
 use think\Db;
+use app\index\model\User;
 class Login extends Base
 {
     public function login()
