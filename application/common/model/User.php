@@ -21,19 +21,19 @@ class User extends Model
         return $result;
     }
     //查看已删除的学生
-    public function getDelUser($ide){
+    public function getDelUser($num){
         $data = [
-            'identity' =>$ide,
+            'identity' =>1,
             'state' =>0
         ];
         $result = $this->where($data)
-            ->select();
+            ->paginate($num);
         return $result;
     }
     //查看已删除的教师
-    public function getDelUser_t(){
+    public function getDelUser_t($num){
         $result = $this->where('identity<>1 AND state=0')//获取identity不等于1(学生)的用户
-        ->select();
+        ->paginate($num);
         return $result;
     }
     //根据用户姓名进行搜索
