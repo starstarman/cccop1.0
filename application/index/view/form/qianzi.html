@@ -14,17 +14,6 @@
         <canvas width="600" height="250" id="canvasEdit"></canvas>
     </div>
 </div>
-
-<div class="imgDiv div1" style="display: none">
-    <span id="sign_show"></span>
-</div>
-
-
-<div class="imgDiv div2"style="display:none">
-    <span id="sign_show"></span>
-</div>
-
-
 <div class="btnDiv">
     <a id="sign_clear" class="clearBtn">清除</a>
     <a id="sign_ok" class="okBtn">确认</a>
@@ -35,7 +24,7 @@
 <script type="text/javascript">
         var num="{$num}";
         //初始化动作，根据DOM的ID不同进行自定义，如果不写则内部默认取这四个
-        $().esign("canvasEdit", $('.qianzi').eq(num), "sign_clear", "sign_ok");
+        $().esign("canvasEdit", $('[leipiplugins=qianzi]').eq(num), "sign_clear", "sign_ok");
 
 </script>
 

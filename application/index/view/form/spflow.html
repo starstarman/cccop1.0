@@ -12,144 +12,103 @@
         #components {
             min-height: 600px;
         }
-
         #target {
             min-height: 200px;
             border: 1px solid #ccc;
             padding: 5px;
         }
-
         #target .component {
             border: 1px solid #fff;
         }
-
         #temp {
             width: 500px;
             background: white;
             border: 1px dotted #ccc;
             border-radius: 10px;
         }
-
         .popover-content form {
             margin: 0 auto;
             width: 213px;
         }
-
         .popover-content form .btn {
             margin-right: 10px
         }
-
         #source {
             min-height: 500px;
         }
+        .dropDown{display:inline-block}.dropDown_A{display:inline-block}
+        .dropDown-menu{ display:none;transition: all 0.3s ease 0s}
+        .dropDown:focus,.dropDown-menu:focus {outline:0}
+        .dropDown-menu li.arrow{ position:absolute;display:block; width:12px; height:8px; margin-top:-13px; margin-left:20%; line-height:0;background:url(../images/icon-jt.png) no-repeat 0 0}
+
+        /*鼠标经过	*/
+        .dropDown.hover.dropDown_A,.dropDown.open.dropDown_A{text-decoration:none;background-color:rgba(255,255,255,0.2)}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0}
+        .dropDown.open.dropDown_A.menu_dropdown-arrow{transform: rotate(180deg)}
+        .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
+        .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
+        .menu.box-shadow{border-top:none}
+        .menu > li{ position: relative; float: none;display:block}
+        .menu > li > a{ display: block;clear: both;border-bottom:solid 1px #f2f2f2;padding:6px 20px;text-align:left;line-height:1.5;font-weight: normal;white-space:nowrap}
+        .menu > li:last-child > a{ border-bottom:none}
+        .menu > li > a:hover,.menu > li > a:focus,.menu > li.open > a{ text-decoration:none;background-color:#fafafa}
+        .menu > li > a.arrow{ position:absolute; top:50%; margin-top:-10px; right:5px;line-height: 20px; height: 20px; color: #999}
+        .menu > li >.menu{ display: none}
+        .menu > li.open >.menu{ display: inline-block;position: absolute; left:100%;top:-1px;min-width:100%}
+        /*禁用菜单*/
+        .menu > li.disabled > a{color:#999;text-decoration:none; cursor:no-drop; background-color:transparent}
+        /*线条*/
+        .menu > li.divider{ display:block;height:0px; line-height:0px;margin:9px 0;overflow:hidden; border-top:solid 1px #eee}
+        /*打开菜单*/
+        .dropDown >.dropDown-menu{ display: none}
+        .dropDown.open{position:relative;z-index:990}
+        /*默认左对齐*/
+        .dropDown.open >.dropDown-menu{position:absolute;z-index:1000;display:inline-block;top:100%;left:-25px;min-width:100%;background-color:#fff;border:solid 1px #f2f2f2}
+        /*右对齐*/
+        .dropDown.open.right >.dropDown-menu{right:-1px!important;left:auto!important}
+        .span1-4{
+            width: auto;
+        }
+        .span1-5{
+            width: 1000px;
+        }
+        .span1-5 textarea{
+            height: 50px;
+            width: 980px;
+        }
+        .span1-6{
+            width: 480px;
+        }
     </style>
 </head>
-<body>
-
+<body style="width: 1235px">
+<div style="text-align: right;margin: 20px 112px 0 40px" class="print-preview">
+    <div id="aside" class="grid_3 push_1" style="float: right;margin-right:13px">
+    </div>
+    <button class='btn ' id="sub" type='submit'>提交</button>
+</div>
+<hr>
+<div style="margin:50px 110px;border:2px solid; border-color: #c6bebe" >
     <fieldset>
         {$html}
     </fieldset>
+</div>
 
 
-<button class='btn btn-info' id="sub" type='submit'>提交</button>
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 <script type="text/javascript">
     //刚进入页面就渲染js
-//    $(document).ready(function () {
-//        var identity={$identity};
-//        switch (identity){
-//            case 1:$("input[shenfen!='user_1']").attr("readonly",true);
-//                break;
-//            case 2:$("input[shenfen!='user_2']").attr("readonly",true);
-//                break;
-//            case 3:$("input[shenfen!='user_3']").attr("readonly",true);
-//                break;
-//            case 4:$("input[shenfen!='user_4']").attr("readonly",true);
-//                break;
-//            case 5:$("input[shenfen!='user_5']").attr("readonly",true);
-//                break;
-//            case 6:$("input[shenfen!='user_6']").attr("readonly",true);
-//                break;
-//            case 7:$("input[shenfen!='user_7']").attr("readonly",true);
-//                break;
-//        }
-//
+    $(document).ready(function () {
+        $("[shenfen!='{$identity}']").attr("readonly",true);
+        $("[shenfen!='{$identity}']:not('.btn')").unbind('click');
+    });
         //给input 添加value 属性
         $("input").blur(function () {
             $(this).attr("value",$(this).val());
         });
-//
-//        $('#tijiao').click(function () {
-//            var user_1='';
-//            var user_2='';
-//            var user_3='';
-//            var user_4='';
-//            var user_5='';
-//            var user_6='';
-//            var user_7='';
-////            .control-group .controls .leipiplugins
-//
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_1")
-//                    user_1+=index+','
-//            });
-//
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_2")
-//                    user_2+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_3")
-//                    user_3+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_4")
-//                    user_4+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_5")
-//                    user_5+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_6")
-//                    user_6+=index+','
-//            });
-//            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-//                if(value.getAttribute("shenfen")==="user_7")
-//                    user_7+=index+','
-//            });
-//
-//            //var length=$('fieldset').children().length-1;//获取提交的元素个数
-//            var contents= $('fieldset').html();           //获取整个表单的样式
-//            var formName=$('input[name="form_name"]').val();
-//            var f_id={$f_id};
-//            var  content={
-//                'f_id':f_id,
-//                'html':contents,
-//                'formName':formName,
-//                'user_1':user_1,
-//                'user_2':user_2,
-//                'user_3':user_3,
-//                'user_4':user_4,
-//                'user_5':user_5,
-//                'user_6':user_6,
-//                'user_7':user_7,
-//            };
-//            var url="{:url('form/studentformSubmit')}";
-//            // 抛送http
-//            $.post(url,content,function (result) {
-//                //逻辑
-////              if(result.code==1){
-////                  location.href=result.data;
-////              }else{
-////                  alert(result.msg);
-////              }
-//            },"json");
-//        });
-//    });
 
     /**
      * 两步骤
@@ -178,6 +137,26 @@
             }
         });
 
+
+    });
+
+    $('[leipiplugins=qianzi]').click(function () {
+        var num= $('[leipiplugins=qianzi]').index(this);
+
+        var url="{:url('form/qianzi')}";
+        var data={
+            'num':num
+        };
+        $.post(url,data,function (result) {
+            layer.open({
+                type: 1,
+                title:'签字区域',
+                area: ['700px', '450px'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: result
+            });
+        });
 
     });
 </script>

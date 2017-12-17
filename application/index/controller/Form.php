@@ -60,18 +60,16 @@ class Form extends Controller
     public function formSubmit(){
         //获取缓存的流程
         $double=Cache::get('double');
-        $html=Cache::get('html');
         if ($double==0){
             $flow=Cache::get('singleflow');
             //处理流程
             $flows=array_splice($flow,1);
             $flows=implode(",",$flows);
             $data=input('param.');
-            print_r($data);
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
-                'html'=>$html,
+                'html'=>$data['html'],
                 'single'=>$flows,
             ];
             model('Adminform')->save($content);
@@ -87,7 +85,7 @@ class Form extends Controller
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
-                'html'=>$html,
+                'html'=>$data['html'],
                 'single'=>$single,
                 'couple'=>$couple,
                 'double'=>$double
@@ -114,12 +112,10 @@ class Form extends Controller
     public function formDetail(){
 
         //首先获得是哪张表
+        $s_id=session('id');
         $f_id=$_GET['f_id'];
-        model('User')->select();
+        $result=model('User')->where(['id'=>$s_id])->select();
         //在获取学生的id
-        $userinfo=session('userinfo','','index');
-        $s_id=$userinfo[0]['id'];
-        $identity=$userinfo[0]['identity'];
         $s_id=session('id');
         //去总表查询是否有表单   如果没有去管理员表单填写
         $data=[
@@ -136,7 +132,7 @@ class Form extends Controller
         return $this->fetch('',[
             'f_id'=>$f_id,
             'html'=>$data[0]['html'],
-            'identity'=>$identity,
+            'identity'=>'user_'.$result[0]['identity'],
         ]);
     }
 
@@ -441,11 +437,13 @@ class Form extends Controller
      */
     public function spflow(){
         $data=input('param.');
+        $res=model('user')->where(['id'=>session('id')])->select();
         $result=model('form')->where($data)->select();
         return $this->fetch('',[
             'html'=>$result[0]['html'],
             'f_id'=>$result[0]['f_id'],
-            's_id'=>$result[0]['s_id']
+            's_id'=>$result[0]['s_id'],
+            'identity'=>'user_'.$res[0]['identity']
         ]);
     }
 

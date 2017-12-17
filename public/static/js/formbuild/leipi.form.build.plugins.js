@@ -62,6 +62,8 @@ LPB.plugins['textarea'] = function (active_component,leipiplugins) {
   //右弹form  初始化值
   $(popover).find("#orgname").val($(leipiplugins).attr("title"));
   $(popover).find("#orgvalue").val($(leipiplugins).val());
+    $(popover).find("select.shenfen").val($(leipiplugins).attr("shenfen"));
+    $(popover).find("select.flow").val($(leipiplugins).attr("flow"));
   //右弹form  取消控件
   $(popover).delegate(".btn-danger", "click", function(e){
      
@@ -75,6 +77,10 @@ LPB.plugins['textarea'] = function (active_component,leipiplugins) {
       {
           inputs.push($(popover).find("textarea")[0]);
       }
+      var shenfen=$("select.shenfen").val();
+      $(leipiplugins).attr("shenfen", shenfen);
+      var flow=$("select.flow").val();
+      $(leipiplugins).attr("flow", flow);
       $.each(inputs, function(i,e){
           var attr_name = $(e).attr("id");//属性名称
           var attr_val = $(e).val();
@@ -101,10 +107,13 @@ LPB.plugins['textarea'] = function (active_component,leipiplugins) {
 /*
  签字控件
  */
-LPB.plugins['textarea'] = function (active_component,leipiplugins) {
-    var plugins = 'textarea',popover = $(".popover");
+LPB.plugins['qianzi'] = function (active_component,leipiplugins) {
+    var plugins = 'qianzi',popover = $(".popover");
     //右弹form  初始化值
+    $(popover).find("#orgname").val($(leipiplugins).attr("title"));
+    $(popover).find("#orgvalue").val($(leipiplugins).val());
     $(popover).find("select.shenfen").val($(leipiplugins).attr("shenfen"));
+    $(popover).find("select.flow").val($(leipiplugins).attr("flow"));
     //右弹form  取消控件
     $(popover).delegate(".btn-danger", "click", function(e){
 
@@ -112,10 +121,25 @@ LPB.plugins['textarea'] = function (active_component,leipiplugins) {
     });
     //右弹form  确定控件
     $(popover).delegate(".btn-info", "click", function(e){
+        var inputs = $(popover).find("input");
         var shenfen=$("select.shenfen").val();
         $(leipiplugins).attr("shenfen", shenfen);
-        active_component.popover("hide");
-
+        var flow=$("select.flow").val();
+        $(leipiplugins).attr("flow", flow);
+        $.each(inputs, function(i,e){
+            var attr_name = $(e).attr("id");//属性名称
+            var attr_val = $(e).val();
+            switch(attr_name)
+            {
+                case 'orgname':
+                    $(leipiplugins).attr("title",attr_val);
+                    active_component.find(".leipiplugins-orgname").text(attr_val);
+                default:
+                    $(leipiplugins).attr(attr_name, attr_val);
+            }
+            active_component.popover("hide");
+            LPB.genSource();//重置源代码
+        });
     });
 }
 /* 下拉框控件 select

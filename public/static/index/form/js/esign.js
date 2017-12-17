@@ -160,6 +160,7 @@
 
         //填充生成的图片
         function preview(){
+            console.log('hello');
             var show = domMap.sign_show[0];
             show.innerHTML = "";
             show.appendChild(convertCanvasToImage(canvas));
@@ -168,8 +169,8 @@
         //生成签字图片，图片大小自行修改
         function convertCanvasToImage(canvas){
             var image = new Image();
-            image.width = 600;
-            image.height =250 ;
+            image.width = 220;
+            image.height =120 ;
             image.src = canvas.toDataURL("i/png");
             return image;
         }
