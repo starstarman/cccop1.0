@@ -9,6 +9,16 @@
 	<div class="cl pd-5 bg-1 bk-gray mt-20">
 		<span class="r">共有数据：<strong>{$user_num}</strong> 条</span> </div>
 	<div class="mt-20">
+		<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+			<div class="dataTables_length" id="DataTables_Table_0_length"><label>显示
+				<select name="DataTables_Table_0_length" id="select_num" aria-controls="DataTables_Table_0"  class="select">
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+					<option value="100" >100</option>
+				</select> 条</label></div>
+		</div>
 	<table class="table table-border table-bordered table-hover table-bg table-sort">
 		<thead>
 			<tr class="text-c">
@@ -44,6 +54,7 @@
 		{/volist}
 	</table>
 	</div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20 cccop">{$user->render()}</div>
 </div>
 <!--_footer 作为公共模版分离出去-->
 {include file="public/footer"}
@@ -55,8 +66,31 @@
 <script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script> 
 <script type="text/javascript">
 /*用户-还原*/
+$(document).ready(function () {
+    var ops=document.getElementById("select_num");
+    var v='{$select_num2}';
+    for(var i=0;i<ops.options.length;i++){
+        if(ops.options[i].value==v){
+            ops.options[i].selected="selected";
+            break;
+        }
+    }
+
+});
+//页面显示条数的选择
+$("select").change(function () {
+    var  select_num = $(this).val();
+    var num = {
+        'select_num':select_num,
+    };
+    var url="{:url('user/member_teacher_list')}";
+    $.post(url,num,function (result) {
+        var url2='/index/user/member_student_del.html?select_num='+select_num;
+        location.replace(url2);
+    },"json");
+});
 function member_huanyuan(obj,id){
-    var r=confirm("确认要还原此老师吗吗吗吗吗吗吗吗吗？")
+    var r=confirm("确认要还原吗？")
     if (r==true){
         var del_id={
             'id':id,
