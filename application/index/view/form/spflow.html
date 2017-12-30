@@ -102,6 +102,7 @@
 <script type="text/javascript">
     //刚进入页面就渲染js
     $(document).ready(function () {
+        $("[readonly]").removeAttr("readonly");
         $("[shenfen!='{$identity}']").attr("readonly",true);
         $("[shenfen!='{$identity}']:not('.btn')").unbind('click');
     });
@@ -110,6 +111,9 @@
             $(this).attr("value",$(this).val());
         });
 
+         $("textarea").blur(function () {
+             $(this).text($(this).val());
+        });
     /**
      * 两步骤
      * 第一步：把内容保存到改学生的html中
@@ -130,13 +134,12 @@
                 var data2={
                     'f_id':{$f_id},
                     's_id':{$s_id},
-                }
+                };
                 $.post(url2,data2,function () {
                     
                 })
             }
         });
-
 
     });
 

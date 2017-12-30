@@ -109,6 +109,7 @@
 <script type="text/javascript">
     //刚进入页面就渲染js
     $(document).ready(function () {
+        $("[readonly]").removeAttr("readonly");
         $("[shenfen!='{$identity}']").attr("readonly",true);
         $("[shenfen!='{$identity}']:not('.btn')").unbind('click');
     });
@@ -117,6 +118,9 @@
            $(this).attr("value", $(this).val());
        });
 
+      $("textarea").blur(function () {
+        $(this).text($(this).val());
+      });
     $(function() {
         // Add link for print preview and intialise
         $('#aside').prepend('<button class="print-preview btn">打印</button>');
@@ -146,6 +150,8 @@
         $.post(url,data,function (result) {
 
         });
+
+
     });
 
     //设置审批人员

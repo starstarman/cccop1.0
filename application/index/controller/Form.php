@@ -14,7 +14,7 @@ class Form extends Controller
     {
         $test=model('form')->select();
         return $this->fetch('',[
-            'test'=>$test
+            'form_id'=>$form
         ]);
     }
     /**
@@ -394,6 +394,7 @@ class Form extends Controller
                 'f_id'=>$f_id,
                 'from'=>$s_id,
                 'to'  =>$identity[0],
+                'identity'=>$single[0],
                 'status'=>1
             ];
             $result=model('log')->save($data);
@@ -406,8 +407,8 @@ class Form extends Controller
 
             //转发两次
             $data= [
-                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity1], 'status'=>1],
-                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity2], 'status'=>1]
+                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity1],'identity'=>$single[0], 'status'=>1],
+                ['s_id'=>$s_id, 'f_id'=>$f_id, 'from'=>$s_id,  'to'  =>$result[$identity2],'identity'=>$couple[0], 'status'=>1]
             ];
             model('log')->saveAll($data);
         }
@@ -420,11 +421,13 @@ class Form extends Controller
      */
     public function formshow(){
         $id=session('id');
+        $identity=session('identity');
         $result=Db::view('user','id,username')
-            ->view('log','s_id,status,to','log.s_id=user.id')
+            ->view('log','s_id,status,to,identity','log.s_id=user.id')
             ->view('adminform','id,formName','log.f_id=adminform.id')
             ->where('status','=',1)
             ->where('to','=',$id)
+            ->where('identity','=',$identity)
             ->select();
        // print_r($result);
         return $this->fetch('',[
@@ -443,7 +446,7 @@ class Form extends Controller
             'html'=>$result[0]['html'],
             'f_id'=>$result[0]['f_id'],
             's_id'=>$result[0]['s_id'],
-            'identity'=>'user_'.$res[0]['identity']
+            'identity'=>'user_'.session('identity'),
         ]);
     }
 
@@ -474,18 +477,20 @@ class Form extends Controller
             'f_id'=>$f_id
         ];
         //判断回复的人是属于单流程的还是双流程的
-
+//
         $id= session('id');
-        $identity=model('user')->where(['id'=>$id])->column('identity');
+//        $identity=model('user')->where(['id'=>$id])->column('identity');
+//        print_r($identity);
         //找到findTeacher里的所有数据
         $find=model('Findteacher')->where($whereData)->select();
         //把identity转化成字符串类型
-        settype($identity[0],"string");
-
+//        settype($identity[0],"string");
+         $identity=session('identity');
         //单流程或者双流程参数设置
-       $y1=strpos($find[0]['couple'], $identity[0])!==false;
+       $y1=strpos($find[0]['couple'], $identity)!==false;
 
-       $y2=strpos($find[0]['single'], $identity[0])!==false;
+       $y2=strpos($find[0]['single'], $identity)!==false;
+
         //设置需要的参数
        if ($y1){
            $liucheng='couple';
@@ -512,13 +517,13 @@ class Form extends Controller
                 $flow=$result[0][$tag];
                 $single=explode(',',$result[0][$liucheng]);
                 $next=$result[0]['f'.$single[$flow+1]];
-
                 //向log添加数据
                 $saveData=[
                     's_id'=>$s_id,
                     'f_id'=>$f_id,
                     'from'=>session('id'),
                     'to'=>$next,
+                    'identity'=>$single[$flow+1],
                     'status'=>1
                 ];
                 $res=model('Log')->save($saveData);
@@ -527,7 +532,8 @@ class Form extends Controller
                     $wheData=[
                         's_id'=>$s_id,
                         'f_id'=>$f_id,
-                        'to'=>session('id')
+                        'to'=>session('id'),
+                        'identity'=>session('identity')
                     ];
                     model('Log')->where($wheData)->update(['status'=>0]);
                     model('Findteacher')->where($whereData)->update([$tag=>$flow+1]);

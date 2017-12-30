@@ -6,7 +6,19 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 2"}班主任{elseif condition="$_SESSION['identity'] eq 3"}辅导员{elseif condition="$_SESSION['identity'] eq 4"}书记{elseif condition="$_SESSION['identity'] eq 5"}指导教师{elseif condition="$_SESSION['identity'] eq 6"}主任{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}</span>
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 2"}班主任{elseif condition="$_SESSION['identity'] eq 3"}辅导员{elseif condition="$_SESSION['identity'] eq 4"}书记{elseif condition="$_SESSION['identity'] eq 5"}指导教师{elseif condition="$_SESSION['identity'] eq 6"}系主任{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}
+            {if condition="$many gt 1"}
+                <li class="dropDown dropDown_hover">
+                <a class="dropDown_A"style="color: #FFFFFF">切换职位</a>
+                   <ul class="dropDown-menu menu radius box-shadow">
+                       {volist name="identity" id="vo"}
+                    <li><a href="javascript:;" onclick="change('{$change[$key]}')">{$vo}</a></li>
+                       {/volist}
+                     </ul>
+                </li>
+            {/if}
+            </span>
+
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
@@ -65,10 +77,10 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="m_member_list.html" data-title="学生列表" href="javascript:;">学生列表</a></li>
-                    <li><a data-href="m_member_del.html" data-title="删除的学生" href="javascript:;">删除的学生</a></li>
-                    <li><a data-href="m_member_list1.html" data-title="教师列表" href="javascript:;">教师列表</a></li>
-                    <li><a data-href="m_member_del1.html" data-title="删除的教师" href="javascript:;">删除的教师</a></li>
+                    <li><a data-href="{:url('user/member_student_list')}" data-title="学生列表" href="javascript:;">学生列表</a></li>
+                    <li><a data-href="{:url('user/member_student_del')}" data-title="删除的学生" href="javascript:;">删除的学生</a></li>
+                    <li><a data-href="{:url('user/member_teacher_list')}" data-title="教师列表" href="javascript:;">教师列表</a></li>
+                    <li><a data-href="{:url('user/member_teacher_del')}" data-title="删除的教师" href="javascript:;">删除的教师</a></li>
                     <li><a data-href="m_member_add.html" data-title="新增成员" href="javascript:void(0)">新增成员</a></li>
                 </ul>
             </dd>
@@ -201,6 +213,19 @@
          }
          });*/
     });
+    //切换身份
+    function change(index) {
+        var url="{:url('login/change')}";
+
+        var data={
+            'identity':index,
+        };
+
+        $.post(url,data,function () {
+
+        });
+        location.reload();
+    }
     /*个人信息*/
     function myselfinfo(){
         layer.open({

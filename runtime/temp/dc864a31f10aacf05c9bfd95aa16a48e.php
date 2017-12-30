@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1513431812;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1513485822;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -371,7 +371,7 @@
                 var index = layer.open({
                     type: 1,
                     title: title,
-                    offset:['10px','400px',],
+                    offset:['90px','500px',],
                     content: re
                 });
                 layer.style(index, {
@@ -413,7 +413,7 @@
                 var index = layer.open({
                     type: 1,
                     title: title,
-                    offset:['10px','400px',],
+                    offset:['90px','500px',],
                     content: re
                 });
                 layer.style(index, {
