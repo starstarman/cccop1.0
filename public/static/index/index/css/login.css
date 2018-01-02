@@ -1,5 +1,5 @@
 /*---------------------reset----------------------*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0 0 4px; padding:0; border:0; outline:0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0 0 4px; padding:0; border:0; outline:0;}
 ol, ul, li { list-style:none } 
 body { background:#FFF;}
 :focus { outline:0 }
@@ -16,36 +16,25 @@ a { text-decoration:none; color:#009bd8 }
 .clearfix:after {clear: both;content: ".";display: block;height: 0;overflow: hidden;visibility: hidden;}
 .pos-r{ position:relative;}
 .hide{ display:none;}
+#yzm{padding-right: 12px;}
 /*---------------------header----------------------*/
 
-.header{ margin:21px auto; overflow: hidden; position: relative; width: 1300px; z-index: 0;}
+.header{ margin:26px auto; overflow: hidden; position: relative; width: 1300px; z-index: 0;}
 .headerNav { right: 0;text-align: right;top: 52px; width: 300px; position:absolute;}
 .headerNav a{ color:#515151; font-size:12px; padding:0 2px;}
 .headerNav a:hover{ text-decoration:underline; color:#658b98;}
 
 /*---------------------banner----------------------*/
 .banner{ min-width:1000px;  position:relative;  overflow:hidden;  }
-.banner .bd{ position:relative; z-index:0;  }
+.banner .bd{ position:relative; z-index:0; height: 465px; }
 .banner .bd ul{ width:100% !important; }
-.banner .bd li{ width:100% !important;  height:560px; }
+.banner .bd li{ width:100% !important;  height:471px; }
 .banner .bd li .siteWidth{ width:1000px; position:relative;  margin:0 auto;  height:299px;  }
 .banner .bd li a{ height:299px; display:block;  }
 .banner .bd .txt{ position:absolute; width:415px; top:100px; left:22px;   font:normal 18px/30px "Microsoft YaHei";    }
 .banner-shadow{ height:50px; line-height:50px; background:url(../../../new/images/banner-shdow.png) repeat-x;}
 .footer{text-align:center; font-size:12px; color:#999999;}
-.login-aside{position:absolute; width:320px; height:461px; z-index:1; border-radius:5px; left:70%; top:40px;}
-.fm-item.aaa{
-    margin:0 0 37px 0;
-}
-.fm-item.bbb{
-    margin:0 0 37px 0;
-}
-.fm-item.ccc{
-    margin:0 0 0 0;
-}
-.fm-item.ddd{
-    margin:0 0 0 0;
-}
+.login-aside{position:absolute; width:340px; height:387px; z-index:1; border-radius:5px; left:70%; top:40px;}
 
 .loginWraper{
 color:#f7ccc8;
@@ -75,7 +64,7 @@ label.form-label {
 
 #o-box-up,#o-box-down {
     width:340px;
-    height:481px;
+    height:387px;
     position:absolute;
 	border-radius:5px;
 
@@ -89,7 +78,7 @@ label.form-label {
 #o-box-down{ padding:30px 0 0 40px;}
 
 .i-text{
-  width:240px;
+  width:248px;
   height:37px;
   line-height:37px;
   border:1px solid #858585;
@@ -103,27 +92,11 @@ label.form-label {
   -o-box-shadow:1px 1px 1px #dfe4e8 inset;
   -mis-box-shadow:1px 1px 1px #dfe4e8 inset;
  }
-span#userid.tips{
-    width: 240px;
-    font-size: 10px;
-}
-span#userpassword.tips{
-    width: 240px;
-    font-size: 10px;
-}
-font.tips_false{
-    color: red;
-}
-font.tips_true{
-    color:blue;
-}
  .yzm{ width:112px;}
- .yzm-img{ position:absolute; left:130px; top:30px; cursor:pointer;}
+ /*.yzm-img{ position:absolute; left:130px; top:30px; cursor:pointer;}*/
 
-.btn-login{ width:115px; height:38px; text-align:center;font-size:15px;background:url(../../../new/images/login-btn.png) no-repeat; border:none; margin:5px;}
-.btn-register{ width:115px; height:36px; text-align:center;font-size:15px;background:url(../../../new/images/login-btn.png) no-repeat; border:none; margin:5px;cursor: pointer;}
-
-
+.btn-login{ width:150px; height:38px; text-align:center;font-size:15px;background:url(../../../new/images/login-btn.png) no-repeat; border:none; margin-right:5px;}
+.btn-register{ width:87px; height:36px; text-align:center;font-size:15px;background:url(../../../new/images/login-btn.png) no-repeat; border:none; margin-left:5px;cursor: pointer;}
 
 
 .h-light{
@@ -136,6 +109,8 @@ font.tips_true{
   box-shadow: 0 1px 4px rgba(11, 122, 179, 0.65) inset, 0 0 14px rgba(11, 122, 179, 0.45);
 
 }
+
+
 
 
 

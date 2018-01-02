@@ -23,17 +23,19 @@ class Login extends Base
            {
                $this->error('密码不正确');
            }
-           session('login',$ret,'index');
+
            return $this->success('登陆成功','login/loginSuccess');*/
             //进行验证码验证
             //if (!captcha_check($data['verifycode'])) {
               //  $this->error('验证码不正确');
             //} else {
                 //$username = $data['username'];
+
                 $id = $data['id'];
                 //$identity = $data['identity'];
                 //根据姓名获取登陆者的信息
                 $result = Db::query("select * from cop_user WHERE id = '$id'");
+                session('login',$result,'index');
                 //$_SESSION['identity'] = $data['identity'];
                 //$_SESSION['username'] = $data['username'];
 
@@ -98,8 +100,8 @@ class Login extends Base
 
     //欢迎界面的
     public function welcome(){
-        //return $this->fetch();
-        return '欢迎来到校企合作';
+        return $this->fetch();
+
     }
     public function logout()
     {

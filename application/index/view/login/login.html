@@ -5,61 +5,14 @@
     <title>系统登录</title>
     <link href="__STATIC__/index/index/css/login.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all" />
     <link href="__STATIC__/index/index/css/demo.css" rel="stylesheet" rev="stylesheet" type="text/css" media="all" />
-
-
-    <script>
-        function checkid() {
-            uid = form1.id.value;
-
-            if (uid.length < 5 || uid.length > 10) {
-                userid.innerHTML = '<font class="tips_false">长度是5-10个字符</font>';
-                $("#userid").show();
-            } else {
-                userid.innerHTML = '<font class="tips_true">输入正确</font>';
-                $("#userid").hide();
-            }
-        }
-        function checkpsd(){
-            psd=form1.password.value;
-            var flagZM=false ;
-            var flagSZ=false ;
-            var flagQT=false ;
-            if(psd.length < 5 || psd.length > 12){
-                userpassword.innerHTML='<font class="tips_false">长度是6-12个字符</font>';
-            }else
-            {
-                for(i=0;i < psd.length;i++)
-                {
-                    if((psd.charAt(i) >= 'A' && psd.charAt(i)<='Z') || (psd.charAt(i)>='a' && psd.charAt(i)<='z'))
-                    {
-                        flagZM=true;
-                    }
-                    else if(psd.charAt(i)>='0' && psd.charAt(i)<='9')
-                    {
-                        flagSZ=true;
-                    }else
-                    {
-                        flagQT=true;
-                    }
-                }
-                if(!flagZM||!flagSZ||flagQT){
-                    userpassword.innerHTML='<font class="tips_false">密码必须是字母数字的组合</font>';
-                    $("userpassword").show();
-                }else{
-                    userpassword.innerHTML='<font class="tips_true">输入正确</font>';
-                    $("userpassword").hide();
-                }
-            }
-        }
-    </script>
     <style type="text/css">
 
         body{padding: 0px;margin: 0px;font-size: 12px;font-family: "微软雅黑";}
 
-        .link{text-align: right;line-height: 20px;padding-right: 40px;}
-        .link a{
-            cursor: pointer;
-        }
+        /*.link{text-align: right;line-height: 20px;padding-right: 40px;}*/
+        /*.link a{*/
+            /*cursor: pointer;*/
+        /*}*/
         .ui-dialog{
             width: 380px;height: auto;display: none;
             position: absolute;z-index: 9000;
@@ -75,6 +28,7 @@
             font-weight: inherit;
             cursor: move;
             user-select:none;
+            text-align: center;
         }
         .ui-dialog-closebutton{
             width: 16px;height: 16px;display: block;
@@ -150,7 +104,7 @@
 <div class="ui-dialog" id="dialogMove" onselectstart='return false;'>
     <div class="ui-dialog-title" id="dialogDrag"  onselectstart="return false;" >
 
-        终于等到你
+        注册
 
         <a class="ui-dialog-closebutton" href="javascript:hideDialog();"></a>
 
@@ -192,31 +146,31 @@
         <div id="o-box-down"  style="table-layout:fixed;">
             <div class="error-box"></div>
             <form name="form1" class="registerform" action="{:url('login/check')}" method="post">
-                <div class="fm-item aaa">
+                <div class="fm-item">
                     <label for="logonId" class="form-label" >系统登录：</label>
                     <input type="text" name="id" value="" placeholder="账号不能为空" id="id" title="傻了吧唧" class="i-text" onblur="checkid()" required oninvalid="setCustomValidity('你虎啊！');" oninput="setCustomValidity('');" />
                     <!--<input type="username" value="输入账号" maxlength="100" id="username" class="i-text" ajaxurl="demo/valid.jsp"  datatype="s6-18" errormsg="用户名至少2个字符,最多18个字符！"  >-->
-                    <div class="ui-form-explain"></div><span class="tips" id="userid"></span>
+                    <div class="ui-form-explain"></div>
                 </div>
 
-                <div class="fm-item bbb">
+                <div class="fm-item">
                     <label for="logonId" class="form-label" >登录密码：</label>
                     <input type="password" name="password" id="password" placeholder="密码不能为空" title="填完了吗" class="i-text" onblur="checkpsd()" required oninvalid="setCustomValidity('哈哈啊哈！');" oninput="setCustomValidity('');"/>
                     <!--<input type="password" value="输入密码" maxlength="100" id="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！">-->
-                    <div class="ui-form-explain"></div><span class="tips" id="userpassword"></span>
+                    <div class="ui-form-explain"></div>
                 </div>
 
-                <div class="fm-item pos-r ccc" >
+                <div class="fm-item pos-r" >
                     <label for="logonId" class="form-label">验证码</label>
                     <input type="text" name="verifycode"  maxlength="100" id="yzm" class="i-text yzm" placeholder="请输入验证码" ><div style="float: right;margin: 0px 89px 0px 3px">{:captcha_img()}</div>
 
                 </div>
 
-                <div class="fm-item ddd">
+                <div class="fm-item">
                     <label for="logonId" class="form-label"></label>
                     <!--<input type="submit" value="" tabindex="4" id="send-btn" class="btn-login">-->
                     <input type="submit" value="登&emsp;录" class="btn-login" />
-                    <input value="注&emsp;册" class="btn-register" onclick="showDialog();" />
+                    <input type="button" value="注&emsp;册" class="btn-register" onclick="showDialog();" />
                     <div class="ui-form-explain"></div>
                     <!--<div class="link">-->
                         <!--<a onclick="showDialog();">登录</a>-->
@@ -284,14 +238,14 @@
                     ,area:['250px','150px']//区域大小
                     ,closeBtn: 0    // 是否显示关闭按钮
                     ,btnAlign: 'c' //按钮居中
-                    ,time:4000 //4s后自动关闭
+                    //,time:4000 //4s后自动关闭
                     ,anim: 1 //动画类型
                     ,title:'注册完成'//标题输出
                     ,btn: ['返回'] //按钮
                     ,icon: 1    // icon
                     ,yes:function(){
 
-                        window.location.href="login.html";
+                        window.location.href="{:url('login/login')}";
                     }
                 });
             }
@@ -397,7 +351,7 @@
     }
 
     //	侦听浏览器窗口大小变化
-    window.onresize = showDialog;
+    //window.onresize = showDialog;
 
     Dialog('dialogDrag','dialogMove');
     //showDialog();

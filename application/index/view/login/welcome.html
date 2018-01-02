@@ -1,0 +1,245 @@
+<?php use think\Session; Session::start();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />-->
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="__STATIC__/index/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="__STATIC__/index/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui/css/H-ui.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <!--<link rel="stylesheet" type="text/css" href="lib/icheck/icheck.css" />-->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/css/style.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+</head>
+<body style="background-color:rgba(219,214,218,0.48); ">
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 今日审批 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c" style="padding-top: 20px;background-color: rgba(193,188,192,0.33);width: 100%;height: 70px;">
+        <a href="#" class="l" style="padding-left: 25px;font-size: 25px;">今日审批</a>
+    </div>
+    {if condition="$_SESSION['identity'] eq 0"}
+    <div >
+        <div  style="padding-top: 20px;height:490px;width:100%;background-color: white;">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fd4d4f;">
+                    <p style="font-size: 25px;color: white;"><strong>也就努努</strong>&nbsp;&nbsp;(元)</p>
+                    <p style="font-size: 25px;color: white;"><strong>0.00</strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;">折扣<span>&nbsp;&nbsp;0.00元</span></p>
+                    <p style="font-size: 20px;color: white;">抹零<span>&nbsp;&nbsp;0.00元</span></p>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff"style="height: 200px;border:0;background-color:#4bacf5">
+                    <p style="font-size: 25px;color: white;"><strong>销售单</strong>&nbsp;&nbsp;(笔)</p>
+                    <p style="font-size: 25px;color: white;"><strong>0</strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;">食堂<span>&nbsp;&nbsp;0笔</span></p>
+                    <p style="font-size: 20px;color: white;">外卖<span>&nbsp;&nbsp;0笔</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #1fe26d;">
+                    <p style="font-size: 25px;color: white;"><strong>会员充值</strong>&nbsp;&nbsp;(元)</p>
+                    <p style="font-size: 25px;color: white;"><strong>0.00</strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;">充值笔数<span>&nbsp;&nbsp;0笔</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fbc31a;">
+                    <p style="font-size: 25px;color: white;"><strong>退单额</strong>&nbsp;&nbsp;(元)</p>
+                    <p style="font-size: 25px;color: white;"><strong>0.00</strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;">退单笔数<span>&nbsp;&nbsp;0笔</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div  style="min-height: 135px;margin-bottom: 30px;padding: 20px;height: 135px;border-right:1px solid gainsboro;">
+                    <p style="font-size: 25px;color: rgba(41,41,41,0.86);"><strong>收入</strong>&nbsp;&nbsp;(元)</p>
+                    <p style="font-size: 25px;color: red;"><strong>0.00</strong></p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                <div  style="min-height: 135px;margin-bottom: 20px;padding: 20px;height: 135px;border-right:1px solid gainsboro;">
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">现金</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">银行卡</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                <div  style="min-height: 135px;margin-bottom: 20px;padding: 20px;height: 135px;border-right:1px solid gainsboro;">
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">支付宝</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">积分</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                <div  style="min-height: 135px;margin-bottom: 20px;padding: 20px;height: 135px;border-right:1px solid gainsboro;">
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">微信</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">其他</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8">
+                <div  style="min-height: 135px;margin-bottom: 20px;padding: 20px;height: 135px;">
+                    <p style="font-size: 20px;color: rgba(90,90,90,0.51);">储值卡</p>
+                    <p style="font-size: 20px;color: rgba(57,57,57,0.84);"><strong>0.00元</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}
+    <div >
+        <div  style="padding-top: 20px;height:490px;width:100%;background-color: white;">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fd4d4f;">
+                    <p style="font-size: 25px;color: white;"><strong>我的任务</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已批<span>&nbsp;&nbsp;1个</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;">未批<span>&nbsp;&nbsp;1个</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff"style="height: 200px;border:0;background-color:#4bacf5">
+                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已读<span>&nbsp;&nbsp;1条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;">未读<span>&nbsp;&nbsp;1条</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #1fe26d;">
+                    <p style="font-size: 25px;color: white;"><strong>我的学生</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span>&nbsp;&nbsp;</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fbc31a;">
+                    <p style="font-size: 25px;color: white;"><strong>我的消息</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong><span></span></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;text-align:center;padding-top: 20px;">已看<span>&nbsp;&nbsp;1条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;&nbsp;1条</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {else /}
+    <div >
+        <div  style="padding-top: 20px;height:490px;width:100%;background-color: white;">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fd4d4f;">
+                    <p style="font-size: 25px;color: white;"><strong>我的任务</strong>&nbsp;&nbsp;</p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span>&nbsp;&nbsp;</span></p>
+                    <p style="font-size: 20px;color: white;"><span>&nbsp;&nbsp;</span></p>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff"style="height: 200px;border:0;background-color:#4bacf5">
+                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong>&nbsp;&nbsp;(条)</p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已读<span>&nbsp;&nbsp;0条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;">未读<span>&nbsp;&nbsp;0条</span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #1fe26d;">
+                    <p style="font-size: 25px;color: white;"><strong>审批进度</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span></span></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box1 bg-fff" style="height: 200px;border:0;background-color: #fbc31a;">
+                    <p style="font-size: 25px;color: white;"><strong>我的消息</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong></strong></p>
+                    <hr style="color: white;">
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已看<span>&nbsp;&nbsp;0条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;&nbsp;0条</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+</div>
+<script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/index/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="__STATIC__/index/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.table-sort').dataTable({
+            "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+            "bStateSave": true,//状态保存
+            "aoColumnDefs": [
+                //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                {"orderable":false,"aTargets":[0,8,9]}// 制定列不参与排序
+            ]
+        });
+        $('.table-sort tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+    });
+    /*用户-添加*/
+    function memeber_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*用户-查看*/
+    function member_show(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+
+    /*用户-编辑*/
+    function caipin_add(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*密码-修改*/
+    function change_password(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*用户-删除*/
+    function caipin_add(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+            $(obj).parents("tr").remove();
+            layer.msg('已删除!',{icon:1,time:1000});
+        });
+    }
+</script>
+</body>
+</html>

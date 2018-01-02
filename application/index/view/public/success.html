@@ -13,6 +13,9 @@
         .system-message .jump a{ color: #333; }
         .system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px; }
         .system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display: none; }
+        .layui-layer-dialog layui-layer-content{
+            margin-left: 110px;
+        }
     </style>
 </head>
 <body>
@@ -39,13 +42,15 @@
     layer.alert('操作成功', {
         type:0
         ,skin: 'layui-layer-molv' //样式类名  自定义样式
+        //,area:['250px','250px']//区域大小
         ,closeBtn: 0    // 是否显示关闭按钮
         ,anim: 4 //动画类型
         ,title:'成功'//标题输出
         ,btn: ['进入'] //按钮
+        ,btnAlign: 'c' //按钮居中
         ,icon: 6    // icon
         ,yes:function(){
-            window.location.href="<?php echo($url)?>";
+            window.location.href="{:url('login/loginsuccess')}";
         }});
 
 </script>
