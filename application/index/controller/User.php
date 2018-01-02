@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Controller;
 use think\Db;
+use think\Request;
 
 class User extends Controller
 {
@@ -132,5 +133,44 @@ class User extends Controller
         }else{
             return '还原失败';
         }
+    }
+//[id] => 2015025540 [username] => 刘阔 [sex] => [department] => [major] => [class] => [address] => [mobile] => [qq] => [email] => [wechat] => [b_teacher] => [z_teacher] =>
+    //学生个人信息完善
+    public function user_stu_info(){
+        if (Request::instance()->isPost()){
+            $data = input('post.');
+            print_r($data);
+            $content=[
+                'id'=>$data['id'],
+                'username'=>$data['username'],
+                'sex'=>$data['sex'],
+                'department'=>$data['department'],
+                'major'=>$data['major'],
+                'class'=>$data['class'],
+                'address'=>$data['address'],
+                'mobile'=>$data['mobile'],
+                'qq'=>$data['qq'],
+                'email'=>$data['email'],
+                'wechat'=>$data['wechat'],
+                'b_teacher'=>$data['b_teacher'],
+                'z_teacher'=>$data['z_teacher'],
+            ];
+            $res = Db::name('user_student')->insert($content);
+            if ($res){
+                return $this->success('','announce/ann_list');
+            }else{
+                return $this->error('新增失败','announce/ann_list');
+            }
+        }else{
+            return $this->fetch(
+
+            );
+        }
+    }
+
+    public function user_t_info(){
+        return $this->fetch(
+
+        );
     }
 }
