@@ -440,12 +440,14 @@ class Form extends Controller
      */
     public function spflow(){
         $data=input('param.');
-        $res=model('user')->where(['id'=>session('id')])->select();
+        $res=model('user')->where(['id'=>$data['s_id']])->select();
         $result=model('form')->where($data)->select();
         return $this->fetch('',[
             'html'=>$result[0]['html'],
             'f_id'=>$result[0]['f_id'],
             's_id'=>$result[0]['s_id'],
+            'from'=>session('id'),
+            'username'=>$res[0]['username'],
             'identity'=>'user_'.session('identity'),
         ]);
     }
@@ -638,5 +640,33 @@ class Form extends Controller
         return $this->fetch('', [
             'html'=>$data['data_po']
         ]);
+    }
+
+    /**
+     * 驳回信息
+     */
+    public function sendMessage(){
+        $data=input('param.');
+        return $this->fetch('',[
+            'username'=>$data['username'],
+            'f_id'=>$data['f_id'],
+            's_id'=>$data['s_id'],
+            'from'=>$data['from']
+        ]);
+    }
+
+    /**
+     * 返回信息提交
+     */
+    public function message(){
+        $data=input('param.');
+        $saveData=[
+            'from'=>$data['from'],
+            'to'=>$data['s_id'],
+            'content'=>$data['content'],
+            'status'=>1
+        ];
+        model('sendmessage')->save($saveData);
+        return show(1,'OK');
     }
 }

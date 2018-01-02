@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+    </style>
+</head>
+<div class="span6" style="margin-bottom: 27px">
+发送到：{$username}
+</div>
+
+<div class="span6">
+    <textarea class="content" style="width: 647px;height: 127px"></textarea>
+    <button type="submit" id="submit" class="btn"  style="margin-left: 605px;" >send</button>
+</div>
+
+<script type="text/javascript">
+    $('#submit').click(function () {
+        var data={
+            'f_id':'{$f_id}',
+            's_id':'{$s_id}',
+            'from':'{$from}',
+            'content':$('.content').val(),
+        };
+        var url="{:url('form/message')}";
+        $.post(url,data,function (result) {
+            if(result.status=1){
+                layer_close();
+            }
+        });
+    });
+</script>
+</body>
+</html>
