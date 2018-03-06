@@ -100,6 +100,27 @@ class Login extends Base
 
     //欢迎界面的
     public function welcome(){
+        //初始化不老师，学生，管理员三种不同的信息
+        $identity=session('identity');
+        //学生的初始化信息
+        if ($identity==1){
+            $messWhere=[
+                'to'=>session('id'),
+                'status'=>1
+            ];
+            $message=model('sendmessage')->where($messWhere)->select();
+            return $this->fetch('',[
+               'num'=>count($message),
+            ]);
+        }
+        //管理员的初始化信息
+        if ($identity==0){
+        echo 'admin';
+        }
+        //老师的初始化信息
+        if ($identity>1){
+        echo 'teacher';
+        }
         return $this->fetch();
 
     }

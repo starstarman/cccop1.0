@@ -7,28 +7,34 @@
     </style>
 </head>
 <div class="span6" style="margin-bottom: 27px">
-发送到：{$username}
+    <span id="change">来自</span>：{$fromUsername}
 </div>
 
 <div class="span6">
-    <textarea class="content" style="width: 647px;height: 127px"></textarea>
-    <button type="submit" id="submit" class="btn"  style="margin-left: 605px;" >send</button>
+    <textarea class="content" style="width: 647px;height: 127px">{$content}</textarea>
+    <button type="submit" id="relay" class="btn"  style="margin-left: 605px;" >回复</button>
+    <button type="submit" id="send"  class="btn"  style="margin-left: 605px; display:none;" >发送</button>
 </div>
 
 <script type="text/javascript">
-    $('#submit').click(function () {
+    $('#relay').click(function () {
+        $("textarea").val('');
+        $('#relay').css("display","none");
+        $('#send'). css("display","block");
+        $("#change").text('发送至');
+    });
+
+    $('#send').click(function () {
         var data={
-            'f_id':'{$f_id}',
-            's_id':'{$s_id}',
             'from':'{$from}',
+            'to':'{$to}',
             'content':$('.content').val(),
             'formName':'{$formName}',
-            'fromUsername':'{$fromUsername}'
         };
-        var url="{:url('form/message')}";
+        var url="{:url('form/relayMessage')}";
         $.post(url,data,function (result) {
             if(result.status=1){
-                layer_close();
+                layer.closeAll();
             }
         });
     });

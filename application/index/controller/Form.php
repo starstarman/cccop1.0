@@ -446,7 +446,9 @@ class Form extends Controller
             'html'=>$result[0]['html'],
             'f_id'=>$result[0]['f_id'],
             's_id'=>$result[0]['s_id'],
+            'formName'=>$result[0]['formName'],
             'from'=>session('id'),
+            'fromUsername'=>session('username'),
             'username'=>$res[0]['username'],
             'identity'=>'user_'.session('identity'),
         ]);
@@ -651,7 +653,9 @@ class Form extends Controller
             'username'=>$data['username'],
             'f_id'=>$data['f_id'],
             's_id'=>$data['s_id'],
-            'from'=>$data['from']
+            'from'=>$data['from'],
+            'fromUsername'=>$data['fromUsername'],
+            'formName'=>$data['formName']
         ]);
     }
 
@@ -664,9 +668,62 @@ class Form extends Controller
             'from'=>$data['from'],
             'to'=>$data['s_id'],
             'content'=>$data['content'],
+            'fromUsername'=>$data['fromUsername'],
+            'formName'=>$data['formName'],
             'status'=>1
         ];
         model('sendmessage')->save($saveData);
+        return show(1,'OK');
+    }
+
+    /**
+     * 已读信息
+     */
+    public function readMessage(){
+
+        return $this->fetch();
+    }
+
+    /**
+     * 未读信息
+     */
+    public function unreadMessage(){
+        $mesInfo=model('sendmessage')->where(['to'=>session('id')])->select();
+        return $this->fetch('',[
+            'mesInfo'=>$mesInfo
+        ]);
+    }
+
+    /**
+     * 查看消息
+     */
+    public function showMessage(){
+        $data=input('param.');
+        $mes_data=model('sendmessage')->where(['id'=>$data['mes_id']])->select();
+        return $this->fetch('',[
+           'fromUsername'=>$mes_data[0]['fromUsername'],
+           'formName'=>$mes_data[0]['formName'],
+            'content'=>$mes_data[0]['content'],
+            'to'=>$mes_data[0]['from'],
+            'from'=>session('id'),
+
+        ]);
+    }
+
+    /**
+     * 回复消息
+     */
+    public function relayMessage(){
+        $data=input('param.');
+        $save=[
+          'formName'=>$data['formName'],
+            'from'=>$data['from'],
+            'fromUsername'=>session('username'),
+            'to'=>$data['to'],
+            'content'=>$data['content'],
+            'status'=>1
+        ];
+        model('sendmessage')->save($save);
         return show(1,'OK');
     }
 }

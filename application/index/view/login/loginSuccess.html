@@ -32,7 +32,7 @@
                             <li><a href="{:url('login/logout')}">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
-                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">5</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
                     <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
@@ -107,6 +107,18 @@
             </dd>
 
         </dl>
+
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 我的消息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="{:url('form/readMessage')}" data-title="已读消息" href="javascript:void(0)">已读消息</a></li>
+                    <li><a data-href="{:url('form/unreadMessage')}" data-title="未读消息" href="javascript:void(0)">未读消息</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -136,6 +148,18 @@
             </dd>
 
         </dl>
+
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 我的消息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="{:url('form/readMessage')}" data-title="已读消息" href="javascript:void(0)">已读消息</a></li>
+                    <li><a data-href="{:url('form/unreadMessage')}" data-title="未读消息" href="javascript:void(0)">未读消息</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 公告信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -183,7 +207,7 @@
     <div id="iframe_box" class="Hui-article">
         <div class="show_iframe">
             <div style="display:none" class="loading"></div>
-            <iframe scrolling="yes" frameborder="0" src="welcome.html"></iframe>
+            <iframe scrolling="yes" frameborder="0" src="{:url('login/welcome')}"></iframe>
         </div>
     </div>
 </section>
@@ -286,15 +310,5 @@
     }
 </script>
 
-<!--此乃百度统计代码，请自行删除-->
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 {else}<?php header("Location:login.html");exit();?>
 {/if}
