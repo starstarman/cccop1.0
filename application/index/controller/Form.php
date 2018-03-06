@@ -14,7 +14,7 @@ class Form extends Controller
     {
         $test=model('form')->select();
         return $this->fetch('',[
-            'form_id'=>$form
+            'form_id'=>$test
         ]);
     }
     /**
@@ -66,11 +66,15 @@ class Form extends Controller
             $flows=array_splice($flow,1);
             $flows=implode(",",$flows);
             $data=input('param.');
+            $data['start_time'] =strtotime($data['start_time']);
+            $data['end_time'] =strtotime($data['end_time']);
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
                 'html'=>$data['html'],
                 'single'=>$flows,
+                'start_time'=>$data['start_time'],
+                'end_time'=>$data['end_time'],
             ];
             model('Adminform')->save($content);
         }else{
@@ -101,8 +105,19 @@ class Form extends Controller
      */
     public function studentShowFrom(){
         $data=model('Adminform')->select();
+        $dddd= $data;
+        for ($i=0;$i<sizeof($data);$i++){
+            if (intval(time())-$dddd[$i]['end_time']>0){
+                $dddd[$i]['status'] = true;
+            }
+            else{
+                $dddd[$i]['status'] = false;
+            }
+            $dddd[$i]['start_time'] = date("Y-m-d H:i",$dddd[$i]['start_time']);
+            $dddd[$i]['end_time'] = date("Y-m-d H:i",$dddd[$i]['end_time']);
+        }
         return $this->fetch('',[
-            'formData'=>$data,
+            'formData'=>$dddd,
         ]);
     }
 

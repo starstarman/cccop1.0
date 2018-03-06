@@ -37,9 +37,9 @@ class Announce extends Controller
         ];
         $res = Db::name('announce')->insert($content);
         if ($res){
-            return $this->success('新增成功','announce/ann_list');
+            return $this->success('信息已完善','');
         }else{
-            return $this->error('新增失败','announce/ann_list');
+            return $this->error('完善信息失败','announce/ann_list');
         }
 
     }
