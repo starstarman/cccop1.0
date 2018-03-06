@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\error.html";i:1508938454;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\error.html";i:1513482911;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -29,14 +29,14 @@
         var wait = document.getElementById('wait'),
             href = document.getElementById('href').href;
         var interval = setInterval(function(){
-            var time = --s.innerHTML;
+            var time = --wait.innerHTML;
             if(time <= 0) {
                 location.href = href;
                 clearInterval(interval);
             };
         }, 1000);
     })();
-    layer.alert('账号或密码有误', {
+    layer.alert('操作失败', {
         type:0
         ,skin: 'layui-layer-molv' //样式类名  自定义样式
         ,closeBtn: 0    // 是否显示关闭按钮

@@ -1,6 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1509285701;s:86:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\header.html";i:1508149305;s:86:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\footer.html";i:1507466056;}*/ ?>
-<?php session_start()?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:91:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\login\loginsuccess.html";i:1514862981;s:86:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\header.html";i:1508149305;s:86:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\footer.html";i:1510990244;}*/ ?>
+<?php use think\Session; Session::start();?>
 <!--包含头部文件-->
+<?php if($_SESSION['username'] != ''): ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -33,18 +34,29 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs"><?php if($_SESSION['identity'] == 1): ?>学生<?php elseif($_SESSION['identity'] == 0): ?>管理员<?php elseif($_SESSION['identity'] == 2): ?>指导教师<?php elseif($_SESSION['identity'] == 3): ?>班主任<?php elseif($_SESSION['identity'] == 4): ?>主任<?php elseif($_SESSION['identity'] == 5): ?>辅导员<?php elseif($_SESSION['identity'] == 6): ?>书记<?php elseif($_SESSION['identity'] == 7): ?>院长<?php endif; ?></span>
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs"><?php if($_SESSION['identity'] == 0): ?>管理员<?php elseif($_SESSION['identity'] == 1): ?>学生<?php elseif($_SESSION['identity'] == 2): ?>班主任<?php elseif($_SESSION['identity'] == 3): ?>辅导员<?php elseif($_SESSION['identity'] == 4): ?>书记<?php elseif($_SESSION['identity'] == 5): ?>指导教师<?php elseif($_SESSION['identity'] == 6): ?>系主任<?php elseif($_SESSION['identity'] == 7): ?>院长<?php endif; if($many > 1): ?>
+                <li class="dropDown dropDown_hover">
+                <a class="dropDown_A"style="color: #FFFFFF">切换职位</a>
+                   <ul class="dropDown-menu menu radius box-shadow">
+                       <?php if(is_array($identity) || $identity instanceof \think\Collection || $identity instanceof \think\Paginator): $i = 0; $__LIST__ = $identity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                    <li><a href="javascript:;" onclick="change('<?php echo $change[$key]; ?>')"><?php echo $vo; ?></a></li>
+                       <?php endforeach; endif; else: echo "" ;endif; ?>
+                     </ul>
+                </li>
+            <?php endif; ?>
+            </span>
+
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
                     <li class="dropDown dropDown_hover">
-                        <option>欢迎你 </option>
+                        欢迎你
                     </li>
                     <li class="dropDown dropDown_hover">
-                        <a class="dropDown_A"><?php echo $_SESSION['username']?><i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <a class="dropDown_A"><?php if($_SESSION['username'] == ''): ?>错误<?php else: ?><?php echo $_SESSION['username'];endif; ?><i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-                            <li><a href="logout">退&emsp;&emsp;出</a></li>
+                            <li><a href="<?php echo url('login/logout'); ?>">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
                     <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -83,7 +95,7 @@
             <dd>
                 <ul>
                     <li><a data-href="<?php echo url('Form/formManage'); ?>" data-title="表单管理" href="javascript:void(0)">表单管理</a></li>
-                    <li><a data-href="<?php echo url('Form/createForm'); ?>" data-title="新增表单" href="javascript:void(0)">新增表单</a></li>
+                    <li><a data-href="<?php echo url('Form/createForm'); ?>" data-title="新增表单" href="javascript:void(0) " onClick="displaynavbar('.pngfix')">新增表单</a></li>
                 </ul>
             </dd>
 
@@ -92,10 +104,10 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="m_member_list.html" data-title="学生列表" href="javascript:;">学生列表</a></li>
-                    <li><a data-href="m_member_del.html" data-title="删除的学生" href="javascript:;">删除的学生</a></li>
-                    <li><a data-href="m_member_list1.html" data-title="教师列表" href="javascript:;">教师列表</a></li>
-                    <li><a data-href="m_member_del1.html" data-title="删除的教师" href="javascript:;">删除的教师</a></li>
+                    <li><a data-href="<?php echo url('user/member_student_list'); ?>" data-title="学生列表" href="javascript:;">学生列表</a></li>
+                    <li><a data-href="<?php echo url('user/member_student_del'); ?>" data-title="删除的学生" href="javascript:;">删除的学生</a></li>
+                    <li><a data-href="<?php echo url('user/member_teacher_list'); ?>" data-title="教师列表" href="javascript:;">教师列表</a></li>
+                    <li><a data-href="<?php echo url('user/member_teacher_del'); ?>" data-title="删除的教师" href="javascript:;">删除的教师</a></li>
                     <li><a data-href="m_member_add.html" data-title="新增成员" href="javascript:void(0)">新增成员</a></li>
                 </ul>
             </dd>
@@ -111,7 +123,7 @@
 
         </dl>
     </div>
-    <?php elseif(($_SESSION['identity'] == 2)OR ($_SESSION['identity'] == 2) OR ($_SESSION['identity'] == 3) OR ($_SESSION['identity'] == 4) OR ($_SESSION['identity'] == 5) OR ($_SESSION['identity'] == 6) OR ($_SESSION['identity'] == 7)): ?>
+    <?php elseif(($_SESSION['identity'] == 2) OR ($_SESSION['identity'] == 3) OR ($_SESSION['identity'] == 4) OR ($_SESSION['identity'] == 5) OR ($_SESSION['identity'] == 6) OR ($_SESSION['identity'] == 7)): ?>
     <div class="menu_dropdown bk_2">
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -135,10 +147,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
-                    <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
-                    <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
-                    <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
+                    <li><a data-href="<?php echo url('form/formshow'); ?>" data-title="审批查看" href="javascript:;">审批查看</a></li>
                 </ul>
             </dd>
         </dl>
@@ -192,7 +201,7 @@
         <div class="Hui-tabNav-wp">
             <ul id="min_title_list" class="acrossTab cl">
                 <li class="active">
-                    <span title="我的桌面" data-href="welcome.html">我的桌面</span>
+                    <span title="我的桌面" data-href="welcome.html"> 我 的 桌 面 </span>
                     <em></em></li>
             </ul>
         </div>
@@ -217,7 +226,7 @@
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="__STATIC__/index//h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="__STATIC__/index/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
 </body>
@@ -239,6 +248,19 @@
          }
          });*/
     });
+    //切换身份
+    function change(index) {
+        var url="<?php echo url('login/change'); ?>";
+
+        var data={
+            'identity':index,
+        };
+
+        $.post(url,data,function () {
+
+        });
+        location.reload();
+    }
     /*个人信息*/
     function myselfinfo(){
         layer.open({
@@ -250,12 +272,21 @@
             title: '查看信息',
             content: '<div>管理员信息</div>'
         });
-    }
     /*个人信息*/
-    function logout() {
+    /*function logout() {
         layer.alert('点击确定跳转', function (index) {
             window.location.href = 'login';
         });
+    }*/
+    // function alert(){
+    //     layer.alert('请重新登陆',{
+    //         icon:2
+    //         ,button:[确定]
+    //         ,yes: function (index, layero) {
+    //         window.location.href = 'login.html';
+    //         layer.close(index);
+    //     }
+    //     })
     }
     /*资讯-添加*/
     function article_add(title,url){
@@ -300,3 +331,4 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+<?php else: header("Location:login.html");exit();endif; ?>

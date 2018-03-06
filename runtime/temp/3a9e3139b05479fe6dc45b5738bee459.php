@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html";i:1509254063;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"D:\Apache24\htdocs\GitHub\cccop1.0\public/../application/index\view\public\success.html";i:1514942153;}*/ ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,6 +14,9 @@
         .system-message .jump a{ color: #333; }
         .system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px; }
         .system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display: none; }
+        .layui-layer-dialog layui-layer-content{
+            margin-left: 110px;
+        }
     </style>
 </head>
 <body>
@@ -30,23 +33,25 @@
         var wait = document.getElementById('wait'),
             href = document.getElementById('href').href;
         var interval = setInterval(function(){
-            var time = --s.innerHTML;
+            var time = --wait.innerHTML;
             if(time <= 0) {
                 location.href = href;
                 clearInterval(interval);
             };
         }, 1000);
     })();
-    layer.alert('即将进入系统', {
+    layer.alert('操作成功', {
         type:0
         ,skin: 'layui-layer-molv' //样式类名  自定义样式
+        //,area:['250px','250px']//区域大小
         ,closeBtn: 0    // 是否显示关闭按钮
         ,anim: 4 //动画类型
         ,title:'成功'//标题输出
         ,btn: ['进入'] //按钮
+        ,btnAlign: 'c' //按钮居中
         ,icon: 6    // icon
         ,yes:function(){
-            window.location.href="<?php echo($url)?>";
+            window.location.href="<?php echo $url; ?>";
         }});
 
 </script>
