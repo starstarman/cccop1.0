@@ -43,10 +43,10 @@
         <input type="submit" id="menu_sub" class="btn menu_sub2 " style="float: right;margin-right: -79px" name="提交"/>
     </div>
 </div>
+<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
 <script>
     //审批流程的顺序设置
     $('.menu_sub2').click(function () {
-        //先判断单、双流程
         var options=$('.selected').text();
         //单流程的审批流程设置
         var str='';
@@ -78,14 +78,20 @@
         });
         //需要保存到数据库的数据
         //conf 流程顺序
-        alert(conf);
         var flowurl="{:url('form/createFlow')}";
         var content={
             'singleflow':conf,
             'double':0
         };
         $.post(flowurl,content,function (result) {
+
         },"json");
+            layer.msg('流程已设置!',{icon: 6,time:2000},function(index) {
+                children.layer.close(index);
+                parent.layer.close();
+            });
+
+
     });
 </script>
 <!--代码部分end-->
