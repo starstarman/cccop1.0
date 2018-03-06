@@ -17,6 +17,13 @@
     <script type="text/javascript">
         var _root = 'http://formbuild/index.php?s=/', _controller = 'index';
     </script>
+    <script type="text/javascript" src="__STATIC__/data_jquery/js/jquery-1.11.0.min.js"></script>
+    <!--<link type="text/css" rel="stylesheet" href="__STATIC__/data_jquery/css/admin.css" />-->
+        <link rel="stylesheet" type="text/css" href="__STATIC__/data_jquery/css/jquery-ui.css" />
+        <script type="text/javascript" src="__STATIC__/data_jquery/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/data_jquery/js/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="__STATIC__/data_jquery/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="__STATIC__/data_jquery/js/jquery-ui-timepicker-zh-CN.js"></script>
     <style>
 
         #components {
@@ -89,6 +96,17 @@
         .span1-6{
             width: 480px;
         }
+                              .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+        .ui-timepicker-div dl { text-align: left; }
+        .ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+        .ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+        .ui-timepicker-div td { font-size: 90%; }
+        .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+        .ui-timepicker-rtl{ direction: rtl; }
+        .ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+        .ui-timepicker-rtl dl dt{ float: right; clear: right; }
+        .ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
     </style>
     <!--link href="__STATIC__/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"-->
 
@@ -111,6 +129,8 @@
                     </span>
                         <button class='btn btn-default' style="font-weight: bold" id="preview" type='submit'>设置表单样式</button>
                         <button class='btn btn-default' style="font-weight: bold" id="tijiao" type='submit'>发布</button>
+                            <input name="start_time"  type="text" class="text-box" value="" placeholder="开始时间" readonly="readonly" style="cursor:pointer; width:150px"/>
+                            <input name="end_time" type="text" class="text-box" value="" placeholder="结束时间" readonly="readonly" style="cursor:pointer;width:150px"/>
                     </div>
                 </h3>
                 <hr>
@@ -273,7 +293,11 @@
     </div> <!-- row -->
 
 </div> <!-- /container -->
+<script type="text/javascript">
+    $( "input[name='start_time'],input[name='end_time']" ).datetimepicker();
+</script>
 
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 
 <script type="text/javascript" charset="utf-8" src="__STATIC__/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="__STATIC__/js/formbuild/bootstrap/js/bootstrap.min.js"></script>
@@ -322,6 +346,13 @@
             //var length=$('fieldset').children().length-1;//获取提交的元素个数
             var contents= $('fieldset').html();           //获取整个表单的样式
             var formName=$('input[name="form_name"]').val();
+            //开始时间
+            var start_time = $('input[name="start_time"]').val();
+            //结束时间
+            var end_time = $('input[name="end_time"]').val();
+
+            console.log(start_time);
+            console.log(end_time);
             var  content={
                 'html':contents,
                 'formName':formName,
@@ -332,6 +363,8 @@
                 'user_5':user_5,
                 'user_6':user_6,
                 'user_7':user_7,
+                'start_time':start_time,
+                'end_time':end_time,
             };
             var url="{:url('form/formSubmit',['test'=>$data])}";
             // 抛送http
