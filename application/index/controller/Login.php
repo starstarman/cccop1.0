@@ -42,6 +42,7 @@ class Login extends Base
                 if ($result) {
                         $_SESSION['username']=$result[0]['username'];
                         $_SESSION['identity']=$result[0]['identity'];
+                        $_SESSION['id']=$result[0]['id'];
                         session('id',$result[0]['id']);
                         session('username',$result[0]['username']);
                         session('identity',$result[0]['identity']);
