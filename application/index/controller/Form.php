@@ -569,6 +569,7 @@ class Form extends Controller
                     'to'=>session('id')
                 ];
                 model('Log')->where($resData)->update(['status'=>0]);
+                model('Findteacher')->where($whereData)->update(['end'=>0]);
             }else{
                 //首先找到findTeacher这个表里面的顺序，然后根据flow进行标记，然后找到标记的人的ID，然后在向log中添加数据
                 $result=model('Findteacher')->where($whereData)->select();
@@ -796,13 +797,36 @@ class Form extends Controller
     /**
      * 审批进度查询
      */
+
+    //要先判断一下form表里有没有数据 如果没有说明没有进行提交 不能显示在审批进度里
     public function progress(){
         //查询审批进度
-        $formData=model('findteacher')->where(['s_id'=>session('id')])->select();
+        $f_id=model('form')->where(['s_id'=>session('id')])->column('f_id');
+        $formData=model('findteacher')->where(['s_id'=>session('id')])->where('f_id','in',$f_id)->select();
+            foreach ($formData as $key=>$val){
+                //单流程
+                if ($val['status']==0){
+                    $name=explode(',',$val['name_str']);
+                    $formData[$key]['name']=$name[$val['flow']];
+                }else {
+                    //双流程
+                    $single=explode(',',$val['single']);
+                    $people1='f'.$single[$val['flow']];
+                    $username1=model('user')->where(['id'=>$val[$people1]])->column('username');
 
-            foreach ($formData as $val){
-                print_r($val['total']);
+                    $couple=explode(',',$val['couple']);
+                    $people2='f'.$couple[$val['flows']];
+                    $username2=model('user')->where(['id'=>$val[$people2]])->column('username');
+                    $formData[$key]['name']=$username1[0].','.$username2[0];
+                }
+                //送adminform查的其他信息
+                $formDatas=model('adminform')->where(['id'=>$val['f_id']])->select();
+                $formData[$key]['formName']=$formDatas['0']['formName'];
+                $formData[$key]['start_time']=$formDatas['0']['start_time'];
+                $formData[$key]['end_time']=$formDatas['0']['end_time'];
             }
-         return  $this->fetch();
+         return  $this->fetch('',[
+            'formData'=>$formData
+         ]);
     }
 }
