@@ -4,29 +4,29 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 团购商品列表 </nav>
 <div class="page-container">
     <div class="mt-20">
-        <table class="table table-border table-bordered table-bg table-hover table-sort">
-            <thead>
-            <tr class="text-c">
-                <th width="100">表单名称</th>
-                <th width="40">发信人</th>
-                <th width="40">消息内容</th>
-                <th width="50">消息发送时间</th>
-                <th width="40">操作</th>
-            </tr>
-            </thead>
-            {volist name="mesInfo" id="vo"}
-            <tbody>
-            <tr class="text-c">
-                <td><a style="text-decoration:none" class="ml-5" onClick="showMessage('{$vo.id}')" href="javascript:;" title="查看">{$vo.formName}</a></td>
-                <td>{$vo.fromUsername}</td>
-                <td>{$vo.content}</td>
-                <td>{$vo.create_time|strtotime|date|date="Y-m-d H:NN",###}</td>
-                <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="查看"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-            </tr>
-            </tbody>
-            {/volist}
-        </table>
-    </div>
+    <table class="table table-border table-bordered table-bg table-hover table-sort">
+        <thead>
+        <tr class="text-c">
+            <th width="100">表单名称</th>
+            <th width="40">发信人</th>
+            <th width="40">消息内容</th>
+            <th width="50">消息发送时间</th>
+            <th width="40">操作</th>
+        </tr>
+        </thead>
+        {volist name="mesInfo" id="vo"}
+        <tbody>
+        <tr class="text-c">
+            <td><a style="text-decoration:none" class="ml-5" onClick="showMessage('{$vo.id}')" href="javascript:;" title="查看">{$vo.formName}</a></td>
+            <td>{$vo.fromUsername}</td>
+            <td>{$vo.content}</td>
+            <td>{$vo.create_time|strtotime|date|date="Y-m-d H:NN",###}</td>
+            <td class="td-manage"> <a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+        </tr>
+        </tbody>
+        {/volist}
+    </table>
+</div>
 
 </div>
 <!--包含头部文件-->
@@ -45,8 +45,13 @@
                 area: ['700px', '350px'],
                 fixed: false, //不固定
                 maxmin: true,
-                content: result
+                content: result,
+                cancel: function(index, layero){
+                    location.reload();
+                    return false;
+                }
             });
+
         });
     }
     function ann_article(title,url){

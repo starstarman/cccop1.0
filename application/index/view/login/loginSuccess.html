@@ -32,7 +32,7 @@
                             <li><a href="{:url('login/logout')}">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
-                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">5</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">{$unreadNum}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
                     <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
@@ -182,10 +182,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批进度管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="m_member_list.html" data-title="工程实训" href="javascript:;">工程实训</a></li>
-                    <li><a data-href="m_member_del.html" data-title="生产实习" href="javascript:;">生产实习</a></li>
-                    <li><a data-href="m_member_list1.html" data-title="毕业实习" href="javascript:;">毕业实习</a></li>
-                    <li><a data-href="m_member_del1.html" data-title="校外毕业实习" href="javascript:;">校外毕业实习</a></li>
+                    <li><a data-href="{:url('Form/progress')}" data-title="审批进度查询" href="javascript:;">审批进度查询</a></li>
                 </ul>
             </dd>
         </dl>

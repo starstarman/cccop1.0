@@ -12,11 +12,36 @@ class Form extends Controller
      */
     public function formManage()
     {
-        $test=model('form')->select();
+        $form=model('adminform')->select();
+        for ($i=0;$i<sizeof($form);$i++){
+            if (intval(time())-$form[$i]['end_time']>0){
+                $form[$i]['status'] = true;
+            }
+            else{
+                $form[$i]['status'] = false;
+            }
+            $form[$i]['start_time'] = date("Y-m-d H:i",$form[$i]['start_time']);
+            $form[$i]['end_time'] = date("Y-m-d H:i",$form[$i]['end_time']);
+        }
         return $this->fetch('',[
-            'form_id'=>$test
+            'data'=>$form
         ]);
     }
+
+    /**
+     * 删除表单
+     */
+    public function del(){
+        $data = input('param.');
+        $content =[
+            'id'=>$data['id'],
+        ];
+        $res = model('adminform')->where('id',$content['id'])->delete();
+        if ($res){
+            return show(1);
+        }
+    }
+
     /**
      * 流程创建
      */
@@ -86,13 +111,17 @@ class Form extends Controller
             $single=implode(",",$single);
             $couple=implode(",",$couple);
             $data=input('param.');
+            $data['start_time'] =strtotime($data['start_time']);
+            $data['end_time'] =strtotime($data['end_time']);
             $content=[
                 'id'=>'',
                 'formName'=>$data['formName'],
                 'html'=>$data['html'],
                 'single'=>$single,
                 'couple'=>$couple,
-                'double'=>$double
+                'double'=>$double,
+                'start_time'=>$data['start_time'],
+                'end_time'=>$data['end_time'],
             ];
 
             model('Adminform')->save($content);
@@ -354,6 +383,8 @@ class Form extends Controller
         $ident = array_filter($ident);
         $single=model('Adminform')->where('id',$data['f_id'])->column('single','single');
         $couple=model('Adminform')->where('id',$data['f_id'])->column('couple','couple');
+        //在findTeacher里表示单双流程
+        $status=model('Adminform')->where('id',$data['f_id'])->column('double','double');
         //添加数据  过滤掉没有的字段
         $set=model('findteacher');
         $set->data([
@@ -369,7 +400,8 @@ class Form extends Controller
             'total'=>count($id),
             'single'=>$single[0],
             'couple'=>$couple[0],
-            'name_str'=>$data['name_str']
+            'name_str'=>$data['name_str'],
+            'status'=>$status[0]
             ])->allowField(true)->save();
 
     }
@@ -388,7 +420,14 @@ class Form extends Controller
             'html'=>$data['html'],
             'formName'=>$data['formName'],
         ];
-        model('form')->allowField(true)->save($formData);
+        //添加之前判断一下是否之前添加过 如果添加过就更新这条数据,并删除log内容
+        $addStatus=model('form')->where(['s_id'=>session('id'),'f_id'=>$f_id])->select();
+        if ($addStatus){
+            model('form')->isUpdate(true)->allowField(true)->save($formData);
+            model('log')->where(['s_id'=>session('id'),'f_id'=>$f_id])->delete();
+        }
+       model('form')->allowField(true)->save($formData);
+
         //找到第一个转发的对象
         $where=[
             'f_id'=>$f_id,
@@ -530,6 +569,7 @@ class Form extends Controller
                     'to'=>session('id')
                 ];
                 model('Log')->where($resData)->update(['status'=>0]);
+                model('Findteacher')->where($whereData)->update(['end'=>0]);
             }else{
                 //首先找到findTeacher这个表里面的顺序，然后根据flow进行标记，然后找到标记的人的ID，然后在向log中添加数据
                 $result=model('Findteacher')->where($whereData)->select();
@@ -695,15 +735,17 @@ class Form extends Controller
      * 已读信息
      */
     public function readMessage(){
-
-        return $this->fetch();
+        $mesInfo=model('sendmessage')->where(['to'=>session('id'),'status'=>0])->select();
+        return $this->fetch('',[
+            'mesInfo'=>$mesInfo
+        ]);
     }
 
     /**
      * 未读信息
      */
     public function unreadMessage(){
-        $mesInfo=model('sendmessage')->where(['to'=>session('id')])->select();
+        $mesInfo=model('sendmessage')->where(['to'=>session('id'),'status'=>1])->select();
         return $this->fetch('',[
             'mesInfo'=>$mesInfo
         ]);
@@ -715,6 +757,7 @@ class Form extends Controller
     public function showMessage(){
         $data=input('param.');
         $mes_data=model('sendmessage')->where(['id'=>$data['mes_id']])->select();
+                  model('sendmessage')->save(['status'=>0],['id'=>$data['mes_id']]);
         return $this->fetch('',[
            'fromUsername'=>$mes_data[0]['fromUsername'],
            'formName'=>$mes_data[0]['formName'],
@@ -725,6 +768,16 @@ class Form extends Controller
         ]);
     }
 
+    /**
+     * 删除消息
+     */
+    public function delmess(){
+        $data=input('param.');
+        $res=model('sendmessage')->where(['id'=>$data['id']])->delete();
+        if ($res){
+            return show(1);
+        }
+    }
     /**
      * 回复消息
      */
@@ -740,5 +793,40 @@ class Form extends Controller
         ];
         model('sendmessage')->save($save);
         return show(1,'OK');
+    }
+    /**
+     * 审批进度查询
+     */
+
+    //要先判断一下form表里有没有数据 如果没有说明没有进行提交 不能显示在审批进度里
+    public function progress(){
+        //查询审批进度
+        $f_id=model('form')->where(['s_id'=>session('id')])->column('f_id');
+        $formData=model('findteacher')->where(['s_id'=>session('id')])->where('f_id','in',$f_id)->select();
+            foreach ($formData as $key=>$val){
+                //单流程
+                if ($val['status']==0){
+                    $name=explode(',',$val['name_str']);
+                    $formData[$key]['name']=$name[$val['flow']];
+                }else {
+                    //双流程
+                    $single=explode(',',$val['single']);
+                    $people1='f'.$single[$val['flow']];
+                    $username1=model('user')->where(['id'=>$val[$people1]])->column('username');
+
+                    $couple=explode(',',$val['couple']);
+                    $people2='f'.$couple[$val['flows']];
+                    $username2=model('user')->where(['id'=>$val[$people2]])->column('username');
+                    $formData[$key]['name']=$username1[0].','.$username2[0];
+                }
+                //送adminform查的其他信息
+                $formDatas=model('adminform')->where(['id'=>$val['f_id']])->select();
+                $formData[$key]['formName']=$formDatas['0']['formName'];
+                $formData[$key]['start_time']=$formDatas['0']['start_time'];
+                $formData[$key]['end_time']=$formDatas['0']['end_time'];
+            }
+         return  $this->fetch('',[
+            'formData'=>$formData
+         ]);
     }
 }

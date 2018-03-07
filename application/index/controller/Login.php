@@ -92,26 +92,35 @@ class Login extends Base
             }
         }
         $many=count($data['identity']);
+        //未读的消息条数
+        $res=model('sendmessage')->where(['to'=>session('id'),'status'=>1])->select();
         return $this->fetch('',[
             'identity'=>$identity,
             'change'=>$data['identity'],
-            'many'=>count($data['identity'])
+            'many'=>count($data['identity']),
+            'unreadNum'=>count($res),
         ]);
     }
 
     //欢迎界面的
     public function welcome(){
-        //初始化不老师，学生，管理员三种不同的信息
+        //初始化老师，学生，管理员三种不同的信息
         $identity=session('identity');
         //学生的初始化信息
         if ($identity==1){
-            $messWhere=[
+            $unreadmessWhere=[
                 'to'=>session('id'),
                 'status'=>1
             ];
-            $message=model('sendmessage')->where($messWhere)->select();
+            $readmessWhere=[
+                'to'=>session('id'),
+                'status'=>0
+            ];
+            $unreadmessage = model('sendmessage')->where($unreadmessWhere)->select();
+            $readmessage = model('sendmessage')->where($readmessWhere)->select();
             return $this->fetch('',[
-               'num'=>count($message),
+               'unreadnum'=>count($unreadmessage),
+               'readnum'=>count($readmessage),
             ]);
         }
         //管理员的初始化信息
