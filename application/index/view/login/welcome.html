@@ -157,8 +157,8 @@
                     <p style="font-size: 25px;color: white;"><strong>我的消息</strong></p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <a href="#" style="text-decoration: none" onclick="memeber_add('已读信息','{:url(\'form/readMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已看<span>&nbsp;&nbsp;0条</span></p></a>
-                    <a href="#" style="text-decoration: none" onclick="memeber_add('未读信息','{:url(\'form/unreadMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;  {$num}条</span></p></a>
+                    <a href="#" style="text-decoration: none" onclick="memeber_add('已读信息','{:url(\'form/readMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已看<span>&nbsp;&nbsp;{$readnum}条</span></p></a>
+                    <a href="#" style="text-decoration: none" onclick="memeber_add('未读信息','{:url(\'form/unreadMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;  {$unreadnum}条</span></p></a>
                 </div>
             </div>
         </div>
