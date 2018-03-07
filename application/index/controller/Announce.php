@@ -27,21 +27,24 @@ class Announce extends Controller
         }
         //获取表单的值
         $data=input('post.');
-        $content=[
-            'id'=>'',
-            'ann_title'=>$data['articletitle'],
-            'ann_type'=>$data['articletype'],
-            'ann_author'=>$data['author'],
-            'ann_content'=>$data['content'],
-            'ann_time'=>date('Y-m-d H:i:s'),
-        ];
-        $res = Db::name('announce')->insert($content);
-        if ($res){
-            return $this->success('信息已完善','');
+        if(!$data['articletitle'] || !$data['articletype'] || !$data['author'] || !$data['content']){
+            return $this->error('请你完善信息！','announce/ann_add');
         }else{
-            return $this->error('完善信息失败','announce/ann_list');
+            $content=[
+                'id'=>'',
+                'ann_title'=>$data['articletitle'],
+                'ann_type'=>$data['articletype'],
+                'ann_author'=>$data['author'],
+                'ann_content'=>$data['content'],
+                'ann_time'=>date('Y-m-d H:i:s'),
+            ];
+            $res = Db::name('announce')->insert($content);
+            if ($res){
+                return $this->success('信息已完善','announce/ann_list');
+            }else{
+                return $this->error('完善信息失败','announce/ann_add');
+            }
         }
-
     }
     //公告编辑前的读取
     public function ann_edit(){
