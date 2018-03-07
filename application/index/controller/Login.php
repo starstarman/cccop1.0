@@ -52,7 +52,7 @@ class Login extends Base
                             }
                     //进行密码验证
                     if ($result[0]['password'] == $data['password']) {
-                        $this->success('',url('login/loginSuccess',['identity'=>$identity]));
+                        $this->success('登陆成功',url('login/loginSuccess',['identity'=>$identity]));
                     } else {
                         return $this->error('密码不正确！');
                     }

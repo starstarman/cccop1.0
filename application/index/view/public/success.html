@@ -1,4 +1,4 @@
-{__NOLAYOUT__}
+<!--{__NOLAYOUT__}-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -42,11 +42,12 @@
     layer.alert('<?php echo (strip_tags($msg))?>', {
         type:0
         ,skin: 'layui-layer-molv' //样式类名  自定义样式
-        //,area:['250px','250px']//区域大小
+        //,area:['250px','200px']//区域大小
         ,closeBtn: 0    // 是否显示关闭按钮
-        ,anim: 4 //动画类型
+        ,anim: 6 //动画类型
         ,title:'成功'//标题输出
         ,btn: ['进入'] //按钮
+        ,offset:'t'
         ,btnAlign: 'c' //按钮居中
         ,icon: 6    // icon
         ,yes:function(){
