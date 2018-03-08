@@ -10,19 +10,16 @@
     margin-top: 15px;
 }
 .btnDiv{
-    height: 100px;
-    width: 400px;
-    margin-top: 15px;
+    height: 50px;
+    margin-top: 31px;
 }
 .clearBtn{
     font-size: 22pt;
-    background:#e57727;
     border: 0;
     margin-left: 25%;
 }
 .okBtn{
     font-size: 22pt;
-    background: #36a5d9;
     border: 0;
-    margin-left: 15%;
+    margin-left: 35%;
 }

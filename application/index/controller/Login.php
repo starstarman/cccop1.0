@@ -116,11 +116,35 @@ class Login extends Base
                 'to'=>session('id'),
                 'status'=>0
             ];
+            //初始化消息信息
             $unreadmessage = model('sendmessage')->where($unreadmessWhere)->select();
             $readmessage = model('sendmessage')->where($readmessWhere)->select();
+
+            //初始化任务信息
+            //管理员一共发布的任务
+            $adminform = model('adminform')->select();
+            //已经处理的任务
+            $progressform = model('form')->where(['s_id'=>session('id')])->select();
+            //待处理的任务数
+            $pending=count($adminform)-count($progressform);
+
+            //初始化审批进度信息
+            //结束的任务
+            $endTask=model('findteacher')->where(['s_id'=>session('id'),'end'=>0])->select();
+
+            //未结束的任务
+            $Task=model('findteacher')->where(['s_id'=>session('id'),'end'=>1])->select();
+
+            //系统公告
+            $annNums=model('announce')->select();
             return $this->fetch('',[
                'unreadnum'=>count($unreadmessage),
                'readnum'=>count($readmessage),
+                'pendingTest'=>$pending,
+                'progressTest'=>count($progressform),
+                'endTask'=>count($endTask),
+                'task'=>count($Task),
+                'annNums'=>count($annNums)
             ]);
         }
         //管理员的初始化信息
@@ -129,7 +153,31 @@ class Login extends Base
         }
         //老师的初始化信息
         if ($identity>1){
-        echo 'teacher';
+            $unreadmessWhere=[
+                'to'=>session('id'),
+                'status'=>1
+            ];
+            $readmessWhere=[
+                'to'=>session('id'),
+                'status'=>0
+            ];
+            //初始化消息信息
+            $unreadmessage = model('sendmessage')->where($unreadmessWhere)->select();
+            $readmessage = model('sendmessage')->where($readmessWhere)->select();
+            //系统公告
+            $annNums=model('announce')->select();
+
+            //我的任务
+            $examineNums=model('log')->where(['to'=>session('id'),'status'=>0,'identity'=>session('identity')])->select();
+            $unexamineNums=model('log')->where(['to'=>session('id'),'status'=>1,'identity'=>session('identity')])->select();
+
+            return $this->fetch('',[
+                'annNums'=>count($annNums),
+                'unreadnum'=>count($unreadmessage),
+                'readnum'=>count($readmessage),
+                'examineNums'=>count($examineNums),
+                'unexamineNums'=>count($unexamineNums),
+            ]);
         }
         return $this->fetch();
 

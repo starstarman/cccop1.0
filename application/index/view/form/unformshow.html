@@ -1,6 +1,6 @@
 {include file="public/header"/}
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 公告信息 <span class="c-gray en">&gt;</span> 公告管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 审批管理 <span class="c-gray en">&gt;</span> 已审批 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> </span>  </div>
@@ -9,32 +9,30 @@
             <thead>
             <tr class="text-c">
                 <th width="25"><input type="checkbox" name="" value=""></th>
-                <th width="80">ID</th>
-                <th>标题</th>
-                <th>发布者</th>
-                <th>发布时间</th>
-                <th width="120">操作</th>
+                <th>学生</th>
+                <th>审批表</th>
+                <th>审批开始时间</th>
+                <th>审批截至时间</th>
+                <th>系统状态</th>
             </tr>
             </thead>
-            {volist name='ann' id='vo'}
             <tbody>
+            {volist name="data" id="vo"}
             <tr class="text-c">
                 <td><input type="checkbox" value="{$vo.id}" name="shanchu"></td>
-                <td>{$vo.id}</td>
-                <td><a style="text-decoration:none" class="ml-5" onClick="ann_article('公告详情','{:url('announce/ann_article', ['id'=>$vo.id])}')" href="javascript:;" title="查看">{$vo.ann_title}</a></td>
+                <td><a style="text-decoration:none" class="ml-5" onClick="ann_article('{$vo.formName}','{:url('form/spflow', ['f_id'=>$vo.id,'s_id'=>$vo.s_id])}')" href="javascript:;" title="查看">{$vo.username}</a></td>
+                <td>{$vo.formName}</td>
+                <td>{$vo.start_time|date='Y-m-d h:i:s',###}</td>
+                <td>{$vo.end_time|date='Y-m-d h:i:s',###}</td>
+                <td style="color:#00EE00">已审批</td>
 
-                <td>{$vo.ann_author}</td>
-                <td>{$vo.ann_time}</td>
-                <td class="f-14 td-manage">
-                    <a style="text-decoration:none" class="ml-5" onClick="article_edit(this,'{$vo.id}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                    <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{$vo.id}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-                </td>
             </tr>
-            </tbody>
             {/volist}
+            </tbody>
+
         </table>
         <!--分页代码-->
-     <div class="cl pd-5 bg-1 bk-gray mt-20 cccop">{$ann->render()}</div>
+     <div class="cl pd-5 bg-1 bk-gray mt-20 cccop"></div>
     </div>
 </div>
 <!--_footer 作为公共模版分离出去-->
@@ -52,7 +50,7 @@
         "pading":false,
         "aoColumnDefs": [
             //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-            {"orderable":false,"aTargets":[0,5]}// 不参与排序的列
+            {"orderable":false,"aTargets":[0,4]}// 不参与排序的列
         ]
     });
 

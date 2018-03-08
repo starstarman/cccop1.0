@@ -32,7 +32,7 @@
                             <li><a href="{:url('login/logout')}">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
-                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">{$unreadNum}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+                    <li id="Hui-msg"> <a href="#" title="只是提示"><span class="badge badge-danger">{$unreadNum}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
                     <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
@@ -132,7 +132,8 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('form/formshow')}" data-title="审批查看" href="javascript:;">审批查看</a></li>
+                    <li><a data-href="{:url('form/formshow')}" data-title="未审批" href="javascript:;">未审批</a></li>
+                    <li><a data-href="{:url('form/unformshow')}" data-title="已审批" href="javascript:;">已审批</a></li>
                 </ul>
             </dd>
         </dl>

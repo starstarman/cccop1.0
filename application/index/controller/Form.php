@@ -478,12 +478,43 @@ class Form extends Controller
         $identity=session('identity');
         $result=Db::view('user','id,username')
             ->view('log','s_id,status,to,identity','log.s_id=user.id')
-            ->view('adminform','id,formName','log.f_id=adminform.id')
+            ->view('adminform','id,formName,start_time,end_time','log.f_id=adminform.id')
             ->where('status','=',1)
             ->where('to','=',$id)
             ->where('identity','=',$identity)
             ->select();
-       // print_r($result);
+
+            for ($i=0;$i<sizeof($result);$i++){
+                if (intval(time())-$result[$i]['end_time']>0){
+                    $result[$i]['status'] = true;
+                }
+                else{
+                    $result[$i]['status'] = false;
+                }
+                $result[$i]['start_time'] = date("Y-m-d H:i",$result[$i]['start_time']);
+                $result[$i]['end_time'] = date("Y-m-d H:i",$result[$i]['end_time']);
+            }
+
+        return $this->fetch('',[
+            'data'=>$result
+        ]);
+    }
+
+    /**
+     *
+     * 审批管理已审批内容
+     */
+    public function unformshow(){
+        $id=session('id');
+        $identity=session('identity');
+        $result=Db::view('user','id,username')
+            ->view('log','s_id,status,to,identity','log.s_id=user.id')
+            ->view('adminform','id,formName,start_time,end_time','log.f_id=adminform.id')
+            ->where('status','=',0)
+            ->where('to','=',$id)
+            ->where('identity','=',$identity)
+            ->select();
+
         return $this->fetch('',[
             'data'=>$result
         ]);
