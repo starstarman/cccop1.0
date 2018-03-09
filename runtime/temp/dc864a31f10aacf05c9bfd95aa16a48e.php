@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1520514545;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"F:\Apache24\htdocs\cccop1.0\public/../application/index\view\form\createform.html";i:1520554945;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -201,7 +201,7 @@
 
                                     <div class="controls" style="margin-left: 1px; margin-right: 1px; ">
                                         <label class="control-label leipiplugins-orgname" style="width: auto;float: none;text-align: left">文本框</label>
-                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框" value=""
+                                        <input name="leipiNewField" type="text" placeholder="默认值" title="文本框"
                                                class="leipiplugins" leipiplugins="text"  shenfen=""/>
                                     </div>
 

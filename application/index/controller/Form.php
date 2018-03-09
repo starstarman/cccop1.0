@@ -540,6 +540,24 @@ class Form extends Controller
     }
 
     /**
+     *  查看已审批
+     */
+    public function unspflow(){
+        $data=input('param.');
+        $res=model('user')->where(['id'=>$data['s_id']])->select();
+        $result=model('form')->where($data)->select();
+        return $this->fetch('',[
+            'html'=>$result[0]['html'],
+            'f_id'=>$result[0]['f_id'],
+            's_id'=>$result[0]['s_id'],
+            'formName'=>$result[0]['formName'],
+            'from'=>session('id'),
+            'fromUsername'=>session('username'),
+            'username'=>$res[0]['username'],
+            'identity'=>'user_'.session('identity'),
+        ]);
+    }
+    /**
      * 老师向学生的表单中添加数据
      */
     public function addForm(){
