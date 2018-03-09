@@ -878,4 +878,32 @@ class Form extends Controller
             'formData'=>$formData
          ]);
     }
+
+    public function user_detail_select()
+    {
+        $data=input('param.');
+        $res = Db::name('user_student')->where('id',$data['data_po'])->select();
+
+        if ($res){
+            return [
+                'data'=>'true'
+            ];
+        }
+        else{
+            return [
+                'data'=>'false'
+            ];
+        }
+
+    }
+
+    public function select_stu_detail()
+    {
+        $data = input('param.');
+        $res = Db::name('user_student')->where('b_teacher',$data['id'])->select();
+        return $this->fetch('',[
+            'user_stu'=>$res,
+        ]);
+    }
+
 }
