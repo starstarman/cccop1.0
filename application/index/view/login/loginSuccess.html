@@ -174,7 +174,7 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 实习审批表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('Form/studentShowFrom')}" data-title="查看表单" href="javascript:void(0)">查看表单</a></li>
+                    <li><a data-href="{:url('Form/studentShowFrom')}" data-title="查看表单"  onclick="ifo_detail('请移步至个人信息模块将个人信息完善','<?php echo $_SESSION['id']?>','{:url('user/user_stu_detail')}')" href="javascript:void(0)">查看表单</a></li>
                 </ul>
             </dd>
 
@@ -183,7 +183,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批进度管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('Form/progress')}" data-title="审批进度查询" href="javascript:;">审批进度查询</a></li>
+                    <li><a data-href="{:url('Form/pro gress')}" data-title="审批进度查询" href="javascript:;">审批进度查询</a></li>
                 </ul>
             </dd>
         </dl>
@@ -305,6 +305,48 @@
     /*用户-添加*/
     function member_add(title,url,w,h){
         layer_show(title,url,w,h);
+    }
+
+    function ifo_detail(title,user_id,url){
+        var data_post={
+            'data_po':user_id,
+        };
+        //抛送逻辑
+        var urls ="{:url('user/user_stu_detail')}";
+        $.ajax({
+            type:"post",
+            url:urls,
+            data:data_post,
+            dataType:"json",
+            success:function (msg) {
+                revert(msg);
+            },
+        });
+        function revert(msg) {
+            if (msg){
+                var index = layer.open({
+                    type: 1,
+                    title: title,
+                    content: msg,
+                    cancel: function(index, layero){
+                        location.reload();
+                        return false;
+                    }
+
+                });
+                layer.style(index, {
+                    width: '370px',
+                    height:'150px',
+                });
+                layer(index);
+            }
+        }
+//        var index = layer.open({
+//            type: 1,
+//            title: title,
+//            content: url
+//        });
+//        layer.full(index);
     }
 </script>
 
