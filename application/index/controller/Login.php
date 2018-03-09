@@ -137,6 +137,8 @@ class Login extends Base
 
             //系统公告
             $annNums=model('announce')->select();
+
+            //该教师班级人数
             return $this->fetch('',[
                'unreadnum'=>count($unreadmessage),
                'readnum'=>count($readmessage),
@@ -144,7 +146,7 @@ class Login extends Base
                 'progressTest'=>count($progressform),
                 'endTask'=>count($endTask),
                 'task'=>count($Task),
-                'annNums'=>count($annNums)
+                'annNums'=>count($annNums),
             ]);
         }
         //管理员的初始化信息
@@ -171,12 +173,15 @@ class Login extends Base
             $examineNums=model('log')->where(['to'=>session('id'),'status'=>0,'identity'=>session('identity')])->select();
             $unexamineNums=model('log')->where(['to'=>session('id'),'status'=>1,'identity'=>session('identity')])->select();
 
+            $usernum = Db::name('user_student')->where(['b_teacher'=>session('id')])->count();
+
             return $this->fetch('',[
                 'annNums'=>count($annNums),
                 'unreadnum'=>count($unreadmessage),
                 'readnum'=>count($readmessage),
                 'examineNums'=>count($examineNums),
                 'unexamineNums'=>count($unexamineNums),
+                'user_stu'=>$usernum,
             ]);
         }
         return $this->fetch();
