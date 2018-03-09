@@ -139,38 +139,46 @@ class User extends Controller
     public function user_stu_info(){
         if (Request::instance()->isPost()){
             $data = input('post.');
-            print_r($data);
-            $content=[
-                'id'=>$data['id'],
-                'username'=>$data['username'],
-                'sex'=>$data['sex'],
-                'department'=>$data['department'],
-                'major'=>$data['major'],
-                'class'=>$data['class'],
-                'address'=>$data['address'],
-                'mobile'=>$data['mobile'],
-                'qq'=>$data['qq'],
-                'email'=>$data['email'],
-                'wechat'=>$data['wechat'],
-                'b_teacher'=>$data['b_teacher'],
-                'z_teacher'=>$data['z_teacher'],
-            ];
-            $res = Db::name('user_student')->insert($content);
-            if ($res){
-                return $this->success('','announce/ann_list');
-            }else{
-                return $this->error('新增失败','announce/ann_list');
-            }
+            $res = Db::name('user')->where('username',$data['b_teacher'])->select();
+            $res2 = Db::name('user')->where('username',$data['z_teacher'])->select();
+                $content=[
+                    'id'=>$data['id'],
+                    'username'=>$data['username'],
+                    'sex'=>$data['sex'],
+                    'department'=>$data['department'],
+                    'major'=>$data['major'],
+                    'class'=>$data['class'],
+                    'address'=>$data['address'],
+                    'mobile'=>$data['mobile'],
+                    'qq'=>$data['qq'],
+                    'email'=>$data['email'],
+                    'wechat'=>$data['wechat'],
+                    'b_teacher'=>$res[0]['id'],
+                    'z_teacher'=>$res2[0]['id'],
+                ];
+                $res = Db::name('user_student')->insert($content);
+                if ($res){
+                    return $this->success('成功','login/welcome');
+                }else{
+                    return $this->error('新增失败','user/user_stu_info');
+                }
+
         }else{
             return $this->fetch(
-
             );
         }
     }
 
-    public function user_t_info(){
-        return $this->fetch(
-
-        );
+    public function user_stu_detail()
+    {
+        $data = input('post.');
+        $res = Db::name('user_student')->where('id',$data['data_po'])->select();
+        if ($res){
+        }else{
+            return $this->fetch(
+         );
+        }
     }
+
+
 }
