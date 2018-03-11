@@ -174,9 +174,9 @@ class User extends Controller
         $data = input('post.');
         $res = Db::name('user_student')->where('id',$data['data_po'])->select();
         if ($res){
+            return false;
         }else{
-            return $this->fetch(
-         );
+            return true;
         }
     }
 

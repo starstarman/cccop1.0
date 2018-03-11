@@ -313,6 +313,7 @@
         };
         //抛送逻辑
         var urls ="{:url('user/user_stu_detail')}";
+        var primeurl = "{:url('login/loginSuccess')}";
         $.ajax({
             type:"post",
             url:urls,
@@ -324,29 +325,16 @@
         });
         function revert(msg) {
             if (msg){
-                var index = layer.open({
-                    type: 1,
-                    title: title,
-                    content: msg,
-                    cancel: function(index, layero){
-                        location.reload();
-                        return false;
-                    }
+                layer.msg(title, {
+                    icon: 1,
+                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    //do something
+                    window.location.replace(primeurl);
+                });
 
-                });
-                layer.style(index, {
-                    width: '370px',
-                    height:'150px',
-                });
-                layer(index);
             }
         }
-//        var index = layer.open({
-//            type: 1,
-//            title: title,
-//            content: url
-//        });
-//        layer.full(index);
     }
 </script>
 

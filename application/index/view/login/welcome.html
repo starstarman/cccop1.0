@@ -130,7 +130,7 @@
                     <p style="font-size: 25px;color: white;"><strong>我的任务</strong>&nbsp;&nbsp;</p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <a style="text-decoration: none" href="{:url('form/studentshowfrom')}"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">待处理<span>&nbsp;&nbsp;{$pendingTest}个</span></p></a>
+                    <a style="text-decoration: none" onclick="ifo_detail('请移步至个人信息模块将个人信息完善','<?php echo $_SESSION['id']?>')"  href="javascript:void(0)"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">待处理<span>&nbsp;&nbsp;{$pendingTest}个</span></p></a>
                     <a style="text-decoration: none" href="{:url('form/progress')}"><p style="font-size: 20px;text-align:center;color: white;">已处理<span>&nbsp;&nbsp;{$progressTest}个</span></p></a>
                 </div>
 
@@ -211,6 +211,39 @@
             $(obj).parents("tr").remove();
             layer.msg('已删除!',{icon:1,time:1000});
         });
+    }
+    function ifo_detail(title,user_id){
+        var data_post={
+            'data_po':user_id,
+        };
+        //抛送逻辑
+        var urls ="{:url('user/user_stu_detail')}";
+        var primeurl = "{:url('form/studentShowFrom')}";
+        $.ajax({
+            type:"post",
+            url:urls,
+            data:data_post,
+            dataType:"json",
+            success:function (msg) {
+                revert(msg);
+            },
+        });
+        function revert(msg) {
+
+            if (msg){
+                layer.msg(title, {
+                    icon: 1,
+                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    //do something
+//                    window.location.replace(primeurl);
+                });
+
+            }else {
+                window.location.href = "{:url('form/studentShowFrom')}";
+                console(msg);
+            }
+        }
     }
 </script>
 </body>
