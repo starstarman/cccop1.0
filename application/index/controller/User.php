@@ -191,6 +191,7 @@ class User extends Controller
                     'username'=>$data['username'],
                     'password'=>$data['id'],
                     'identity'=>$allready_arr[$i],
+                    'state'=> 1
                 ];
                 $res = Db::name('user')->insert($content);
             }
