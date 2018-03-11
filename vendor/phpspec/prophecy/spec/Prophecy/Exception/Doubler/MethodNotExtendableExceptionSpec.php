@@ -9,7 +9,7 @@ class MethodNotExtendableExceptionSpec extends ObjectBehavior
 {
     function let()
     {
-        $this->beConstructedWith('', 'User', 'getName');
+        $this->beConstructedWith('', 'mmmmm', 'getName');
     }
 
     function it_is_DoubleException()
@@ -24,6 +24,6 @@ class MethodNotExtendableExceptionSpec extends ObjectBehavior
 
     function it_has_classname()
     {
-        $this->getClassName()->shouldReturn('User');
+        $this->getClassName()->shouldReturn('mmmmm');
     }
 }

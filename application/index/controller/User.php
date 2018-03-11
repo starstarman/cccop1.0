@@ -180,5 +180,30 @@ class User extends Controller
         }
     }
 
+    public function member_teacher_add()
+    {
+        if(Request::instance()->isPost()){
+            $data=input('post.');
+            $allready_arr=$_REQUEST['vehicle'];
+            for ($i = 0;$i < count($allready_arr);$i++){
+                $content = [
+                    'id'=>$data['id'],
+                    'username'=>$data['username'],
+                    'password'=>$data['id'],
+                    'identity'=>$allready_arr[$i],
+                ];
+                $res = Db::name('user')->insert($content);
+            }
+            if ($res){
+                return $this->success('新增成功','login/welcome');
+            }else{
+                return $this->error('新增失败','user/memeber_teacher_add');
+            }
+        }else{
+            return $this->fetch();
+        }
+
+    }
+
 
 }
