@@ -150,9 +150,6 @@ class Login extends Base
             ]);
         }
         //管理员的初始化信息
-        if ($identity==0){
-        echo 'admin';
-        }
         //老师的初始化信息
         if ($identity>1){
             $unreadmessWhere=[
