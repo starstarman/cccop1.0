@@ -618,7 +618,16 @@ class Form extends Controller
                     'to'=>session('id')
                 ];
                 model('Log')->where($resData)->update(['status'=>0]);
-                model('Findteacher')->where($whereData)->update(['end'=>0]);
+                if ($find[0]['status']==0){
+                    model('Findteacher')->where($whereData)->update(['end'=>0]);
+                }else{
+                    if ($find[0]['end']==1){
+                        model('Findteacher')->where($whereData)->update(['end'=>3]);
+                    }else{
+                        model('Findteacher')->where($whereData)->update(['end'=>2]);
+                    }
+                }
+
             }else{
                 //首先找到findTeacher这个表里面的顺序，然后根据flow进行标记，然后找到标记的人的ID，然后在向log中添加数据
                 $result=model('Findteacher')->where($whereData)->select();
@@ -857,6 +866,9 @@ class Form extends Controller
                 if ($val['status']==0){
                     $name=explode(',',$val['name_str']);
                     $formData[$key]['name']=$name[$val['flow']];
+                    if ($val['end']==0){
+                        $formData[$key]['name']='无';
+                    }
                 }else {
                     //双流程
                     $single=explode(',',$val['single']);
@@ -867,12 +879,17 @@ class Form extends Controller
                     $people2='f'.$couple[$val['flows']];
                     $username2=model('user')->where(['id'=>$val[$people2]])->column('username');
                     $formData[$key]['name']=$username1[0].','.$username2[0];
+                    if ($val['end']==2){
+                        $formData[$key]['name']='无';
+                    }
                 }
                 //送adminform查的其他信息
+
                 $formDatas=model('adminform')->where(['id'=>$val['f_id']])->select();
                 $formData[$key]['formName']=$formDatas['0']['formName'];
                 $formData[$key]['start_time']=$formDatas['0']['start_time'];
                 $formData[$key]['end_time']=$formDatas['0']['end_time'];
+
             }
          return  $this->fetch('',[
             'formData'=>$formData

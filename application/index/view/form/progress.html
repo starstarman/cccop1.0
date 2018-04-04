@@ -24,7 +24,7 @@
                 <td>{$vo.name}</td>
                 <td>{$vo.start_time|date='Y-m-d h:i:s',###}</td>
                 <td>{$vo.end_time|date='Y-m-d h:i:s',###}</td>
-                {if condition="$vo.end eq '0'"}<td style="color: #FF4040;">完成</td>
+                {if condition="($vo.end eq 0) OR ($vo.end eq 2)"}<td style="color: #FF4040;">完成</td>
                 {else}<td style="color: #00EE00;">审批中...</td>
                 {/if}
 
