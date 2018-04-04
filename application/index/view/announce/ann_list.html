@@ -1,3 +1,4 @@
+<?php use think\Session;use think\Db; Session::start();?>
 {include file="public/header"/}
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 审批事项管理 <span class="c-gray en">&gt;</span> 公告管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
@@ -13,7 +14,7 @@
                 <th>标题</th>
                 <th>发布者</th>
                 <th>发布时间</th>
-                <th width="120">操作</th>
+                {if condition="$_SESSION['username'] == 'admin'"}<th width="120">操作</th>{/if}
             </tr>
             </thead>
             {volist name='ann' id='vo'}
@@ -25,10 +26,14 @@
 
                 <td>{$vo.ann_author}</td>
                 <td>{$vo.ann_time}</td>
+                {if condition="$_SESSION['username'] == 'admin'"}
                 <td class="f-14 td-manage">
-                    <a style="text-decoration:none" class="ml-5" onClick="article_edit(this,'{$vo.id}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <a style="text-decoration:none" class="ml-5" onClick="article_edit('编辑','{:url('announce/ann_edit',['id'=>$vo.id])}','','')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                     <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{$vo.id}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                    <a style="text-decoration:none" class="ml-5" onClick="article_sel(this,'{$vo.id}')" href="javascript:selected='selected};" title="设为滚动公告"><i class="Hui-iconfont">&#xe608;</i></a>
+                    <!--<a style="text-decoration:none" class="ml-5" onClick="article_sel(this,'{$vo.id}')"href="javascript:;" title="设为滚动公告"><i class="Hui-iconfont">&#xe6a8;</i></a>-->
                 </td>
+                {/if}
             </tr>
             </tbody>
             {/volist}
@@ -66,20 +71,33 @@
         layer.full(index);
     }
     /*资讯-编辑*/
-    function article_edit(obj,id){
-        var edit_id = {
-            'id':id,
-        };
-        var url="{:url('announce/ann_edit')}";
-        $.post(url,edit_id,function (result) {
-            //逻辑
-//              if(result.code==1){
-//                  location.href=result.data;
-//              }else{
-//                  alert(result.msg);
-//              }
-        },"json");
+    function article_edit(title,url,w,h){
+        return layer_show(title,url,w,h);
     }
+    function article_sel(obj,id){
+        layer.alert('确定设置',{
+             type:0
+            ,btn: ['进入','取消'] //按钮
+            ,btnAlign: 'c' //按钮居中
+            ,yes:function () {
+                var sel_id={
+                    'id':id,
+                };
+                var url="{:url('announce/sel')}";
+                $.post(url,sel_id,function(result) {
+                },"json");
+                layer.closeAll();
+            }
+            ,btn2:function () {
+                layer_close();
+            },end:function () {
+                top.location.reload();
+            }
+        })
+
+
+
+        }
     /*资讯-删除*/单条公告的删除
     function article_del(obj,id){
         var r=confirm("确认要删除吗？")
@@ -89,7 +107,7 @@
                 'id':id,
             };
             var url="{:url('announce/del')}";
-            $.post(url,del_id,function (result) {
+            $.post(url,del_id,function(result) {
                 //逻辑
 //              if(result.code==1){
 //                  location.href=result.data;

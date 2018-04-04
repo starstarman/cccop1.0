@@ -1,5 +1,6 @@
 <?php
 namespace app\index\controller;
+use think\Cache;
 use think\Session;
 use think\Db;
 use app\index\model\User;
@@ -35,7 +36,8 @@ class Login extends Base
                 //$identity = $data['identity'];
                 //根据姓名获取登陆者的信息
                 $result = Db::query("select * from cop_user WHERE id = '$id'");
-                session('login',$result,'index');
+                session::set('login',$result,'index');
+                session::set('announce',$result,'announce');
                 //$_SESSION['identity'] = $data['identity'];
                 //$_SESSION['username'] = $data['username'];
 
@@ -116,21 +118,23 @@ class Login extends Base
                 'to'=>session('id'),
                 'status'=>0
             ];
+            $id = Cache::get('id');
             $unreadmessage = model('sendmessage')->where($unreadmessWhere)->select();
             $readmessage = model('sendmessage')->where($readmessWhere)->select();
             return $this->fetch('',[
                'unreadnum'=>count($unreadmessage),
                'readnum'=>count($readmessage),
+                'id' => $id,
             ]);
         }
         //管理员的初始化信息
-        if ($identity==0){
-        echo 'admin';
-        }
-        //老师的初始化信息
-        if ($identity>1){
-        echo 'teacher';
-        }
+//        if ($identity==0){
+//        echo 'admin';
+//        }
+//        //老师的初始化信息
+//        if ($identity>1){
+//        echo 'teacher';
+//        }
         return $this->fetch();
 
     }
@@ -147,7 +151,7 @@ class Login extends Base
 
         public function change(){
         $data=input('param.');
-        print_r($data);
+        //print_r($data);
         session('identity',$data['identity']);
         $_SESSION['identity']=$data['identity'];
         return show('1');

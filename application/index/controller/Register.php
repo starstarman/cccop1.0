@@ -6,9 +6,9 @@ class Register extends Controller{
     //用户注册
     public function register(){
         $data=input('param.');
-        $username = Db::table('cop_user')->where('username',$data['username'])->find();
-        if($username){
-            return show($username,'已存在相同用户');
+        $id = Db::table('cop_user')->where('id',$data['id'])->find();
+        if($id){
+            return show($id,'已存在相同用户');
         }   else{
             $user = [
                 'id' => $data['id'],

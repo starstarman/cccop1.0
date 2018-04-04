@@ -1,7 +1,9 @@
 <?php
 namespace app\index\controller;
+use think\Cache;
 use think\Controller;
 use think\Db;
+use think\Session;
 
 class Announce extends Controller
 {
@@ -19,6 +21,33 @@ class Announce extends Controller
 
     public function ann_add(){
         return $this->fetch();
+    }
+    public function ann_succ(){
+        return $this->fetch();
+    }
+    public function save() {
+        if(!request()->isPost()) {
+            $this->error('请求失败');
+        }
+        $data = input('post.');
+        if(!empty($data['ann_title']) || !empty($data['ann_type']) || !empty($data['ann_author']) || !empty($data['ann_content'])) {
+            return $this->update($data);
+        }
+        // 把$data 提交model层
+        $res = $this->obj->addi($data);
+        if($res) {
+            $this->success('新增成功');
+        }else {
+            $this->error('新增失败');
+        }
+    }
+    public function update($data) {
+        $res =  $this->obj->save($data, ['id' => intval($data['id'])]);
+        if($res) {
+            $this->success('更新成功');
+        } else {
+            $this->error('更新失败');
+        }
     }
 
     public function add(){
@@ -46,33 +75,34 @@ class Announce extends Controller
             }
         }
     }
-    //公告编辑前的读取
-    public function ann_edit(){
-        return $this->fetch();
-//        {:url('ann_edit',array('id'=>$vo.id))}
-//        $id = 9;
-//        $ann = $this->obj->getAnnounceElemenById1($id);
-//        return $this->fetch('',[
-//            'ann'=>$ann,
-//        ]);
+    //
+    //公告修改前的读取
+    public function ann_edit($id){
+        //return $this->fetch();
+        if(intval($id) < 1 && $id < 0) {
+            $this->error('参数不合法','announce/ann_list');
+        }
+        $data = $this->obj->getAnnounceTitleById($id);
+//        print_r($data);exit();
+        return $this->fetch('', [
+            'data' => $data,
+        ]);
     }
-
-    //公告的编辑功能
+    //公告的修改功能
     public function edit(){
-        echo 'neng';exit();
-        echo 'nengxing ';exit();
+        $id = input('get.id');
         $data=input('post.');
         $content = [
             'ann_title'=>$data['articletitle'],
             'ann_type'=>$data['articletype'],
             'ann_author'=>$data['author'],
-            'ann_comment'=>$data['content'],
+            'ann_content'=>$data['content'],
         ];
-        $res = Db::name('announce')->update($content);
+        $res = Db::name('announce')->where('id',$id)->update($content);
         if ($res){
-            return $this->success('修改成功','announce/ann_list');
+            $this->success('修改成功');//点击确定返回修改界面，需要关闭弹层在刷新方可显示
         }else{
-            return $this->error('修改失败','announce/ann_list');
+            return $this->error('修改失败');
         }
     }
 
@@ -99,9 +129,46 @@ class Announce extends Controller
         if(empty($id)) {
             return $this->error('ID错误');
         }
+
         $ann = $this->obj->getAnnouncecontentById($id);
         return $this->fetch('',[
             'ann'=>$ann,
+        ]);
+    }
+    public function sel(){
+        session::get('announce');
+        if($_SESSION['username'] == 'admin'){
+            $data = input('param.');
+            $content=[
+                'id'=>$data['id'],
+            ];
+            $status = [
+                'ann_status' => 1
+            ];
+            $start = [
+                'ann_status' => 0
+            ];
+            $ref = Db::name('announce')->where('ann_status',1)->update($start);
+            if($ref){
+                Cache::set('id',$content['id'],0);
+                return Db::name('announce')->where('id',$content['id'])->update($status);
+            }else{
+                $this->error('设置失败');
+            }
+        }else{
+            $this->error('无此权限');
+        }
+
+    }
+    public function ann_readdetail(){
+        $id = Cache::get('id');
+        if(empty($id)){
+            $this->error("ID不允许为空");
+        }
+        $ann = $this->obj->getAnnounceTitleById($id);
+        return $this->fetch('',[
+            'ann'=>$ann,
+            'id'=>$id
         ]);
     }
 }
