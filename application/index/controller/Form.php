@@ -180,6 +180,32 @@ class Form extends Controller
         ]);
     }
 
+    public function showFormDetail(){
+
+        //首先获得是哪张表
+        $s_id=session('id');
+        $f_id=$_GET['f_id'];
+        $result=model('User')->where(['id'=>$s_id])->select();
+        //在获取学生的id
+        $s_id=session('id');
+        //去总表查询是否有表单   如果没有去管理员表单填写
+        $data=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id,
+        ];
+        $data=model('Form')->where($data)->select();
+        if (!empty($data)){
+
+        }else{
+            $data=model('Adminform')->where('id',$f_id)->select();
+        }
+
+        return $this->fetch('',[
+            'f_id'=>$f_id,
+            'html'=>$data[0]['html'],
+            'identity'=>'user_'.$result[0]['identity'],
+        ]);
+    }
     /**
      * 审批流程数据接收
      */
