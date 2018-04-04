@@ -26,7 +26,7 @@ class Unescaper
     /**
      * Regex fragment that matches an escaped character in a double quoted string.
      */
-    const REGEX_ESCAPED_CHARACTER = '\\\\(x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8}|.)';
+    const REGEX_ESCAPED_CHARACTER = '\\\\(x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|User[0-9a-fA-F]{8}|.)';
 
     /**
      * Unescapes a single quoted string.
@@ -96,22 +96,22 @@ class Unescaper
             case '\\':
                 return '\\';
             case 'N':
-                // U+0085 NEXT LINE
+                // User+0085 NEXT LINE
                 return "\xC2\x85";
             case '_':
-                // U+00A0 NO-BREAK SPACE
+                // User+00A0 NO-BREAK SPACE
                 return "\xC2\xA0";
             case 'L':
-                // U+2028 LINE SEPARATOR
+                // User+2028 LINE SEPARATOR
                 return "\xE2\x80\xA8";
             case 'P':
-                // U+2029 PARAGRAPH SEPARATOR
+                // User+2029 PARAGRAPH SEPARATOR
                 return "\xE2\x80\xA9";
             case 'x':
                 return self::utf8chr(hexdec(substr($value, 2, 2)));
             case 'u':
                 return self::utf8chr(hexdec(substr($value, 2, 4)));
-            case 'U':
+            case 'User':
                 return self::utf8chr(hexdec(substr($value, 2, 8)));
             default:
                 throw new ParseException(sprintf('Found unknown escape character "%s".', $value));

@@ -32,7 +32,7 @@
                             <li><a href="{:url('login/logout')}">退&emsp;&emsp;出</a></li>
                         </ul>
                     </li>
-                    <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">{$unreadNum}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+                    <li id="Hui-msg"> <a href="#" title="只是提示"><span class="badge badge-danger">{$unreadNum}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
                     <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
@@ -81,7 +81,7 @@
                     <li><a data-href="{:url('user/member_student_del')}" data-title="删除的学生" href="javascript:;">删除的学生</a></li>
                     <li><a data-href="{:url('user/member_teacher_list')}" data-title="教师列表" href="javascript:;">教师列表</a></li>
                     <li><a data-href="{:url('user/member_teacher_del')}" data-title="删除的教师" href="javascript:;">删除的教师</a></li>
-                    <li><a data-href="m_member_add.html" data-title="新增成员" href="javascript:void(0)">新增成员</a></li>
+                    <li><a data-href="{:url('user/member_teacher_add')}" data-title="新增教师" href="javascript:void(0)">新增教师</a></li>
                 </ul>
             </dd>
         </dl>
@@ -98,15 +98,15 @@
     </div>
     {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}
     <div class="menu_dropdown bk_2">
-        <dl id="menu-article">
-            <dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="{:url('user/user_info')}" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>
-                </ul>
-            </dd>
+        <!--<dl id="menu-article">-->
+            <!--<dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
+            <!--<dd>-->
+                <!--<ul>-->
+                    <!--<li><a data-href="{:url('user/user_info')}" data-title="个人信息" href="javascript:void(0)">个人信息</a></li>-->
+                <!--</ul>-->
+            <!--</dd>-->
 
-        </dl>
+        <!--</dl>-->
 
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 我的消息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -132,7 +132,8 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('form/formshow')}" data-title="审批查看" href="javascript:;">审批查看</a></li>
+                    <li><a data-href="{:url('form/formshow')}" data-title="未审批" href="javascript:;">未审批</a></li>
+                    <li><a data-href="{:url('form/unformshow')}" data-title="已审批" href="javascript:;">已审批</a></li>
                 </ul>
             </dd>
         </dl>
@@ -173,7 +174,7 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 实习审批表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('Form/studentShowFrom')}" data-title="查看表单" href="javascript:void(0)">查看表单</a></li>
+                    <li><a data-href="{:url('Form/studentShowFrom')}" data-title="查看表单"  onclick="ifo_detail('请移步至个人信息模块将个人信息完善','<?php echo $_SESSION['id']?>','{:url('user/user_stu_detail')}')" href="javascript:void(0)">查看表单</a></li>
                 </ul>
             </dd>
 
@@ -182,7 +183,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 审批进度管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('Form/progress')}" data-title="审批进度查询" href="javascript:;">审批进度查询</a></li>
+                    <li><a data-href="{:url('Form/pro gress')}" data-title="审批进度查询" href="javascript:;">审批进度查询</a></li>
                 </ul>
             </dd>
         </dl>
@@ -304,6 +305,36 @@
     /*用户-添加*/
     function member_add(title,url,w,h){
         layer_show(title,url,w,h);
+    }
+
+    function ifo_detail(title,user_id,url){
+        var data_post={
+            'data_po':user_id,
+        };
+        //抛送逻辑
+        var urls ="{:url('user/user_stu_detail')}";
+        var primeurl = "{:url('login/loginSuccess')}";
+        $.ajax({
+            type:"post",
+            url:urls,
+            data:data_post,
+            dataType:"json",
+            success:function (msg) {
+                revert(msg);
+            },
+        });
+        function revert(msg) {
+            if (msg){
+                layer.msg(title, {
+                    icon: 1,
+                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    //do something
+                    window.location.replace(primeurl);
+                });
+
+            }
+        }
     }
 </script>
 

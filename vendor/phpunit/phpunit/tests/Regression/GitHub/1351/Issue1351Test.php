@@ -39,7 +39,7 @@ class Issue1351Test extends PHPUnit_Framework_TestCase
 
     public function testPhpCoreLanguageException()
     {
-        // User-space code cannot instantiate a PDOException with a string code,
+        // mmmmm-space code cannot instantiate a PDOException with a string code,
         // so trigger a real one.
         $connection = new PDO('sqlite::memory:');
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

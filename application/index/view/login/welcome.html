@@ -1,29 +1,5 @@
 <?php use think\Session;use think\Db; Session::start();?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />-->
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="__STATIC__/index/lib/html5shiv.js"></script>
-    <script type="text/javascript" src="__STATIC__/index/lib/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui/css/H-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui/css/H-ui.css" />
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/lib/Hui-iconfont/1.0.8/iconfont.css" />
-    <!--<link rel="stylesheet" type="text/css" href="lib/icheck/icheck.css" />-->
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/skin/default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="__STATIC__/index/h-ui.admin/css/style.css" />
-    <!--[if IE 6]>
-    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
-    <script>DD_belatedPNG.fix('*');</script>
-    <![endif]-->
-</head>
+{include file="public/header" /}
 <body style="background-color:rgba(219,214,218,0.48); ">
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 今日审批 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
@@ -114,17 +90,17 @@
                     <p style="font-size: 25px;color: white;"><strong>我的任务</strong></p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已批<span>&nbsp;&nbsp;1个</span></p>
-                    <p style="font-size: 20px;text-align:center;color: white;">未批<span>&nbsp;&nbsp;1个</span></p>
+                    <a href="{:url('form/formshow')}" style="text-decoration: none"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">未审批<span>&nbsp;&nbsp;{$unexamineNums}个</span></p></a>
+                    <a href="{:url('form/unformshow')}" style="text-decoration: none"><p style="font-size: 20px;text-align:center;color: white;">已审批<span>&nbsp;&nbsp;{$examineNums}个</span></p></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box1 bg-fff"style="height: 200px;border:0;background-color:#4bacf5">
-                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong></p>
+                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong>&nbsp;&nbsp;</p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已读<span>&nbsp;&nbsp;1条</span></p>
-                    <p style="font-size: 20px;text-align:center;color: white;">未读<span>&nbsp;&nbsp;1条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">总共<span>&nbsp;&nbsp;{$annNums}条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;"><span>&nbsp;&nbsp;</span></p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
@@ -132,7 +108,7 @@
                     <p style="font-size: 25px;color: white;"><strong>我的学生</strong></p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span>&nbsp;&nbsp;</span></p>
+                    <a href="#" style="text-decoration: none" onclick="memeber_add('学生实习审核详情','{:url('form/select_stu_detail',[\'id\' => $_SESSION[\'id\']])}')"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">学生详情<span>  {$user_stu}人</span></p></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -140,8 +116,8 @@
                     <p style="font-size: 25px;color: white;"><strong>我的消息</strong></p>
                     <p style="font-size: 25px;color: white;"><strong></strong><span></span></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;color: white;text-align:center;padding-top: 20px;">已看<span>&nbsp;&nbsp;1条</span></p>
-                    <p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;&nbsp;1条</span></p>
+                    <a href="#" style="text-decoration: none" onclick="memeber_add('已读信息','{:url(\'form/readMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已看<span>&nbsp;&nbsp;{$readnum}条</span></p></a>
+                    <a href="#" style="text-decoration: none" onclick="memeber_add('未读信息','{:url(\'form/unreadMessage\')}')"><p style="font-size: 20px;text-align:center;color: white;">未看<span>&nbsp;  {$unreadnum}条</span></p></a>
                 </div>
             </div>
         </div>
@@ -154,18 +130,18 @@
                     <p style="font-size: 25px;color: white;"><strong>我的任务</strong>&nbsp;&nbsp;</p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span>&nbsp;&nbsp;</span></p>
-                    <p style="font-size: 20px;color: white;"><span>&nbsp;&nbsp;</span></p>
+                    <a style="text-decoration: none" onclick="ifo_detail('请移步至个人信息模块将个人信息完善','<?php echo $_SESSION['id']?>')"  href="javascript:void(0)"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">待处理<span>&nbsp;&nbsp;{$pendingTest}个</span></p></a>
+                    <a style="text-decoration: none" href="{:url('form/progress')}"><p style="font-size: 20px;text-align:center;color: white;">已处理<span>&nbsp;&nbsp;{$progressTest}个</span></p></a>
                 </div>
 
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box1 bg-fff"style="height: 200px;border:0;background-color:#4bacf5">
-                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong>&nbsp;&nbsp;(条)</p>
+                    <p style="font-size: 25px;color: white;"><strong>系统公告</strong>&nbsp;&nbsp;</p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已读<span>&nbsp;&nbsp;0条</span></p>
-                    <p style="font-size: 20px;text-align:center;color: white;">未读<span>&nbsp;&nbsp;0条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">总共<span>&nbsp;&nbsp;{$annNums}条</span></p>
+                    <p style="font-size: 20px;text-align:center;color: white;"><span>&nbsp;&nbsp;</span></p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
@@ -173,7 +149,8 @@
                     <p style="font-size: 25px;color: white;"><strong>审批进度</strong></p>
                     <p style="font-size: 25px;color: white;"><strong></strong></p>
                     <hr style="color: white;">
-                    <p style="font-size: 20px;color: white;padding-top: 20px;"><span></span></p>
+                    <a style="text-decoration: none" href="{:url('form/progress')}"><p style="font-size: 20px;text-align:center;color: white;padding-top: 20px;">已完成<span>&nbsp;&nbsp;{$endTask}个</span></p></a>
+                    <a style="text-decoration: none" href="{:url('form/progress')}"><p style="font-size: 20px;text-align:center;color: white;">进行中<span>&nbsp;&nbsp;{$task}个</span></p></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -189,13 +166,7 @@
     </div>
     {/if}
 </div>
-<script type="text/javascript" src="__STATIC__/index/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__STATIC__/index/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="__STATIC__/index/lib/laypage/1.2/laypage.js"></script>
-<script type="text/javascript" src="__STATIC__/index/lib/My97DatePicker/WdatePicker.js"></script>
-<script type="text/javascript" src="__STATIC__/index/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="__STATIC__/index/h-ui/js/H-ui.js"></script>
-<script type="text/javascript" src="__STATIC__/index/h-ui.admin/js/H-ui.admin.js"></script>
+{include file="public/footer" /}
 <script type="text/javascript">
     $(function(){
         $('.table-sort').dataTable({
@@ -239,6 +210,39 @@
             $(obj).parents("tr").remove();
             layer.msg('已删除!',{icon:1,time:1000});
         });
+    }
+    function ifo_detail(title,user_id){
+        var data_post={
+            'data_po':user_id,
+        };
+        //抛送逻辑
+        var urls ="{:url('user/user_stu_detail')}";
+        var primeurl = "{:url('form/studentShowFrom')}";
+        $.ajax({
+            type:"post",
+            url:urls,
+            data:data_post,
+            dataType:"json",
+            success:function (msg) {
+                revert(msg);
+            },
+        });
+        function revert(msg) {
+
+            if (msg){
+                layer.msg(title, {
+                    icon: 1,
+                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    //do something
+//                    window.location.replace(primeurl);
+                });
+
+            }else {
+                window.location.href = "{:url('form/studentShowFrom')}";
+                console(msg);
+            }
+        }
     }
 </script>
 </body>

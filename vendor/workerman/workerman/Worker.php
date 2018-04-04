@@ -986,7 +986,7 @@ class Worker
         // Get uid.
         $user_info = posix_getpwnam($this->user);
         if (!$user_info) {
-            self::log("Warning: User {$this->user} not exsits");
+            self::log("Warning: mmmmm {$this->user} not exsits");
             return;
         }
         $uid = $user_info['uid'];

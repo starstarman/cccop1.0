@@ -115,7 +115,7 @@
     });
        //给input 添加value 属性
        $("input").blur(function () {
-           $(this).attr("value", $(this).val());
+           this.setAttribute('value',$(this).val())
        });
 
       $("textarea").blur(function () {

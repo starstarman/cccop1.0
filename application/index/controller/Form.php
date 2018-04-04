@@ -478,12 +478,43 @@ class Form extends Controller
         $identity=session('identity');
         $result=Db::view('user','id,username')
             ->view('log','s_id,status,to,identity','log.s_id=user.id')
-            ->view('adminform','id,formName','log.f_id=adminform.id')
+            ->view('adminform','id,formName,start_time,end_time','log.f_id=adminform.id')
             ->where('status','=',1)
             ->where('to','=',$id)
             ->where('identity','=',$identity)
             ->select();
-       // print_r($result);
+
+            for ($i=0;$i<sizeof($result);$i++){
+                if (intval(time())-$result[$i]['end_time']>0){
+                    $result[$i]['status'] = true;
+                }
+                else{
+                    $result[$i]['status'] = false;
+                }
+                $result[$i]['start_time'] = date("Y-m-d H:i",$result[$i]['start_time']);
+                $result[$i]['end_time'] = date("Y-m-d H:i",$result[$i]['end_time']);
+            }
+
+        return $this->fetch('',[
+            'data'=>$result
+        ]);
+    }
+
+    /**
+     *
+     * 审批管理已审批内容
+     */
+    public function unformshow(){
+        $id=session('id');
+        $identity=session('identity');
+        $result=Db::view('user','id,username')
+            ->view('log','s_id,status,to,identity','log.s_id=user.id')
+            ->view('adminform','id,formName,start_time,end_time','log.f_id=adminform.id')
+            ->where('status','=',0)
+            ->where('to','=',$id)
+            ->where('identity','=',$identity)
+            ->select();
+
         return $this->fetch('',[
             'data'=>$result
         ]);
@@ -508,6 +539,24 @@ class Form extends Controller
         ]);
     }
 
+    /**
+     *  查看已审批
+     */
+    public function unspflow(){
+        $data=input('param.');
+        $res=model('user')->where(['id'=>$data['s_id']])->select();
+        $result=model('form')->where($data)->select();
+        return $this->fetch('',[
+            'html'=>$result[0]['html'],
+            'f_id'=>$result[0]['f_id'],
+            's_id'=>$result[0]['s_id'],
+            'formName'=>$result[0]['formName'],
+            'from'=>session('id'),
+            'fromUsername'=>session('username'),
+            'username'=>$res[0]['username'],
+            'identity'=>'user_'.session('identity'),
+        ]);
+    }
     /**
      * 老师向学生的表单中添加数据
      */
@@ -829,4 +878,32 @@ class Form extends Controller
             'formData'=>$formData
          ]);
     }
+
+    public function user_detail_select()
+    {
+        $data=input('param.');
+        $res = Db::name('user_student')->where('id',$data['data_po'])->select();
+
+        if ($res){
+            return [
+                'data'=>'true'
+            ];
+        }
+        else{
+            return [
+                'data'=>'false'
+            ];
+        }
+
+    }
+
+    public function select_stu_detail()
+    {
+        $data = input('param.');
+        $res = Db::name('user_student')->where('b_teacher',$data['id'])->select();
+        return $this->fetch('',[
+            'user_stu'=>$res,
+        ]);
+    }
+
 }
