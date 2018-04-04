@@ -103,8 +103,17 @@
             'name_str':name_str
         };
 
-        $.post(url,data,function (result) {
-
+        $.ajax({
+            url:url,
+            data:data,
+            type:"POST",
+            dataType:"json",
+           success:function (data) {
+               layer.alert('提交成功！',{'btn':'确定','btnAlign':'c','title':'提交'});
+           },
+            error:function (data) {
+                layer.alert('提交失败，请联系管理员！',{'btn':'确定','btnAlign':'c','title':'提交'});
+            }
         });
 
     });

@@ -137,8 +137,21 @@
                     'f_id':{$f_id},
                     's_id':{$s_id},
                 };
-                $.post(url2,data2,function () {
-                    
+                $.ajax({
+                    url:url2,
+                    data:data2,
+                    type:"POST",
+                    dataType:"json",
+                    success:function (data) {
+                        layer.alert('提交成功！',{'btn':'确定','btnAlign':'c','title':'提交',yes:function () {
+                                window.location.href="{:url('form/unformshow')}";
+                            }});
+                    },
+                    error:function (data) {
+                        layer.alert('提交成功！',{'btn':'确定','btnAlign':'c','title':'提交',yes:function () {
+                                window.location.href="{:url('form/unformshow')}";
+                            }});
+                    }
                 })
             }
         });

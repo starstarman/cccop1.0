@@ -147,8 +147,17 @@
             'html':contents,
             'formName':formName
         };
-        $.post(url,data,function (result) {
-
+        $.ajax({
+            url:url,
+            data:data,
+            type:"POST",
+            dataType:"json",
+            success:function (data) {
+                layer.alert('提交成功！',{'btn':'确定','btnAlign':'c','title':'提交'});
+            },
+            error:function (data) {
+                layer.alert('提交失败，请联系管理员！',{'btn':'确定','btnAlign':'c','title':'提交'});
+            }
         });
 
 
@@ -177,7 +186,7 @@
                     'data_po':str,
                 };
                 $.post(url1,da,function (data) {
-                    attrbut(data,'以设置的审批人员');
+                    attrbut(data,'已设置的审批人员');
                 });
             }else{
 
@@ -188,6 +197,7 @@
                 };
                 $.post(url,data,function (data) {
                     attrbut(data,'请设置审批人员');
+
                 });
             }
         });
