@@ -56,7 +56,6 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 审批事项管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('announce/ann_add')}" data-title="审批管理" href="javascript:void(0)">审批管理</a></li>
                     <li><a data-href="{:url('announce/ann_list')}" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
                     <li><a data-href="{:url('announce/ann_add')}" data-title="发布公告" href="javascript:void(0)">发布公告</a></li>
                 </ul>
@@ -84,16 +83,6 @@
                     <li><a data-href="{:url('user/member_teacher_add')}" data-title="新增教师" href="javascript:void(0)">新增教师</a></li>
                 </ul>
             </dd>
-        </dl>
-        <dl id="menu-article">
-            <dt><i class="Hui-iconfont">&#xe616;</i> 数据管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="" data-title="数据备份" href="javascript:void(0)">数据备份</a></li>
-                    <li><a data-href="" data-title="数据恢复" href="javascript:void(0)">数据恢复</a></li>
-                </ul>
-            </dd>
-
         </dl>
     </div>
     {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}

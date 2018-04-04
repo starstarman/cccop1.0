@@ -12,7 +12,7 @@ class Form extends Controller
      */
     public function formManage()
     {
-        $form=model('adminform')->select();
+        $form=Db::name('adminform')->paginate(15);
         for ($i=0;$i<sizeof($form);$i++){
             if (intval(time())-$form[$i]['end_time']>0){
                 $form[$i]['status'] = true;
@@ -133,7 +133,7 @@ class Form extends Controller
      *  实习审批表查看表单   查询管理员建的表单
      */
     public function studentShowFrom(){
-        $data=model('Adminform')->select();
+        $data=model('Adminform')->paginate(15);
         $dddd= $data;
         for ($i=0;$i<sizeof($data);$i++){
             if (intval(time())-$dddd[$i]['end_time']>0){
@@ -180,6 +180,32 @@ class Form extends Controller
         ]);
     }
 
+    public function showFormDetail(){
+
+        //首先获得是哪张表
+        $s_id=session('id');
+        $f_id=$_GET['f_id'];
+        $result=model('User')->where(['id'=>$s_id])->select();
+        //在获取学生的id
+        $s_id=session('id');
+        //去总表查询是否有表单   如果没有去管理员表单填写
+        $data=[
+            'f_id'=>$f_id,
+            's_id'=>$s_id,
+        ];
+        $data=model('Form')->where($data)->select();
+        if (!empty($data)){
+
+        }else{
+            $data=model('Adminform')->where('id',$f_id)->select();
+        }
+
+        return $this->fetch('',[
+            'f_id'=>$f_id,
+            'html'=>$data[0]['html'],
+            'identity'=>'user_'.$result[0]['identity'],
+        ]);
+    }
     /**
      * 审批流程数据接收
      */
@@ -793,7 +819,7 @@ class Form extends Controller
      * 已读信息
      */
     public function readMessage(){
-        $mesInfo=model('sendmessage')->where(['to'=>session('id'),'status'=>0])->select();
+        $mesInfo=Db::name('sendmessage')->where(['to'=>session('id'),'status'=>0])->paginate(15);
         return $this->fetch('',[
             'mesInfo'=>$mesInfo
         ]);
@@ -803,7 +829,7 @@ class Form extends Controller
      * 未读信息
      */
     public function unreadMessage(){
-        $mesInfo=model('sendmessage')->where(['to'=>session('id'),'status'=>1])->select();
+        $mesInfo=model('sendmessage')->where(['to'=>session('id'),'status'=>1])->paginate(15);
         return $this->fetch('',[
             'mesInfo'=>$mesInfo
         ]);
@@ -860,7 +886,7 @@ class Form extends Controller
     public function progress(){
         //查询审批进度
         $f_id=model('form')->where(['s_id'=>session('id')])->column('f_id');
-        $formData=model('findteacher')->where(['s_id'=>session('id')])->where('f_id','in',$f_id)->select();
+        $formData=model('findteacher')->where(['s_id'=>session('id')])->where('f_id','in',$f_id)->paginate(15);
             foreach ($formData as $key=>$val){
                 //单流程
                 if ($val['status']==0){
@@ -885,7 +911,7 @@ class Form extends Controller
                 }
                 //送adminform查的其他信息
 
-                $formDatas=model('adminform')->where(['id'=>$val['f_id']])->select();
+                $formDatas=model('adminform')->where(['id'=>$val['f_id']])->paginate(15);
                 $formData[$key]['formName']=$formDatas['0']['formName'];
                 $formData[$key]['start_time']=$formDatas['0']['start_time'];
                 $formData[$key]['end_time']=$formDatas['0']['end_time'];
