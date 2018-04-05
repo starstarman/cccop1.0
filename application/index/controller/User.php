@@ -205,6 +205,40 @@ class User extends Controller
         }
 
     }
-
-
+    public function user_stu_pwd()
+    {
+        return $this->fetch();
+    }
+    public function user_verify_pwd()
+    {
+        $data = input('post.');
+        $id = $data['id'];
+        $pwd = $data['password'];
+        $ids = Db::name('user')->where('id','=',$id)->value('password');
+        if($ids == $pwd){
+            $this->success('点击进入修改密码','user/user_modify_pwd');
+        }else{
+            $this->error('密码校验出错');
+        }
+    }
+    public function user_modify_pwd()
+    {
+        return $this->fetch();
+    }
+    public function user_stu_modify(){
+        $data = input('post.');
+        $id = $data['id'];
+        $pwd = $data['password'];
+        $modifypwd = $data['modifypwd'];
+        if($pwd != $modifypwd){
+            $this->error('请确认两次密码一致');
+        }else{
+            $update = Db::name('user')->where('id','=',$id)->setField('password',$pwd);
+            if($update){
+                $this->success('密码修改成功','user/user_stu_pwd');
+            }else{
+                $this->error('密码修改失败，请重试！');
+            }
+        }
+    }
 }

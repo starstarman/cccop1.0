@@ -1,0 +1,45 @@
+<!--_meta 作为公共模版分离出去-->
+<?php use think\Session; Session::start();?>
+{include file="public/header" /}
+<style>
+    html{
+        align:center;
+    }
+    .input-text{
+        width:400px;
+    }
+    .page-container{
+        margin-top: 250px;
+        margin-left: 200px;
+    }
+</style>
+<body>
+<article class="page-container">
+    <form class="form form-horizontal" action="{:url('user/user_stu_modify')}" method="post">
+        <input type="hidden" class="input-text" value="<?php echo $_SESSION['id'];?>" placeholder="" id="articletitle" name="id">
+        <input type="hidden" class="input-text" value="<?php echo $_SESSION['username'];?>" placeholder="" id="articletitle" name="username">
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>请输入密码：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="articletitle" name="password">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>请再次确认密码：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="articletitle" name="modifypwd">
+            </div>
+        </div>
+        <div class="row cl">
+            <button type="submit"  style="width: auto;margin-left: 590px" class="input-text" value="提交">提交</button>
+        </div>
+    </form>
+</article>
+{include file="public/footer" /}
+<script>
+
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
