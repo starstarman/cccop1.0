@@ -9,10 +9,6 @@
 
         body{padding: 0px;margin: 0px;font-size: 12px;font-family: "微软雅黑";}
 
-        /*.link{text-align: right;line-height: 20px;padding-right: 40px;}*/
-        /*.link a{*/
-            /*cursor: pointer;*/
-        /*}*/
         .ui-dialog{
             width: 380px;height: auto;display: none;
             position: absolute;z-index: 9000;
@@ -144,14 +140,14 @@
             <form name="form1" class="registerform" action="{:url('login/check')}" method="post">
                 <div class="fm-item">
                     <label for="logonId" class="form-label" >系统登录：</label>
-                    <input type="text" name="id" value="" placeholder="账号不能为空" id="id" title="傻了吧唧" class="i-text" onblur="checkid()" required oninvalid="setCustomValidity('你虎啊！');" oninput="setCustomValidity('');" />
+                    <input type="text" name="id" value="" placeholder="账号不能为空" id="id" title="输入账号" class="i-text" onblur="checkid()" required oninvalid="setCustomValidity('必须输入账号！');" oninput="setCustomValidity('');" />
                     <!--<input type="username" value="输入账号" maxlength="100" id="username" class="i-text" ajaxurl="demo/valid.jsp"  datatype="s6-18" errormsg="用户名至少2个字符,最多18个字符！"  >-->
                     <div class="ui-form-explain"></div>
                 </div>
 
                 <div class="fm-item">
                     <label for="logonId" class="form-label" >登录密码：</label>
-                    <input type="password" name="password" id="password" placeholder="密码不能为空" title="填完了吗" class="i-text" onblur="checkpsd()" required oninvalid="setCustomValidity('哈哈啊哈！');" oninput="setCustomValidity('');"/>
+                    <input type="password" name="password" id="password" placeholder="密码不能为空" title="输入密码" class="i-text" onblur="checkpsd()" required oninvalid="setCustomValidity('必须输入密码！');" oninput="setCustomValidity('');"/>
                     <!--<input type="password" value="输入密码" maxlength="100" id="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！">-->
                     <div class="ui-form-explain"></div>
                 </div>
@@ -168,25 +164,7 @@
                     <input type="submit" value="登&emsp;录" class="btn-login" />
                     <input type="button" value="注&emsp;册" class="btn-register" onclick="showDialog();" />
                     <div class="ui-form-explain"></div>
-                    <!--<div class="link">-->
-                        <!--<a onclick="showDialog();">登录</a>-->
-                    <!--</div>-->
-
-
-
                 </div>
-                <!--<div class="fm-item eee">-->
-                    <!--<label for="logonId" class="form-label"></label>-->
-                    <!--&lt;!&ndash;<input type="submit" value="" tabindex="4" id="send-btn" class="btn-login">&ndash;&gt;-->
-                    <!--<input value="注&emsp;册" class="btn-register" onclick="showDialog();" />-->
-                    <!--&lt;!&ndash;<div class="ui-form-explain"></div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="link">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a onclick="showDialog();">登录</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-
-                <!--</div>-->
             </form>
 
         </div>
@@ -345,94 +323,13 @@
     }
 
     //	侦听浏览器窗口大小变化
-    //window.onresize = showDialog;
 
     Dialog('dialogDrag','dialogMove');
-    //showDialog();
 
 
     $(".btn-login").click(function() {
-        /*layer.alert('即将进入系统', {
-             type: 0
-             , skin: 'layui-layer-molv' //样式类名  自定义样式
-             , closeBtn: 0    // 是否显示关闭按钮
-             , time: 0
-             , shift: 1
-             , anim: 4 //动画类型
-             , title: '小样'//标题输出
-             , btn: ['进入', '退出'] //按钮
-             , icon: 6    // icon
-             , yes: function (index, layero) {
-                 window.location.href = 'loginSuccess.html';
-                 layer.close(index);
-             }
-             , btn2: function (index, layero) {
-                 window.location.href = 'login.html';
-                 layer.close(index);
 
-             }
-         });*/
      });
-         /*layer.confirm('is not?', function(index){
-           window.location.href="loginSuccess.html";
-
-         });
-     })*/
-        /*$.gDialog.prompt("站长素材", "loginSuccess.html",{
-                title: "Prompt Dialog Box",
-                required: true,
-                animateIn : "rollIn",
-                animateOut: "rollOut"
-            });
-        });*/
-    /*$.gDialog.alert("我的小芳在哪里，哈哈哈哈", {
-        animateIn: "bounceIn",
-        animateOut: "bounceOut"
-    });
-});*/
-//        $.gDialog.confirm("Are you Sure?", {
-//            title: "Confirm Dialog Box",
-//            animateIn : "bounceInDown",
-//            animateOut: "bounceOutUp",
-//            buttons: {
-//                "Ok": function () {
-//                    $(this).dialog('close');
-//                },
-//                "Cancel": function () {
-//                    $(this).dialog('close');
-//                }
-//            }
-//        });
-//    });
-         /*$(document).ready(function () {
-             $(".button-ok").click(function () {
-                 var id = $(this).attr("title");
-                 var oper = "check";
-                 $.ajax({
-                     success: function (data) {
-                         location.href ='loginSuccess.html';
-                     }
-                 });
-             });*/
-         //});
-       /* function check1(){
-            var id = document.getElementById("id").value;
-            if(id ==  null || id == ''){
-                alert("用户名不能为空");
-                return false;
-            }
-            return true;
-        }
-        function check2(){
-            var password = document.getElementById("password").value;
-            if(password ==  null || password == ''){
-                alert("密码不能为空");
-                return false;
-            }
-            return true;
-        }*/
-    // var zIndex = 9000;
-
 
 </script>
 </body>
