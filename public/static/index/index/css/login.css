@@ -20,7 +20,7 @@ a { text-decoration:none; color:#009bd8 }
 /*---------------------header----------------------*/
 
 .header{ margin:26px auto; overflow: hidden; position: relative; width: 1300px; z-index: 0;}
-.headerNav { right: 0;text-align: right;top: 52px; width: 300px; position:absolute;}
+.headerNav { right: 0;text-align: right;top: 61px; width: 300px; position:absolute;}
 .headerNav a{ color:#515151; font-size:12px; padding:0 2px;}
 .headerNav a:hover{ text-decoration:underline; color:#658b98;}
 
