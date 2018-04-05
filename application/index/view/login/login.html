@@ -92,6 +92,10 @@
             position: absolute;top: 0px;height: 0px;z-index: 2;
             opacity:0.4; filter: Alpha(opacity=40);
         }
+        .manufacture4{
+            cursor: pointer;
+            margin-right: 150px;
+        }
 </style>
 </head>
 
@@ -128,6 +132,9 @@
 <div class="header">
     <h1 class="headerLogo">
         <img alt="logo" src="__STATIC__/new/images/logo.jpg"><img alt="logo" src="__STATIC__/new/images/biaoti.jpg"></h1>
+        <div class="headerNav">
+        <h7 target="_blank" class="manufacture4">开发团队&ensp;</h7>
+        </div>
 
 </div>
 
@@ -174,7 +181,6 @@
         <ul>
             <li style="background:url(__STATIC__/new/themes/theme-pic1.jpg) #CCE1F3 center 0 no-repeat;"></li>
         </ul>
-
     </div>
 
 </div>
@@ -330,6 +336,13 @@
     $(".btn-login").click(function() {
 
      });
+    $(".manufacture4").click(function () {
+        layer.msg('',{
+            title:['@YOU工作室','text-align:right;'],
+            time:2000,
+            content:'\<\div>黑科大计算机15-3班&nbsp;&nbsp;刘阔<br> 黑科大软件16-2班&nbsp;&nbsp;董竹杰<br> 黑科大软件16-2班&nbsp;&nbsp;岳家伟<br> \<\/div>'
+        })
+    })
 
 </script>
 </body>
