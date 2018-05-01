@@ -3,6 +3,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Cache;
 use think\Db;
+use think\Session;
 
 class Form extends Controller
 {
@@ -85,6 +86,10 @@ class Form extends Controller
     public function formSubmit(){
         //获取缓存的流程
         $double=Cache::get('double');
+        $isliucheng = is_numeric($double);
+        if (!$isliucheng){
+            return show('','请先设置表单流程');
+        }
         if ($double==0){
             $flow=Cache::get('singleflow');
             //处理流程
@@ -101,7 +106,13 @@ class Form extends Controller
                 'start_time'=>$data['start_time'],
                 'end_time'=>$data['end_time'],
             ];
-            model('Adminform')->save($content);
+            Cache::clear();
+            $result = model('Adminform')->save($content);
+            if ($result ==1){
+                return show('1','提交成功');
+            }else{
+                return show('0','提交失败请联系管理员');
+            }
         }else{
           //双流程定义
             $single=Cache::get('singleflow');
@@ -123,8 +134,13 @@ class Form extends Controller
                 'start_time'=>$data['start_time'],
                 'end_time'=>$data['end_time'],
             ];
-
-            model('Adminform')->save($content);
+            Cache::clear();
+           $result= model('Adminform')->save($content);
+            if ($result ==1){
+                return show('1','提交成功');
+            }else{
+                return show('0','提交失败请联系管理员');
+            }
         }
 
     }
@@ -151,7 +167,7 @@ class Form extends Controller
     }
 
     /**
-     * 学生点击表单进入的详情表
+     * 申请人点击表单进入的详情表
      */
     public function formDetail(){
 
@@ -159,7 +175,7 @@ class Form extends Controller
         $s_id=session('id');
         $f_id=$_GET['f_id'];
         $result=model('User')->where(['id'=>$s_id])->select();
-        //在获取学生的id
+        //在获取申请人的id
         $s_id=session('id');
         //去总表查询是否有表单   如果没有去管理员表单填写
         $data=[
@@ -186,7 +202,7 @@ class Form extends Controller
         $s_id=session('id');
         $f_id=$_GET['f_id'];
         $result=model('User')->where(['id'=>$s_id])->select();
-        //在获取学生的id
+        //在获取申请人的id
         $s_id=session('id');
         //去总表查询是否有表单   如果没有去管理员表单填写
         $data=[
@@ -217,7 +233,7 @@ class Form extends Controller
             //将接收到的数据进行转换
             switch ($flow[$i]){
                 case 'user_1':
-                    $flow[$i]='学生';
+                    $flow[$i]='申请人';
                     break;
                 case 'user_2':
                     $flow[$i]='班主任';
@@ -235,7 +251,13 @@ class Form extends Controller
                     $flow[$i]='系主任';
                     break;
                 case 'user_7':
-                    $flow[$i]='院长';
+                    $flow[$i]='教学院长';
+                    break;
+                case 'user_8':
+                    $flow[$i]='教务处长';
+                    break;
+                case 'user_9':
+                    $flow[$i]='教务科';
                     break;
                 case '':
                     $flow[$i]='';
@@ -264,7 +286,7 @@ class Form extends Controller
             //将接收到的数据进行转换
             switch ($flow[$i]){
                 case 'user_1':
-                    $flow[$i]='学生';
+                    $flow[$i]='申请人';
                     break;
                 case 'user_2':
                     $flow[$i]='班主任';
@@ -282,7 +304,13 @@ class Form extends Controller
                     $flow[$i]='系主任';
                     break;
                 case 'user_7':
-                    $flow[$i]='院长';
+                    $flow[$i]='教学院长';
+                    break;
+                case 'user_8':
+                    $flow[$i]='教务处长';
+                    break;
+                case 'user_9':
+                    $flow[$i]='教务科';
                     break;
                 case '':
                     $flow[$i]='';
@@ -297,7 +325,7 @@ class Form extends Controller
             //将接收到的数据进行转换
             switch ($flow2[$i]){
                 case 'user_1':
-                    $flow2[$i]='学生';
+                    $flow2[$i]='申请人';
                     break;
                 case 'user_2':
                     $flow2[$i]='班主任';
@@ -315,7 +343,13 @@ class Form extends Controller
                     $flow2[$i]='系主任';
                     break;
                 case 'user_7':
-                    $flow2[$i]='院长';
+                    $flow2[$i]='教学院长';
+                    break;
+                case 'user_8':
+                    $flow2[$i]='教务处长';
+                    break;
+                case 'user_9':
+                    $flow2[$i]='教务科';
                     break;
                 case '':
                     $flow2[$i]='';
@@ -333,7 +367,7 @@ class Form extends Controller
     }
 
     /**
-     * 学生选择老师
+     * 申请人选择老师
      */
     public function findTeacher(){
         $data=input('param.');
@@ -365,8 +399,16 @@ class Form extends Controller
                     $identity[$i]=6;
                     break;
                 case 'user_7':
-                    $flow[$i]='院长';
+                    $flow[$i]='教学院长';
                     $identity[$i]=7;
+                    break;
+                case 'user_8':
+                    $flow[$i]='教务处长';
+                    $identity[$i]=8;
+                    break;
+                case 'user_9':
+                    $flow[$i]='教务科';
+                    $identity[$i]=9;
                     break;
                 case '':
                     $flow[$i]='';
@@ -423,6 +465,8 @@ class Form extends Controller
             $ident[4]=>$id[4],
             $ident[5]=>$id[5],
             $ident[6]=>$id[6],
+            $ident[7]=>$id[7],
+            $ident[8]=>$id[8],
             'total'=>count($id),
             'single'=>$single[0],
             'couple'=>$couple[0],
@@ -433,7 +477,7 @@ class Form extends Controller
     }
 
     /**
-     * 学生提交填写完的表单做第一次转发
+     * 申请人提交填写完的表单做第一次转发
      * @param $f_id 表单Id
      */
     public function studentSub($f_id){
@@ -445,6 +489,8 @@ class Form extends Controller
             's_id'=>$s_id,
             'html'=>$data['html'],
             'formName'=>$data['formName'],
+            'unit'=>$data['unit'],
+            'time'=>date("Y-m-d H:i:s")
         ];
         //添加之前判断一下是否之前添加过 如果添加过就更新这条数据,并删除log内容
         $addStatus=model('form')->where(['s_id'=>session('id'),'f_id'=>$f_id])->select();
@@ -584,7 +630,7 @@ class Form extends Controller
         ]);
     }
     /**
-     * 老师向学生的表单中添加数据
+     * 老师向申请人的表单中添加数据
      */
     public function addForm(){
         $data=input('param.');
@@ -633,7 +679,7 @@ class Form extends Controller
            $liucheng='single';
            $tag='flow';
        }
-            //如果转发到最后一位，直接给该学生的表单增加数据否则继续转发
+            //如果转发到最后一位，直接给该申请人的表单增加数据否则继续转发
             $sin=model('Findteacher')->where($whereData)->value($liucheng);
             $sin=explode(',',$sin);
             $fl=model('Findteacher')->where($whereData)->value($tag);
@@ -723,8 +769,16 @@ class Form extends Controller
                     $identity[$i]=6;
                     break;
                 case 'user_7':
-                    $flow[$i]='院长';
+                    $flow[$i]='教学院长';
                     $identity[$i]=7;
+                    break;
+                case 'user_8':
+                    $flow[$i]='教务处长';
+                    $identity[$i]=8;
+                    break;
+                case 'user_9':
+                    $flow[$i]='教务科';
+                    $identity[$i]=9;
                     break;
                 case '':
                     $flow[$i]='';
@@ -947,6 +1001,47 @@ class Form extends Controller
         return $this->fetch('',[
             'user_stu'=>$res,
         ]);
+    }
+    /*
+     * 归档
+     */
+    public function send(){
+        $data = input('param.');
+        $logChage= model('log')->save([
+            'status'=>'0'
+        ],[
+            's_id'=>$data['s_id'],
+            'f_id'=>$data['f_id'],
+            'to'=>session('id')
+        ]);
+        if ($logChage == 1){
+            $list = [
+                [
+                    's_id'=>$data['s_id'],
+                    'f_id'=>$data['f_id'],
+                    'from'=>session('id'),
+                    'to'=>'88888888',
+                    'identity'=>'10',
+                    'status'=>'1',
+                ],
+                [
+                    's_id'=>$data['s_id'],
+                    'f_id'=>$data['f_id'],
+                    'from'=>session('id'),
+                    'to'=>'99999999',
+                    'identity'=>'10',
+                    'status'=>'1'
+                ]
+
+            ];
+           model('log')->saveAll($list);
+
+           return show('1','归档成功');
+
+        }else{
+            return show('0','归档异常,请联系管理员');
+        }
+
     }
 
 }

@@ -6,7 +6,7 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="">校企合作</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 1"}学生{elseif condition="$_SESSION['identity'] eq 2"}班主任{elseif condition="$_SESSION['identity'] eq 3"}辅导员{elseif condition="$_SESSION['identity'] eq 4"}书记{elseif condition="$_SESSION['identity'] eq 5"}指导教师{elseif condition="$_SESSION['identity'] eq 6"}系主任{elseif condition="$_SESSION['identity'] eq 7"}院长{/if}
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs">{if condition="$_SESSION['identity'] eq 0"}管理员{elseif condition="$_SESSION['identity'] eq 1"}申请人{elseif condition="$_SESSION['identity'] eq 2"}班主任{elseif condition="$_SESSION['identity'] eq 3"}辅导员{elseif condition="$_SESSION['identity'] eq 4"}书记{elseif condition="$_SESSION['identity'] eq 5"}指导教师{elseif condition="$_SESSION['identity'] eq 6"}系主任{elseif condition="$_SESSION['identity'] eq 7"}教学院长 {elseif condition="$_SESSION['identity'] eq 8"}教务处长 {elseif condition="$_SESSION['identity'] eq 9"}教务科{/if}
             {if condition="$many gt 1"}
                 <li class="dropDown dropDown_hover">
                 <a class="dropDown_A"style="color: #FFFFFF">切换职位</a>
@@ -66,7 +66,7 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 表单管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{:url('Form/formManage')}" data-title="表单管理" href="javascript:void(0)">表单管理</a></l+i>
+                    <li><a data-href="{:url('Form/formManage')}" data-title="表单管理" href="javascript:void(0)">表单管理</a></li>
                     <li><a data-href="{:url('Form/createForm')}" data-title="新增表单" href="javascript:void(0) " onClick="displaynavbar('.pngfix')">新增表单</a></li>
                 </ul>
             </dd>
@@ -85,7 +85,7 @@
             </dd>
         </dl>
     </div>
-    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}
+    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7) OR ($_SESSION['identity'] eq 8) OR ($_SESSION['identity'] eq 9)"}
     <div class="menu_dropdown bk_2">
         <!--<dl id="menu-article">-->
             <!--<dt><i class="Hui-iconfont">&#xe616;</i> 个人信息<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->

@@ -86,8 +86,10 @@
     <div id="aside" class="grid_3 push_1" style="float: right;margin-right:13px">
     </div>
     <button class='btn ' id="back" type='submit'>驳回</button>
-    <button class='btn ' id="sub" type='submit'>提交</button>
-
+    {if condition="$_SESSION['identity'] eq 9"}
+    <button class='btn ' id="send" type='submit'>归档</button>
+    {else /}<button class='btn ' id="sub" type='submit'>提交</button>
+    {/if}
 </div>
 <hr>
 <div style="margin:50px 110px;border:2px solid; border-color: #c6bebe" >
@@ -156,6 +158,24 @@
             }
         });
 
+    });
+    /**
+     * 归档
+     */
+    $('#send').click(function () {
+
+        var url="{:url('form/send')}";
+        var data={
+            'f_id':{$f_id},
+            's_id':{$s_id}
+        };
+        $.post(url,data,function (res) {
+            if (res.status ==1){
+                alert(res.message);
+            } else{
+                alert(res.message);
+            }
+        })
     });
 
     $('[leipiplugins=qianzi]').click(function () {

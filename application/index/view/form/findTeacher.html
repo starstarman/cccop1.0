@@ -28,7 +28,7 @@
                     <td class="shenfen">{$vo}</td>
                     <input type="hidden" class="identity" value="{$identity[$key]}">
                     <td class="text-c listorder">
-                        <select style="width:120px;" >
+                        <select class='selectTeacher' style="width:120px;" >
                             <option value ="" >请选择</option>
                             <option value ="" ></option>
                             <option value ="" ></option>
@@ -48,7 +48,7 @@
 <!--代码部分end-->
 <script type="text/javascript">
     //点击select动态添加数据
-    $('select').click(function () {
+    $('.selectTeacher').click(function () {
         //获取选中人员的身份
         var sel=$(this);
        var identity=$(this).parent().siblings('input').val();
@@ -70,7 +70,7 @@
        },'json');
     });
     //当点击option时取消select绑定的事件
-    $('select').change(function () {
+    $('.selectTeacher').change(function () {
         $(this).unbind("click");
 
     });
@@ -83,7 +83,7 @@
         var name_str='';
         //处理老师的id将其传给后台
         //将老师的姓名也存到后台
-        $('select').each(function (i) {
+        $('.selectTeacher').each(function (i) {
            id_str+=$(this).val()+',';
            name_str+=$(this).find("option:selected").text()+',';
         });

@@ -177,13 +177,15 @@
       <label class='control-label'>可写权限</label>
       <select class='shenfen'>
         <option value=''>请选择</option>
-        <option value='user_1'>学生</option>
+        <option value='user_1'>申请人</option>
         <option value='user_2'>班主任</option>
         <option value='user_3'>导员</option>
         <option value='user_4'>书记</option>
         <option value='user_5'>指导教师</option>
         <option value='user_6'>系主任</option>
-        <option value='user_7'>院长</option>
+        <option value='user_7'>教学院长</option>
+        <option value='user_8'>教务处长</option>
+        <option value='user_9'>教务科</option>
       </select>
       <label class='control-label'>流程设置（如是双流程请选择）</label>
       <select class='flow'>
@@ -217,13 +219,15 @@
       <label class='control-label'>可写权限</label>
       <select class='shenfen'>
         <option value=''>请选择</option>
-        <option value='user_1'>学生</option>
+        <option value='user_1'>申请人</option>
         <option value='user_2'>班主任</option>
         <option value='user_3'>导员</option>
         <option value='user_4'>书记</option>
         <option value='user_5'>指导教师</option>
         <option value='user_6'>系主任</option>
-        <option value='user_7'>院长</option>
+        <option value='user_7'>教务院长</option>
+        <option value='user_8'>教务处长</option>
+        <option value='user_9'>教务科</option>
       </select>
       <label class='control-label'>流程设置（如是双流程请选择）</label>
       <select class='flow'>
@@ -255,13 +259,15 @@
       <label class='control-label'>可写权限</label>
       <select class='shenfen'>
         <option value=''>请选择</option>
-        <option value='user_1'>学生</option>
+        <option value='user_1'>申请人</option>
         <option value='user_2'>班主任</option>
         <option value='user_3'>导员</option>
         <option value='user_4'>书记</option>
         <option value='user_5'>指导教师</option>
         <option value='user_6'>系主任</option>
-        <option value='user_7'>院长</option>
+        <option value='user_7'>教学院长</option>
+        <option value='user_8'>教务处长</option>
+        <option value='user_9'>教务科</option>
       </select>
       <label class='control-label'>流程设置（如是双流程请选择）</label>
       <select class='flow'>
@@ -307,43 +313,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('#tijiao').click(function () {
-            var user_1='';
-            var user_2='';
-            var user_3='';
-            var user_4='';
-            var user_5='';
-            var user_6='';
-            var user_7='';
-//            .control-group .controls .leipiplugins
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_1")
-                    user_1+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_2")
-                    user_2+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_3")
-                    user_3+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_4")
-                    user_4+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_5")
-                    user_5+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_6")
-                    user_6+=index+','
-            });
-            $.each($("fieldset").find(".control-group .controls .leipiplugins"),function (index,value) {
-                if(value.getAttribute("shenfen")==="user_7")
-                    user_7+=index+','
-            });
-            //var length=$('fieldset').children().length-1;//获取提交的元素个数
+
             var contents= $('fieldset').html();           //获取整个表单的样式
             var formName=$('input[name="form_name"]').val();
             //开始时间
@@ -351,30 +321,36 @@
             //结束时间
             var end_time = $('input[name="end_time"]').val();
 
-            console.log(start_time);
-            console.log(end_time);
             var  content={
                 'html':contents,
                 'formName':formName,
-                'user_1':user_1,
-                'user_2':user_2,
-                'user_3':user_3,
-                'user_4':user_4,
-                'user_5':user_5,
-                'user_6':user_6,
-                'user_7':user_7,
                 'start_time':start_time,
                 'end_time':end_time,
             };
-            var url="{:url('form/formSubmit',['test'=>$data])}";
+
+            if (content.formName==''){
+                alert("请填写表单名");
+                return false;
+            }
+            if (content.start_time==''){
+                alert("请选择开始时间");
+                return false;
+            }
+
+            if (content.end_time==''){
+                alert("请选择结束时间");
+                return false;
+            }
+
+            var url="{:url('form/formSubmit')}";
             // 抛送http
             $.post(url,content,function (result) {
-                //逻辑
-//              if(result.code==1){
-//                  location.href=result.data;
-//              }else{
-//                  alert(result.msg);
-//              }
+                // 逻辑
+             if(result.status==1){
+                 alert(result.message);
+             }else{
+                 alert(result.message);
+             }
             },"json");
         });
         //管理员定义审批流程
@@ -432,7 +408,7 @@
             });
             var data_post={
                 'data_po':str1,
-                'data_po2':str2,
+                'data_po2':str2
             };
             //抛送逻辑
             var url ="{:url('form/flow_d')}";
@@ -445,12 +421,12 @@
                 var index = layer.open({
                     type: 1,
                     title: title,
-                    offset:['90px','500px',],
+                    offset:['90px','500px'],
                     content: re
                 });
                 layer.style(index, {
                     width: '370px',
-                    height:'550px',
+                    height:'550px'
                 });
 
             }

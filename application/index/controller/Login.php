@@ -14,8 +14,8 @@ class Login extends Base
     {
         if (request()->isPost()) {
             $data = input('post.');
-            if (!captcha_check($data['verifycode'])) {
-                $this->error('验证码不正确');}
+//            if (!captcha_check($data['verifycode'])) {
+//                $this->error('验证码不正确');}
                 $id = $data['id'];
                 //根据姓名获取登陆者的信息
                 $result = Db::query("select * from cop_user WHERE id = '$id'");
@@ -66,7 +66,13 @@ class Login extends Base
                     $identity[$i]='系主任';
                     break;
                 case '7':
-                    $identity[$i]='院长';
+                    $identity[$i]='教学院长';
+                    break;
+                case '8':
+                    $identity[$i]='教务处长';
+                    break;
+                case '9':
+                    $identity[$i]='教务科';
                     break;
                 case '':
                     $identity[$i]='';

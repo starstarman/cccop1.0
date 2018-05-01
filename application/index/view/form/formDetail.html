@@ -88,7 +88,27 @@
 <div style="text-align: right;margin: 20px 180px 0 40px" class="print-preview">
     <div id="aside" class="grid_3 push_1" style="float: left;margin-left:13px">
     </div>
-<button class='btn ' id="tijiao" type='submit'>提交</button>
+    <span class="select-box" style="width:150px">
+			<select class="select" name="brandclass" id="unit" size="1" style="margin-top: 10px">
+				<option value="0" selected="">请选择所在单位</option>
+				<option value="1">计算机学院</option>
+				<option value="2">安全学院</option>
+				<option value="3">材料学院</option>
+				<option value="4">电气学院</option>
+				<option value="5">电信学院</option>
+				<option value="6">管理学院</option>
+				<option value="7">国教学院</option>
+				<option value="8">环化学院</option>
+				<option value="9">机械学院</option>
+				<option value="10">建工学院</option>
+				<option value="11">经济学院</option>
+				<option value="12">矿业学院</option>
+				<option value="13">人文学院</option>
+				<option value="14">研究生学院</option>
+				<option value="15">外国语学院</option>
+			</select>
+			</span>
+<button class='btn' id="tijiao" type='submit'>提交</button>
 <span class="dropDown">
         <a class="dropDown_A btn" id="set" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">设置审批人员</a>
     </span>
@@ -137,7 +157,12 @@
     });
     //学生填完表单做第一次转发
     $('#tijiao').click(function () {
+        var unit =  $("#unit").find("option:selected").text();
 
+        if ($("#unit").val() == 0){
+            alert("请选择所在单位");
+            return false;
+        };
         var contents= $('fieldset').html();
         var formName=$('input[name="form_name"]').val();
         var f_id={$f_id};
@@ -145,7 +170,8 @@
         var data={
             'f_id':f_id,
             'html':contents,
-            'formName':formName
+            'formName':formName,
+            'unit':unit
         };
         $.ajax({
             url:url,

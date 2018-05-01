@@ -1,5 +1,5 @@
 <?php use think\Session;use think\Db; Session::start();?>
-{include file="public/header" /}
+{include file="public/header"/}
 <body style="background-color:rgba(219,214,218,0.48); ">
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 今日审批 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
@@ -7,7 +7,7 @@
         <marquee behavior="scroll" scrollAmount="9" scrolldelay="100" width="100%" direction="right" loop="-1"><h3 style="font-weight:200" ><a href="{:url('announce/ann_readdetail',['id'=>$id[0][$id]])}"><?php echo Db::table('cop_announce')->where('ann_status',1)->value('ann_content')?></a></h3></marquee>
     </div>
     {if condition="$_SESSION['identity'] eq 0"}
-    <div >
+    <div>
         <div  style="padding-top: 20px;height:490px;width:100%;background-color: white;">
             <h1 style="text-align: center">管理员使用说明</h1>
             <div style="margin-left: 492px; margin-top: 50px">
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7)"}
+    {elseif condition="($_SESSION['identity'] eq 2) OR ($_SESSION['identity'] eq 3) OR ($_SESSION['identity'] eq 4) OR ($_SESSION['identity'] eq 5) OR ($_SESSION['identity'] eq 6) OR ($_SESSION['identity'] eq 7) OR ($_SESSION['identity'] eq 8) OR ($_SESSION['identity'] eq 9)"}
     <div >
         <div  style="padding-top: 20px;height:490px;width:100%;background-color: white;">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
