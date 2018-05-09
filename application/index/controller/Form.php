@@ -690,6 +690,12 @@ class Form extends Controller
                     'to'=>session('id')
                 ];
                 model('Log')->where($resData)->update(['status'=>0]);
+                //把Form表中end置为1 表示表单全部填写完成
+                model('Form')->where([
+                    's_id'=>$s_id,
+                    'f_id'=>$f_id
+                ])->update(['end'=>1]);
+
                 if ($find[0]['status']==0){
                     model('Findteacher')->where($whereData)->update(['end'=>0]);
                 }else{
